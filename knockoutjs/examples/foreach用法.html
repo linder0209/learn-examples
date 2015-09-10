@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../styles/examples.css" rel="stylesheet">
+    <script src="../../bower_components/knockout/dist/knockout.debug.js"></script>
+    <title>对象和数组的用法用法</title>
+</head>
+<body>
+<div class="container example">
+    <h2>官方说明与例子</h2>
+
+    <p><a href="http://knockoutjs.com/documentation/foreach-binding.html" target="_blank">官方说明与例子</a></p>
+
+    <h2> $index 的用法，注意判断是first和last的情况，需要调用 $index() 而不是 $index</h2>
+
+    <div class="example-exhibition" id="example1">
+
+        <h4>People</h4>
+        <ol data-bind="foreach: people">
+            <li>
+                Name at position <span data-bind="text: $index"></span>:
+                <span data-bind="text: name"></span>
+                <a href="#" data-bind="click: $parent.removePerson">Remove</a>
+                <span data-bind="visible: $index() == 0">first</span>
+                <span data-bind="visible: $index() == $parent.people().length-1">last</span>
+                <span data-bind="visible: $index() % 2 == 1">even（双数）</span>
+                <span data-bind="visible: $index() % 2 == 0">odd（单数）</span>
+            </li>
+        </ol>
+        <button class="btn btn-primary" data-bind="click: addPerson">Add</button>
+        <button class="btn btn-default" data-bind="click: removeAll">Remove All</button>
+
+        <script type="text/javascript">
+
+            function AppViewModel() {
+                var self = this;
+
+                self.people = ko.observableArray([
+                    {name: 'Bert'},
+                    {name: 'Charles'},
+                    {name: 'Denise'},
+                    {name: 'Linder'}
+                ]);
+
+                self.addPerson = function () {
+                    self.people.push({name: "New at " + new Date()});
+                };
+
+                self.removePerson = function (data,event) {
+                    //self.people.remove(this);
+                    //或者
+                    self.people.remove(data);
+                };
+
+                self.removeAll = function(){
+                    self.people.removeAll();
+                };
+
+            }
+
+            ko.applyBindings(new AppViewModel(),document.getElementById('example1'));
+
+        </script>
+    </div>
+</div>
+</body>
+</html>

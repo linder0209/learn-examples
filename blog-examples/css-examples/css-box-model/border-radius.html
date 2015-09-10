@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>border-radius 用法</title>
+    <style>
+        ol > li {
+            padding: 10px;
+            background-color: #008ab8;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        .left{
+            float: left;
+            margin-right: 50px;
+        }
+        .demo1 .one {
+            border-radius: 10px;
+        }
+        .demo1 .two {
+            border-radius:10px 20px;
+        }
+        .demo1 .three {
+            border-radius:10px 20px 30px;
+        }
+        .demo1 .four {
+            border-radius:10px 20px 30px 40px;
+        }
+        .demo1 .five {
+            border-radius:80% 50% 20% 10%;
+        }
+        .demo2 .one {
+            border-radius:10px/5px;
+        }
+        .demo2 .two {
+            border-radius:10px 20px/5px 10px;
+        }
+        .demo2 .three {
+            border-radius:10px 20px 30px/5px 10px 15px;
+        }
+        .demo2 .four {
+            border-radius:10px 20px 30px 40px/5px 10px 15px 20px;
+        }
+        .demo2 .five {
+            border-radius:10px 20% 30px 40%/5% 10px 15% 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="left">
+    <h2>水平与垂直半径相同时：</h2>
+    <ol class="demo1">
+        <li class="one">提供1个参数<br />border-radius:10px;</li>
+        <li class="two">提供2个参数<br />border-radius:10px 20px;</li>
+        <li class="three">提供3个参数<br />border-radius:10px 20px 30px;</li>
+        <li class="four">提供4个参数<br />border-radius:10px 20px 30px 40px;</li>
+        <li class="five">百分比设置<br />border-radius:80% 50% 20% -20%;</li>
+    </ol>
+</div>
+<div class="left">
+    <h2>水平与垂直半径不同时：</h2>
+    <ol class="demo2">
+        <li class="one">提供1个参数<br />border-radius:10px/5px;</li>
+        <li class="two">提供2个参数<br />border-radius:10px 20px/5px 10px;</li>
+        <li class="three">提供3个参数<br />border-radius:10px 20px 30px/5px 10px 15px;</li>
+        <li class="four">提供4个参数<br />border-radius:10px 20px 30px 40px/5px 10px 15px 20px;</li>
+        <li class="five">百分比和长度混合设置<br />border-radius:10px 20% 30px 40%/5% 10px 15% 20px;</li>
+    </ol>
+</div>
+</body>
+</html>

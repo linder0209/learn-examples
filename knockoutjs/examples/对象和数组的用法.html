@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../styles/examples.css" rel="stylesheet">
+    <title>对象和数组的用法</title>
+</head>
+<body>
+<div class="container">
+    <h2>对象和数组的用法</h2>
+
+    <p>
+        <button class="btn btn-primary" type="button" id="addLabel">新增标签</button>
+    </p>
+
+    <!--列表-->
+    <table class="table table-striped" id="customerLabelsList">
+        <thead>
+        <tr>
+            <th width="15%">标签名称</th>
+            <th width="65%">标签值集合</th>
+            <th width="15%">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>标签1</td>
+            <td>标签值</td>
+            <td>
+                <a href="" class="updateLabel" data-id="1">修改</a>
+                <a href="" class="deleteLabel" data-id="1">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script type="kotmpl" id="customLabelModalTmpl">
+    <div class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" data-bind="text: modalTitle"></h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" data-bind="visible: showlabelForm">
+                    <div class="form-group">
+                        <label for="customLabelName" class="col-sm-2 control-label">标签</label>
+
+                        <div class="col-sm-10">
+                            <input id="customLabelName" type="text" data-bind="value: customLabel.customLabelName" maxlength="50">
+                            <a href="#" data-bind="click: quoteLabel" name="quoteLabel">引用</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">标签值</label>
+
+                        <div class="col-sm-10">
+                            <div data-bind="foreach: customLabel.customLabelPros">
+                                <p>
+                                    <input type="text" class="textInput" name="labelValue" maxlength="50"
+                                           data-bind="value: customLableProValue">
+                                    <a href="#" name="deleteLabelValue"
+                                       data-bind="visible:$parent.customLabel.customLabelPros().length!=1 ,click: $parent.deleteLabelValue">删除</a>
+                                    <a href="#" class="aImp" name="addLabelValue"
+                                       data-bind="visible:$index() == $parent.customLabel.customLabelPros().length-1,click: $parent.addLabelValue">新增</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="table-responsive" data-bind="visible:showLabelsContainer">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>标签名称</th>
+                            <th>标签值集合</th>
+                        </tr>
+                        </thead>
+                        <tbody data-bind="foreach: labels">
+                        <tr>
+                            <td>
+                                <input type="radio" name="customLabelName" data-bind="event: { change: $parent.selectLabel}">
+                                <span data-bind="text: customLabelName"> </span>
+                            </td>
+                            <td>
+                                <ul class="label-value-item" data-bind="foreach: customLabelPros">
+                                    <li data-bind="text: customLableProValue"></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div>
+                       <button type="button" class="btn btn-info" data-bind="cli">选择</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-bind="click: submitData">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</script>
+
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../../bower_components/knockout/dist/knockout.debug.js"></script>
+<script src="./js/object_array.js"></script>
+</body>
+</html>

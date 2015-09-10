@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>font-size 用法</title>
+    <style>
+        p {
+            margin: 15px 0;
+            border: 1px solid #008ab8;
+            padding: 10px;
+            width: 500px;
+        }
+
+        .xx-small p {
+            font-size: xx-small;
+        }
+
+        .x-small p {
+            font-size: x-small;
+        }
+
+        .small p {
+            font-size: small;
+        }
+
+        .medium p {
+            font-size: medium;
+        }
+
+        .large p {
+            font-size: large;
+        }
+
+        .x-large p {
+            font-size: x-large;
+        }
+
+        .xx-large p {
+            font-size: xx-large;
+        }
+
+        .smaller p {
+            font-size: 20px;
+        }
+
+        .smaller p span {
+            font-size: smaller;
+            border: 1px solid #ff0000;
+        }
+
+        .larger p {
+            font-size: 25px;
+        }
+
+        .larger p span {
+            font-size: larger;
+            border: 1px solid #ff0000;
+        }
+
+        .float p {
+            font-size: 25px;
+        }
+
+        .percentage {
+            font-size: 20px;
+        }
+
+        .percentage span {
+            font-size: 60%;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li class="xx-small">
+        <strong>尺寸大小为xx-small：</strong>
+
+        <p>xx-small尺寸的文字。</p>
+    </li>
+    <li class="x-small">
+        <strong>尺寸大小为x-small：</strong>
+
+        <p>x-small尺寸的文字。</p>
+    </li>
+    <li class="small">
+        <strong>尺寸大小为small：</strong>
+
+        <p>small尺寸的文字。</p>
+    </li>
+    <li class="medium">
+        <strong>尺寸大小为medium：</strong>
+
+        <p>medium尺寸的文字。</p>
+    </li>
+    <li class="large">
+        <strong>尺寸大小为large：</strong>
+
+        <p>large尺寸的文字。</p>
+    </li>
+    <li class="x-large">
+        <strong>尺寸大小为x-large：</strong>
+
+        <p>x-large尺寸的文字。</p>
+    </li>
+    <li class="xx-large">
+        <strong>尺寸大小为xx-large：</strong>
+
+        <p>xx-large尺寸的文字。</p>
+    </li>
+    <li class="smaller">
+        <strong>尺寸大小为 smaller：</strong>
+
+        <p>父元素的文字大小为 25px。
+            <span>子元素设置为smaller，文字的尺寸。</span>
+        </p>
+    </li>
+    <li class="larger">
+        <strong>尺寸大小为larger：</strong>
+
+        <p>父元素的文字大小为 25px。
+            <span>子元素设置为larger，文字的尺寸。</span>
+        </p>
+    </li>
+    <li class="float">
+        <strong>尺寸大小为20px：</strong>
+
+        <p>20px尺寸的文字。</p>
+    </li>
+    <li class="percentage">
+        <strong>尺寸大小为20px：</strong>
+
+        <p>父对象20px尺寸的文字。<span>我的尺寸只是父对象的60%</span></p>
+    </li>
+</ol>
+
+<div id="outer">
+    <div id="inner">some text. some text. some text.
+        <p>this is a paragragh.</p>
+    </div>
+</div>
+</body>
+</html>

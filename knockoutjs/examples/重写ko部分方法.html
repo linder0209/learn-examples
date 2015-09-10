@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../styles/examples.css" rel="stylesheet">
+    <script src="../../bower_components/knockout/dist/knockout.debug.js"></script>
+    <title>重写ko部分方法</title>
+</head>
+<body>
+<div class="container example">
+    <h2>重写ko部分方法</h2>
+
+    <h3>重写 ko.utils.unwrapObservable 去除输入内容首位空字符串</h3>
+
+    <div class="example-exhibition" id="example1">
+        <p><input type="text" data-bind="value: name"/></p>
+
+        <p>您输入的值是： <span data-bind="text: name"></span></p>
+        <script type="text/javascript">
+            ko.utils.unwrapObservable = function (value) {
+                var newValue;
+                if(ko.isObservable(value)){
+                    newValue = value();
+                    newValue = newValue == null ? newValue : newValue.trim();
+                }else{
+                    newValue = value;
+                }
+                return newValue;
+            };
+            function AppViewModel() {
+                var self = this;
+
+                self.name = ko.observable();
+
+            }
+
+            ko.applyBindings(new AppViewModel(),document.getElementById('example1'));
+
+        </script>
+    </div>
+</div>
+</body>
+</html>

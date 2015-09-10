@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>text-transform 用法</title>
+  <style>
+    .capitalize span {
+      text-transform: capitalize;
+    }
+
+    .uppercase span {
+      text-transform: uppercase;
+    }
+
+    .lowercase span {
+      text-transform: lowercase;
+    }
+    .full-width span {
+      text-transform: full-width;
+    }
+  </style>
+</head>
+<body>
+<ol>
+  <li>
+    <strong>将每个单词的首字母转换成大写</strong>
+
+    <div>原　文： <span>how do you do.</span></div>
+    <div class="capitalize">转换后： <span>how do you do.</span></div>
+  </li>
+  <li>
+    <strong>转换成大写</strong>
+
+    <div>原　文： <span>how do you do.</span></div>
+    <div class="uppercase">转换后： <span>how do you do.</span></div>
+  </li>
+  <li>
+    <strong>转换成小写</strong>
+
+    <div>原　文： <span>HOW ARE YOU.</span></div>
+    <div class="lowercase">转换后： <span>HOW ARE YOU.</span></div>
+  </li>
+
+  <li>
+    <strong>转换成full-width，请在高版本的firefox下查看这种效果</strong>
+
+    <div>原　文： <span>HOW ARE YOU.</span></div>
+    <div class="full-width">转换后： <span>HOW ARE YOU.</span></div>
+  </li>
+</ol>
+</body>
+</html>

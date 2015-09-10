@@ -1,0 +1,941 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" type="text/javascript" src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/gpt.js"></script><script type="text/javascript" src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/encoder.js"></script>
+
+<title>Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/style.css">
+<link type="text/css" rel="stylesheet" href="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/101461.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/TomXu/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/TomXu/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/TomXu/wlwmanifest.xml">
+<script src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'TomXu', cb_enable_mathjax=false;</script>
+<script src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/blog-common.js" type="text/javascript"></script>
+<script src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/skin.js" language="javascript" type="text/javascript"></script>
+<script async="" type="text/javascript" src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/pubads_impl_32.js"></script><script type="text/javascript" src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/osd.js"></script></head>
+<body>
+<a name="top"></a>
+
+
+<div id="container">
+    <a class="minyx" href="http://www.spiga.com.mx/">Spiga</a>
+    <ul id="topMnu">
+        <!-- 统计数据 -->
+        <li>
+        
+            
+Posts - 128, 
+Articles - 1, 
+Comments - 15150
+<!---->            
+        
+        </li>
+        <!-- 这边可以增加一些链接 -->
+        <!-- 博客园 -->
+        <li><a href="http://www.cnblogs.com/">Cnblogs</a></li>
+        <!-- 管理 -->
+        <li id="topMnu-dashboard"><a id="lnkDashboard" href="http://www.cnblogs.com/TomXu/admin/EditPosts.aspx">Dashboard</a></li>
+        <li><a id="lnkLogin" href="http://passport.cnblogs.com/login.aspx?ReturnUrl=http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html">Login</a></li>
+    </ul>
+    
+    <script language="javascript" type="text/javascript">
+        var m = window.__blog.topMenuRendered;
+        if (m) { m(__$("topMnu")); }
+    </script>
+
+    <div id="header">
+        <ul id="menu">
+                <!-- 首页，当前section加上current类 -->
+                <li id="menu-home" class="current"><a id="lnkHome" href="http://www.cnblogs.com/TomXu/">Home</a></li>
+                <!-- 联系 -->
+                <li id="menu-contact"><a id="lnkContact" href="http://space.cnblogs.com/msg/send/%e6%b1%a4%e5%a7%86%e5%a4%a7%e5%8f%94">Contact</a></li>
+                <!-- 相册 -->
+                <li id="menu-gallary"><a id="lnkGallery" href="http://www.cnblogs.com/TomXu/gallery.html">Gallery</a></li>
+                <!-- Rss订阅 -->
+                <li id="rss"><a id="lnkRss" href="http://www.cnblogs.com/TomXu/rss">RSS</a></li>
+        </ul>
+	<div id="newmsg"></div>
+        <h1>
+            <!-- 主标题 -->
+            <a id="lnkBlogTitle" href="http://www.cnblogs.com/TomXu/">汤姆大叔的博客</a>
+            <!-- 子标题 -->
+            <small></small>
+        </h1>
+    </div>
+    
+    <script language="javascript" type="text/javascript">
+        var m = window.__blog.headerRendered;
+        if (m) { m(__$("header")); }
+    </script>
+        
+    <div id="wrapper"> 
+        <div id="content">
+             <script language="javascript" type="text/javascript">
+                        var m = window.__blog.preRenderPosts;
+                        if (m) { m(); } 
+            </script>
+            
+
+<div class="post" id="post"><a name="top"></a>
+    <h2>
+        <a id="ctl01_lnkTitle" href="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园.htm">Knockout应用开发指南 第三章：绑定语法（3）</a></h2>
+    <small>
+        2011-11-24 12:52
+        by
+        汤姆大叔,
+        <span id="post_view_count">8226</span>
+        阅读,
+        <span id="post-comment-count"><span id="post_comment_count">6</span></span>
+        评论,
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#" onclick="PutInWz();return false;">收藏</a>,
+        <a id="ctl01_lnkEdit" href="http://i.cnblogs.com/EditPosts.aspx?postid=2256904">编辑</a></small>
+    <div class="entry">
+        <div id="cnblogs_post_body"><h3>12 &nbsp; value 绑定</h3>
+<p><strong>目的</strong></p>
+<p>value绑定是关联DOM元素的值到view model的属性上。主要是用在表单控件&lt;input&gt;，&lt;select&gt;和&lt;textarea&gt;上。</p>
+<p>当用户编辑表单控件的时候， view model对应的属性值会自动更新。同样，当你更新view model属性的时候，相对应的元素值在页面上也会自动更新。</p>
+<p>注：如果你在checkbox或者radio button上使用checked绑定来读取或者写入元素的 checked状态，而不是value 值的绑定。</p>
+<p>&nbsp;</p>
+<p><strong>例子</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Login name: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="value: userName"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Password: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="password"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="value: userPassword"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br> <br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        userName: ko.observable(</span><span style="background-color: #f5f5f5; color: #000000;">""</span><span style="background-color: #f5f5f5; color: #000000;">),        </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Initially blank</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">        userPassword: ko.observable(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">abc</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">), </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Prepopulate</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    };<br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br></strong></p>
+<p><strong>参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; <strong>主参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; KO设置此参数为元素的value值。之前的值将被覆盖。</p>
+<p>&nbsp;&nbsp;&nbsp; 如果参数是监控属性observable的，那元素的value值将根据参数值的变化而更新，如果不是，那元素的value值将只设置一次并且以后不在更新。</p>
+<p>&nbsp;&nbsp;&nbsp; 如果你提供的参数不是一个数字或者字符串（而是对象或者数组）的话，那显示的value值就是yourParameter.toString() 的内容（通常没用，所以最好都设置为数字或者字符串）。</p>
+<p>&nbsp;&nbsp;&nbsp; 不管什么时候，只要你更新了元素的值，那 KO都会将view model对应的属性值自动更新。默认情况下当用户离开焦点（例如onchange事件）的时候，KO才更新这个值，但是你可以通过第2个参数valueUpdate来特别指定改变值的时机。</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp; <strong>其它参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>valueUpdate</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果你使用valueUpdate参数，那就是意味着KO将使用自定义的事件而不是默认的离开焦点事件。下面是一些最常用的选项：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “<span style="color: #ff6600;">change</span>”（默认值） - 当失去焦点的时候更新view model的值，或者是&lt;select&gt; 元素被选择的时候。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “<span style="color: #ff6600;">keyup</span>” – 当用户敲完一个字符以后立即更新view model。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “<span style="color: #ff6600;">keypress</span>” – 当用户正在敲一个字符但没有释放键盘的时候就立即更新view model。不像 keyup，这个更新和keydown是一样的。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “<span style="color: #ff6600;">afterkeydown</span>” – 当用户开始输入字符的时候就更新view model。主要是捕获浏览器的keydown事件或异步handle事件。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 上述这些选项，如果你想让你的view model进行实时更新，使用“afterkeydown”是最好的选择。</p>
+<p>&nbsp;</p>
+<p><strong>例子：</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Your value: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="value: someValue, valueUpdate: 'afterkeydown'"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>You have typed: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="text: someValue"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span> <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> updates in real-time </span><span style="color: #008000;">--&gt;</span> <br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        someValue: ko.observable(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">edit me</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">)<br>    };<br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br></strong></p>
+<p><strong>注1：绑定下拉菜单drop-down list（例如SELECT）</strong></p>
+<p>Knockout对下拉菜单drop-down list绑定有一个特殊的支持，那就是在读取和写入绑定的时候，这个值可以是任意JavaScript对象，而不必非得是字符串。在你让你用户选择一组model对象的时候非常有用。具体例子，参考options绑定。</p>
+<p>类似，如果你想创建一个multi-select list，参考selectedOptions绑定。</p>
+<p>&nbsp;</p>
+<p><strong>注2：更新observable和non-observable属性值</strong></p>
+<p>如果你用value绑定将你的表单元素和你的observable属性关联起来，KO设置的2-way的双向绑定，任何一方改变都会更新另外一方的值。</p>
+<p>但是，如果你的元素绑定的是一个non-observable属性（例如是一个原始的字符串或者JavaScript表达式） ,KO会这样执行：</p>
+<ul>
+<li>如果你绑定的non-observable属性是简单对象，例如一个常见的属性值，KO会设置这个值为form表单元素的初始值，如果你改变form表单元素的值，KO会将值重新写回到view mode的这个属性。但当这个属性自己改变的时候，元素却不会再变化了（因为不是observable的），所以它仅仅是1-way绑定。</li>
+<li>如果你绑定的non-observable属性是复杂对象，例如复杂的JavaScript 表达式或者子属性，KO也会设置这个值为form表单元素的初始值，但是改变form表单元素的值的时候，KO不会再写会view model属性，这种情况叫one-time-only value setter，不是真正的绑定。</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>例子：</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>First value: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="value: firstValue"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>          <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> two-way binding </span><span style="color: #008000;">--&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Second value: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="value: secondValue"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> one-way binding </span><span style="color: #008000;">--&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Third value: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="value: secondValue.length"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>  <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> no binding </span><span style="color: #008000;">--&gt;</span> <br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        firstValue: ko.observable(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">hello</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">), </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Observable</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">        secondValue: </span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">hello, again</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Not observable</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    };<br>    ko.applyBindings(viewModel);<br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br></strong></p>
+<p><strong>依赖性</strong></p>
+<p>除KO核心类库外，无依赖。</p>
+<h3>&nbsp;</h3>
+<h3>13 &nbsp; checked 绑定</h3>
+<p><strong>目的</strong></p>
+<p>checked绑定是关联到checkable的form表单控件到view model上 - 例如checkbox（&lt;input type='checkbox'&gt;）或者radio button（&lt;input type='radio'&gt;） 。当用户check关联的form表单控件的时候，view model对应的值也会自动更新，相反，如果view model的值改变了，那控件元素的check/uncheck状态也会跟着改变。</p>
+<p>注：对text box，drop-down list和所有non-checkable的form表单控件，用<a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#_value_%E7%BB%91%E5%AE%9A">value绑定</a>来读取和写入是该元素的值，而不是checked绑定。</p>
+<p><strong>例子</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Send me spam: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="checkbox"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: wantsSpam"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span> <br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        wantsSpam: ko.observable(</span><span style="background-color: #f5f5f5; color: #0000ff;">true</span><span style="background-color: #f5f5f5; color: #000000;">) </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Initially checked</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    };<br><br>     </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> ... then later ...</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    viewModel.wantsSpam(</span><span style="background-color: #f5f5f5; color: #0000ff;">false</span><span style="background-color: #f5f5f5; color: #000000;">); </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> The checkbox becomes unchecked</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br></strong></p>
+<p><strong>Checkbox</strong><strong>关联到数组</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Send me spam: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="checkbox"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: wantsSpam"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="visible: wantsSpam"</span><span style="color: #0000ff;">&gt;</span><br>    Preferred flavors of spam:<br>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="checkbox"</span><span style="color: #ff0000;"> value</span><span style="color: #0000ff;">="cherry"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: spamFlavors"</span><span style="color: #0000ff;">/&gt;</span> Cherry<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="checkbox"</span><span style="color: #ff0000;"> value</span><span style="color: #0000ff;">="almond"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: spamFlavors"</span><span style="color: #0000ff;">/&gt;</span> Almond<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="checkbox"</span><span style="color: #ff0000;"> value</span><span style="color: #0000ff;">="msg"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: spamFlavors"</span><span style="color: #0000ff;">/&gt;</span> Monosodium Glutamate<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br><br> <br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        wantsSpam: ko.observable(</span><span style="background-color: #f5f5f5; color: #0000ff;">true</span><span style="background-color: #f5f5f5; color: #000000;">),<br>        spamFlavors: ko.observableArray([</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">cherry</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">almond</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">]) </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Initially checks the Cherry and Almond checkboxes</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    };<br><br>    </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> ... then later ...</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    viewModel.spamFlavors.push(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">msg</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">); </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Now additionally checks the Monosodium Glutamate checkbox</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br></strong></p>
+<p><strong>添加radio button</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Send me spam: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="checkbox"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: wantsSpam"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="visible: wantsSpam"</span><span style="color: #0000ff;">&gt;</span><br>    Preferred flavor of spam:<br>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="radio"</span><span style="color: #ff0000;"> name</span><span style="color: #0000ff;">="flavorGroup"</span><span style="color: #ff0000;"> value</span><span style="color: #0000ff;">="cherry"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: spamFlavor"</span><span style="color: #0000ff;">/&gt;</span> Cherry<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="radio"</span><span style="color: #ff0000;"> name</span><span style="color: #0000ff;">="flavorGroup"</span><span style="color: #ff0000;"> value</span><span style="color: #0000ff;">="almond"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: spamFlavor"</span><span style="color: #0000ff;">/&gt;</span> Almond<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="radio"</span><span style="color: #ff0000;"> name</span><span style="color: #0000ff;">="flavorGroup"</span><span style="color: #ff0000;"> value</span><span style="color: #0000ff;">="msg"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: spamFlavor"</span><span style="color: #0000ff;">/&gt;</span> Monosodium Glutamate<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br><br> <br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        wantsSpam: ko.observable(</span><span style="background-color: #f5f5f5; color: #0000ff;">true</span><span style="background-color: #f5f5f5; color: #000000;">),<br>        spamFlavor: ko.observable(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">almond</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">) </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Initially selects only the Almond radio button</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    };<br><br>     </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> ... then later ...</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    viewModel.spamFlavor(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">msg</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">); </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Now only Monosodium Glutamate is checked</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br><br></strong></p>
+<p><strong>参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; <strong>主参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; KO会设置元素的checked状态匹配到你的参数上，之前的值将被覆盖。对参数的解析取决于你元素的类型：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于checkbox，当参数为true的时候，KO会设置元素的状态为checked，反正设置为unchecked。如果你传的参数不是布尔值，那KO将会解析成布尔值。也就是说非0值和非null对象，非空字符串将被解析成true，其它值都被解析成false。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当用户check或者uncheck这个checkbox的时候，KO会将view model的属性值相应地设置为true或者false。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一个特殊情况是参数是一个数组，如果元素的值存在于数组，KO就会将元素设置为checked，如果数组里不存在，就设置为unchecked。如果用户对checkbox进行check或uncheck，KO就会将元素的值添加数组或者从数组里删除。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于radio buttons，KO只有当参数值等于radio button value属性值的时候才设置元素为checked状态。所以参数应是字符串。在上面的例子里只有当view model 的spamFlavor 属性等于“almond”的时候，该radio button才会设置为checked。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当用户将一个radio button选择上的时候 is selected，KO会将该元素的value属性值更新到view model属性里。上面的例子，当点击value= “cherry”的选项上， viewModel.spamFlavor的值将被设置为“cherry”。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当然，最有用的是设置一组radio button元素对应到一个单个的view model 属性。确保一次只能选择一个radio button需要将他们的name属性名都设置成一样的值（例如上个例子的flavorGroup值）。这样的话，一次就只能选择一个了。</p>
+<p>&nbsp;&nbsp;&nbsp; 如果参数是监控属性observable的，那元素的checked状态将根据参数值的变化而更新，如果不是，那元素的value值将只设置一次并且以后不在更新。</p>
+<p>&nbsp;&nbsp; <strong>&nbsp;</strong><strong>其它参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; 无</p>
+<p>&nbsp;</p>
+<p><strong>依赖性</strong></p>
+<p>除KO核心类库外，无依赖。</p>
+<h3>&nbsp;</h3>
+<h3>14 &nbsp; options 绑定</h3>
+<p><strong>目的</strong></p>
+<p>options绑定控制什么样的options在drop-down列表里（例如：&lt;select&gt;）或者 multi-select 列表里 （例如：&lt;select size='6'&gt;）显示。此绑定不能用于&lt;select&gt;之外的元素。关联的数据应是数组（或者是observable数组），&lt;select&gt;会遍历显示数组里的所有的项。</p>
+<p>&nbsp;</p>
+<p>注：对于multi-select列表，设置或者获取选择的多项需要使用<a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#_selectedOptions_%E7%BB%91%E5%AE%9A">selectedOptions</a>绑定。对于single-select列表，你也可以使用<a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#_value_%E7%BB%91%E5%AE%9A">value绑定</a>读取或者设置元素的selected项。</p>
+<p>&nbsp;</p>
+<p><strong>例1：Drop-down list</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Destination country: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">select </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="options: availableCountries"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">select</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><br> <br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        availableCountries: ko.observableArray([</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">France</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">Germany</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">Spain</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">]) </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> These are the initial options</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    };<br><br>    </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> ... then later ...</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    viewModel.availableCountries.push(</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">China</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">); </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Adds another option</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p><strong>例2：Multi-select list</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Choose some countries you'd like to visit: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">select </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="options: availableCountries"</span><span style="color: #ff0000;"> size</span><span style="color: #0000ff;">="5"</span><span style="color: #ff0000;"> multiple</span><span style="color: #0000ff;">="true"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">select</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br> <br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        availableCountries: ko.observableArray([</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">France</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">Germany</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">Spain</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">])<br>    };<br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br></strong></p>
+<p><strong>例3：Drop-down list展示的任意JavaScript对象，不仅仅是字符串</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br>    Your country:<br>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">select </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="options: availableCountries, <br>　　　　　　　　　　　　　　optionsText: 'countryName', value: selectedCountry, optionsCaption: 'Choose...'"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">select</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="visible: selectedCountry"</span><span style="color: #0000ff;">&gt;</span> <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> Appears when you select something </span><span style="color: #008000;">--&gt;</span><br>    You have chosen a country with population<br>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="text: selectedCountry() ? selectedCountry().countryPopulation : 'unknown'"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>.<br><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Constructor for an object with two properties</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> country </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #0000ff;">function</span><span style="background-color: #f5f5f5; color: #000000;"> (name, population) {<br>        </span><span style="background-color: #f5f5f5; color: #0000ff;">this</span><span style="background-color: #f5f5f5; color: #000000;">.countryName </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> name;<br>        </span><span style="background-color: #f5f5f5; color: #0000ff;">this</span><span style="background-color: #f5f5f5; color: #000000;">.countryPopulation </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> population;<br>    };<br><br>     </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        availableCountries: ko.observableArray([<br>            </span><span style="background-color: #f5f5f5; color: #0000ff;">new</span><span style="background-color: #f5f5f5; color: #000000;"> country(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">UK</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">65000000</span><span style="background-color: #f5f5f5; color: #000000;">),<br>            </span><span style="background-color: #f5f5f5; color: #0000ff;">new</span><span style="background-color: #f5f5f5; color: #000000;"> country(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">USA</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">320000000</span><span style="background-color: #f5f5f5; color: #000000;">),<br>            </span><span style="background-color: #f5f5f5; color: #0000ff;">new</span><span style="background-color: #f5f5f5; color: #000000;"> country(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">Sweden</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">29000000</span><span style="background-color: #f5f5f5; color: #000000;">)<br>        ]),<br>        selectedCountry: ko.observable() </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Nothing selected by default</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    };<br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br></strong></p>
+<p><strong>例4：Drop-down list展示的任意JavaScript对象，显示text是function的返回值</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> Same as example 3, except the &lt;select&gt; box expressed as follows: </span><span style="color: #008000;">--&gt;</span><br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">select </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="options: availableCountries,<br>                   optionsText: function(item) {<br>                       return item.countryName + ' (pop: ' + item.countryPopulation + ')'<br>                   },<br>                   value: selectedCountry,<br>                   optionsCaption: 'Choose...'"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">select</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br></strong></p>
+<p>注意例3和例4在optionsText值定义上的不同。</p>
+<p>&nbsp;</p>
+<p><strong>参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; <strong>主参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; 该参数是一个数组（或者observable数组）。对每个item，KO都会将它作为一个&lt;option&gt; 添加到&lt;select&gt;里，之前的options都将被删除。</p>
+<p>&nbsp;&nbsp;&nbsp; 如果参数是一个string数组，那你不需要再声明任何其它参数。&lt;select&gt;元素会将每个string显示为一个option。不过，如果你让用户选择的是一个JavaScript对象数组（不仅仅是string），那就需要设置optionsText和optionsValue这两个参数了。</p>
+<p>&nbsp;&nbsp;&nbsp; 如果参数是监控属性observable的，那元素的options项将根据参数值的变化而更新，如果不是，那元素的value值将只设置一次并且以后不在更新。</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp; <strong>其它参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>optionsCaption</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 有时候，默认情况下不想选择任何option项。但是single-select drop-down列表由于每次都要默认选择以项目，怎么避免这个问题呢？常用的方案是加一个“请选择的”或者“Select an item”的提示语，或者其它类似的，然后让这个项作为默认选项。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我们使用optionsCaption参数就能很容易实现，它的值是字符串型，作为默认项显示。例如：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;select data-bind='options: myOptions, optionsCaption: "Select an item...", value: myChosenValue'&gt;&lt;/select&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KO会在所有选项上加上这一个项，并且设置value值为undefined。所以，如果myChosenValue被设置为undefined（默认是observable的），那么上述的第一个项就会被选中。</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>optionsText</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 上面的例3展示的绑定JavaScript对象到option上 – 不仅仅是字符串。这时候你需要设置这个对象的那个属性作为drop-down列表或multi-select列表的text来显示。例如，例3中使用的是设置额外的参数optionsText将对象的属性名countryName作为显示的文本。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果不想仅仅显示对象的属性值作为每个item项的text值，那你可以设置optionsText 为JavaScript 函数，然后再函数里通过自己的逻辑返回相应的值（该函数参数为item项本身）。例4展示的就是返回item的2个属性值合并的结果。</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>optionsValue</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 和optionsText类似, 你也可以通过额外参数optionsValue来声明对象的那个属性值作为该&lt;option&gt;的value值。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 经典场景：如在更新options的时候想保留原来的已经选择的项。例如，当你重复多次调用Ajax获取car列表的时候，你要确保已经选择的某个car一直都是被选择上，那你就需要设置optionsValue为“carId”或者其它的unique标示符，否则的话KO找不知道之前选择的car是新options里的哪一项。</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>selectedOptions</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于multi-select列表，你可以用selectedOptions读取和设置多个选择项。技术上看它是一个单独的绑定，有自己的文档，请参考： selectedOptions绑定。</p>
+<p>&nbsp;</p>
+<p>注：已经被选择的项会再options改变的时候保留</p>
+<p>当使用options绑定&lt;select&gt;元素的时候，如果options改变，KO将尽可能第保留之前已经被选择的项不变（除非是你事先手工删除一个或多个已经选择的项）。这是因为options 绑定尝试依赖value值的绑定（single-select列表）和selectedOptions绑定（multi-select列表）。</p>
+<p>&nbsp;</p>
+<p><strong>依赖性</strong></p>
+<p>除KO核心类库外，无依赖。</p>
+<h3>&nbsp;</h3>
+<h3>15 &nbsp; selectedOptions 绑定</h3>
+<p><strong>目的</strong></p>
+<p>selectedOptions绑定用于控制multi-select列表已经被选择的元素，用在使用options绑定的&lt;select&gt;元素上。</p>
+<p>当用户在multi-select列表选择或反选一个项的时候，会将view model的数组进行相应的添加或者删除。同样，如果view model上的这个数组是observable数组的话，你添加或者删除任何item（通过push或者splice）的时候，相应的UI界面里的option项也会被选择上或者反选。这种方式是2-way绑定。</p>
+<p>注：控制single-select下拉菜单选择项，你可以使用value绑定。</p>
+<p>&nbsp;</p>
+<p><strong>例子</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br>    Choose some countries you'd like to visit:<br>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">select </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="options: availableCountries, selectedOptions: chosenCountries"</span><span style="color: #ff0000;"> size</span><span style="color: #0000ff;">="5"</span><span style="color: #ff0000;"> multiple</span><span style="color: #0000ff;">="true"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">select</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        availableCountries: ko.observableArray([</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">France</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">Germany</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">, </span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">Spain</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">]),<br>        chosenCountries: ko.observableArray([</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">Germany</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">]) </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Initially, only Germany is selected</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    }; <br><br>    </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> ... then later ...</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="background-color: #f5f5f5; color: #000000;">    viewModel.chosenCountries.push(</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">France</span><span style="background-color: #f5f5f5; color: #000000;">'</span><span style="background-color: #f5f5f5; color: #000000;">); </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> Now France is selected too</span><span style="background-color: #f5f5f5; color: #008000;"><br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong><br></strong></p>
+<p><strong>参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; <strong>主参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; 该参数是数组（或observable数组）。KO设置元素的已选项为和数组里match的项，之前的已选择项将被覆盖。</p>
+<p>&nbsp;&nbsp;&nbsp; 如果参数是依赖监控属性observable数组，那元素的已选择项selected options项将根据参数值的变化（通过push，pop，或其它<a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#_%E4%BD%BF%E7%94%A8observable%E6%95%B0%E7%BB%84">observable数组方法</a>）而更新，如果不是，那元素的已选择项selected options将只设置一次并且以后不在更新。</p>
+<p>&nbsp;&nbsp;&nbsp; 不管该参数是不是observable数组，用户在multi-select列表里选择或者反选的时候，KO都会探测到，并且更新数组里的对象以达到同步的结果。这样你就可以获取options已选项。</p>
+<p>&nbsp;&nbsp;&nbsp; <strong>其它参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 无</p>
+<p>&nbsp;</p>
+<p><strong>注：支持让用户选择任意JavaScript对象 </strong></p>
+<p>在上面的例子里，用户可以选择数组里的字符串值，但是选择不限于字符串，如果你愿意你可以声明包含任意JavaScript对象的数组，查看<a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#_options_%E7%BB%91%E5%AE%9A">options绑定</a>如何显示JavaScript对象到列表里。</p>
+<p>这种场景，你可以用selectedOptions来读取或设置这些对象本身，而不是页面上显示的option表示形式，这样做在大部分情况下都非常清晰。view model就可以探测到你从数组对象里选择的项了，而不必关注每个项和页面上展示的option项是如何map的。</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>依赖性</strong></p>
+<p>除KO核心类库外，无依赖。</p>
+<h3>&nbsp;</h3>
+<h3>16 &nbsp; uniqueName 绑定</h3>
+<p><strong>目的</strong></p>
+<p>uniqueName绑定确保所绑定的元素有一个非空的name属性。如果该元素没有name属性，那绑定会给它设置一个unique的字符串值作为name属性。你不会经常用到它，只有在某些特殊的场景下才用到，例如：</p>
+<ul>
+<li>在使用KO的时候，一些技术可能依赖于某些元素的name属性，尽快他们没有什么意义。例如，jQuery Validation验证当前只验证有name属性的元素。为配合Knockout UI使用，有些时候需要使用uniqueName绑定避免让jQuery Validation验证出错。</li>
+</ul>
+<ul>
+<li>IE 6下，如果radio button没有name属性是不允许被checked了。大部分时候都没问题，因为大部分时候radio button元素都会有name属性的作为一组互相的group。不过，如果你没声明，KO内部会在这些元素上使用uniqueName那么以确保他们可以被checked。</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>例子</strong></p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="value: someModelProperty, uniqueName: true"</span><span style="color: #0000ff;">/&gt;</span></pre>
+</div>
+<p><strong><br></strong></p>
+<p><strong>参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; <strong>主参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; 就像上面的例子一样，传入true（或者可以转成true的值）以启用uniqueName绑定。</p>
+<p>&nbsp;&nbsp;&nbsp; <strong>其它参数</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 无</p>
+<p>&nbsp;</p>
+<p><strong>依赖性</strong></p>
+<p>除KO核心类库外，无依赖。</p></div><div id="MySignature"></div>
+        
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="blog_post_info"><div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/TomXu/category/336771.html">[08]Knockout</a></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/TomXu/tag/Knockout/">Knockout</a>, <a href="http://www.cnblogs.com/TomXu/tag/asp.net%20MVC/">asp.net MVC</a>, <a href="http://www.cnblogs.com/TomXu/tag/JavaScript/">JavaScript</a>, <a href="http://www.cnblogs.com/TomXu/tag/MVVM/">MVVM</a>, <a href="http://www.cnblogs.com/TomXu/tag/ViewModel/">ViewModel</a></div>
+<div id="green_channel">
+绿色通道：
+<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(cb_entryId,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+<a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a>
+<a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://space.cnblogs.com/msg/send/%e6%b1%a4%e5%a7%86%e5%a4%a7%e5%8f%94" target="_blank">与我联系</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/icon_weibo_24.png" alt=""></a>
+</div>
+<div id="digg_block">
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/TomXu/" target="_blank"><img src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/u349491.jpg" class="author_avatar" alt=""></a>
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/TomXu/">汤姆大叔</a><br>
+<a href="http://home.cnblogs.com/u/TomXu/followees">关注 - 19</a><br>
+<a href="http://home.cnblogs.com/u/TomXu/followers">粉丝 - 4759</a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor">荣誉：<a href="http://www.cnblogs.com/expert/" target="_blank">推荐博客</a></div>
+<div id="author_profile_follow">
+<a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a>
+</div>
+</div>
+<div id="div_digg">										
+	<div class="diggit" onclick="votePost(cb_entryId,&#39;Digg&#39;)"> 
+		<span class="diggnum" id="digg_count">7</span>
+	</div>
+	<div class="buryit" onclick="votePost(cb_entryId,&#39;Bury&#39;)"> 
+		<span class="burynum" id="bury_count">0</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">
+    (请您对文章做出评价)
+    </div>	
+</div>
+</div></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256878.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256878.html" title="发布于2011-11-24 09:00">Knockout应用开发指南 第三章：绑定语法（2）</a><br><a href="http://www.cnblogs.com/TomXu/archive/2011/11/25/2256930.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/TomXu/archive/2011/11/25/2256930.html" title="发布于2011-11-25 09:01">Knockout应用开发指南 第四章：模板绑定</a><br></div>
+</div>
+
+
+    </div>    
+    <ul class="postmetadata">
+        <li id="ctl01_liCate" class="icon_cat"><strong>Categories: </strong>
+            <a href="http://www.cnblogs.com/TomXu/category/336771.html">[08]Knockout</a>            
+        </li>
+        <li id="ctl01_liTag" class="icon_bullet"><strong>Tags: </strong>
+            <a href="http://www.cnblogs.com/TomXu/tag/Knockout/">Knockout</a>, <a href="http://www.cnblogs.com/TomXu/tag/asp.net+MVC/">asp.net MVC</a>, <a href="http://www.cnblogs.com/TomXu/tag/JavaScript/">JavaScript</a>, <a href="http://www.cnblogs.com/TomXu/tag/MVVM/">MVVM</a>, <a href="http://www.cnblogs.com/TomXu/tag/ViewModel/">ViewModel</a>
+        </li>        
+    </ul>
+</div>
+<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=101461,cb_entryId=2256904,cb_blogApp=currentBlogApp,cb_blogUserGuid='65b02d3c-5b0b-e111-b7b9-842b2b196315',cb_entryCreatedDate='2011/11/24 12:52:00';loadViewCount(cb_entryId);</script>
+<script type="text/javascript">
+    var m = window.__blog.postRendered;
+    if (m) { m(__$("post")); }
+</script>
+
+<script type="text/javascript">
+    var m = window.__blog.postRenderPosts;
+    if (m) { m(); }
+</script><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<a class="addcomment" href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#comment_tip">Add your comment</a>
+<h3 id="comments"></h3>
+<div class="feedbackNoItems"></div>
+
+
+<ol class="commentlist" id="commentList">	
+
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#2277049" class="layer">#1楼</a><a name="2277049" id="comment_anchor_2277049"></a></cite> <a id="a_comment_author_2277049" href="http://www.cnblogs.com/gaotang/" target="_blank">高堂</a> <a href="http://space.cnblogs.com/msg/send/%e9%ab%98%e5%a0%82" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2011-12-22 19:48</span></small>
+			</h5>
+			<div id="comment_body_2277049" class="blog_comment_body">汤姆大叔<br>   您好！<br>      请教一个问题，关于两个Select二级联动，Knockout如何实现，刚试了半天， 也没有试出来！<br><br>    thanks</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2277049,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2277049,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2277049_avatar" style="display:none;">http://pic.cnitblog.com/face/u37156.jpg</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#2278506" class="layer">#2楼</a><a name="2278506" id="comment_anchor_2278506"></a>[<span class="louzhu">楼主</span>]</cite> <a id="a_comment_author_2278506" href="http://www.cnblogs.com/TomXu/" target="_blank">汤姆大叔</a> <a href="http://space.cnblogs.com/msg/send/%e6%b1%a4%e5%a7%86%e5%a4%a7%e5%8f%94" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2011-12-24 14:55</span></small>
+			</h5>
+			<div id="comment_body_2278506" class="blog_comment_body"><fieldset class="comment_quote"><legend><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#2277049" title="查看引用原文">引用</a></legend>高堂：<br>汤姆大叔<br>   您好！<br>      请教一个问题，关于两个Select二级联动，Knockout如何实现，刚试了半天， 也没有试出来！<br><br>    thanks</fieldset><br>简单做了一个例子，请参考一下：<br><a href="http://jsfiddle.net/TomXu/MMtut/" target="_blank">http://jsfiddle.net/TomXu/MMtut/</a></div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2278506,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2278506,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2278506_avatar" style="display:none;">http://pic.cnitblog.com/face/u349491.jpg?id=02230504</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#2279975" class="layer">#3楼</a><a name="2279975" id="comment_anchor_2279975"></a></cite> <a id="a_comment_author_2279975" href="http://www.cnblogs.com/gaotang/" target="_blank">高堂</a> <a href="http://space.cnblogs.com/msg/send/%e9%ab%98%e5%a0%82" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2011-12-26 20:51</span></small>
+			</h5>
+			<div id="comment_body_2279975" class="blog_comment_body">thanks</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2279975,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2279975,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2279975_avatar" style="display:none;">http://pic.cnitblog.com/face/u37156.jpg</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#2322975" class="layer">#4楼</a><a name="2322975" id="comment_anchor_2322975"></a></cite> <a id="a_comment_author_2322975" href="http://www.cnblogs.com/yanbin/" target="_blank">彦斌</a> <a href="http://space.cnblogs.com/msg/send/%e5%bd%a6%e6%96%8c" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-03-05 11:55</span></small>
+			</h5>
+			<div id="comment_body_2322975" class="blog_comment_body">请教一个问题，如何让一个下拉框默认选中一条<br> 也就是说数据源是一个数组，不是单个值，这样如何才能让它被选中某一行呢?<br><br>-------------------------------------<br>看了上面的那个联动例子，问题已解决，非常感谢</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2322975,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2322975,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2322975_avatar" style="display:none;">http://pic.cnitblog.com/face/u66471.jpg</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#2323128" class="layer">#5楼</a><a name="2323128" id="comment_anchor_2323128"></a></cite> <a id="a_comment_author_2323128" href="http://www.cnblogs.com/yanbin/" target="_blank">彦斌</a> <a href="http://space.cnblogs.com/msg/send/%e5%bd%a6%e6%96%8c" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-03-05 14:12</span></small>
+			</h5>
+			<div id="comment_body_2323128" class="blog_comment_body">再请教下<br>我看你获取其它非ID值，是用以下方式取得<br>self.availableProvinces().each(function (p) { return p.provinceId == provinceId ? self.availableCities(p.cities) : null });<br><br>有没有更简单的方式，类似像<br>selectedProvince().provinceId<br>selectedProvince().cities<br><br>以便在所有的方法里调用？<br><br>我看了你的那个例子，<br>里面有个设置默认选中行的<br> koViewModel.selectedProvinceId(2);<br>在我这边有个很奇怪的问题<br>如果我的id值为字符串，就无法选中默认值<br>actionViewModel.selectedActionCode1('FS');<br>下拉框永远显示 “请选择”<br>但是下拉框中的FS 却有被高亮显示，不知道楼主有没有碰到这个问题，求解决。谢谢！<br></div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2323128,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2323128,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2323128_avatar" style="display:none;">http://pic.cnitblog.com/face/u66471.jpg</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#2417885" class="layer">#6楼</a><a name="2417885" id="comment_anchor_2417885"></a><span id="comment-maxId" style="display:none;">2417885</span><span id="comment-maxDate" style="display:none;">2012/7/4 17:44:34</span></cite> <a id="a_comment_author_2417885" href="http://home.cnblogs.com/u/406980/" target="_blank">wuben</a> <a href="http://space.cnblogs.com/msg/send/wuben" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-07-04 17:44</span></small>
+			</h5>
+			<div id="comment_body_2417885" class="blog_comment_body">关于Option中的例4<br>visible: selectedCountry<br>text:SelectedCountry()<br>怎么一个用“属性”一个用“方法”<br>求解！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2417885,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2417885,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+</ol>
+
+<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/TomXu/archive/2011/11/24/2256904.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"><a href="http://www.cnblogs.com/cmt/p/3577868.html" target="_blank">游戏开发者报名得阿里云代金券，更有千元大奖等你拿</a></div>
+<div id="site_nav_under"><a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">博客园首页</a><a href="http://q.cnblogs.com/" target="_blank" title="程序员问答社区">博问</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://job.cnblogs.com/" target="_blank">程序员招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a></div>
+<div id="ad_under_post_holder">
+
+<div id="google_ad_c1" class="c_ad_block">
+    <!-- cnblogs_blogpost_C1_sitehome -->
+    <div id="div-gpt-ad-1346480159711-0" style="width: 300px; height: 250px; ">
+    
+    <div id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__container__" style="border: 0pt none; "><iframe id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom; " src="javascript:"<html><body style='background:transparent'></body></html>""></iframe></div><iframe id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none; " src="javascript:"<html><body style='background:transparent'></body></html>""></iframe></div>
+</div>
+<div id="blog_news_kb"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/201932/" target="_blank">腾讯手游想疯狂变现 却遭遇360狙击</a><br> ·  <a href="http://news.cnblogs.com/n/201931/" target="_blank">迅雷推“红雷盒子”机顶盒：3月28日发售 售399元</a><br> ·  <a href="http://news.cnblogs.com/n/201930/" target="_blank">全球最大飞行器竟是美军间谍工具</a><br> ·  <a href="http://news.cnblogs.com/n/201929/" target="_blank">中国人民银行行长周小川：绝不取缔余额宝</a><br> ·  <a href="http://news.cnblogs.com/n/201928/" target="_blank">神PS！奥斯卡影星与年轻时自己的合影</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/191521/" target="_blank">指尖上的浏览：如何理解用户的眼？</a><br> ·  <a href="http://kb.cnblogs.com/page/200929/" target="_blank">Node.js 究竟是什么？</a><br> ·  <a href="http://kb.cnblogs.com/page/194376/" target="_blank">Habya'a（临时拼凑的组件）与技术债务</a><br> ·  <a href="http://kb.cnblogs.com/page/200528/" target="_blank">关于在线教育和线下教育的六个问题</a><br> ·  <a href="http://kb.cnblogs.com/page/199787/" target="_blank">别错把需求当市场</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div></div>
+<script type="text/javascript">
+var enableGoogleAd = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+fixPostBodyFormat();
+loadAdUnderPost();
+</script>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+loadBlogSignature();
+LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+</script>
+<script type="text/javascript">
+    $.ajax({ url: 'http://counter.cnblogs.com/blog/post/' + cb_entryId, type: 'get', dataType: 'script', cache: true });
+</script>
+</div>
+
+        </div>
+        
+	    <script language="javascript" type="text/javascript">
+	               var m = window.__blog.contentRendered;
+	               if (m) { m(__$("content")); }
+        </script>
+
+	    <div id="sidebar">
+			    
+<div id="about">
+<div>
+<h2 id="about_title">About</h2>
+<div id="about_body">
+<div id="blog-news" style=""><p><img style="float:left;margin-right:10px" alt="" src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/tom.jpg" height="150" width="150"><strong>目前工作</strong>：项目管理（PMP）<br>
+<strong>曾获认证</strong>：MCP、MCSE、MCDBA、MCTS、MCITP、MCPD、PMP、MVP<br>
+<strong>略有小成</strong>：软件架构、设计模式、OOD、OOP、DI、IOC、AOP、SOA<br>
+<strong>兴趣爱好</strong>：技术、管理、英文、吃喝玩乐乱侃空
+</p>
+<p style="clear:both"></p>
+<br>
+熟悉Waterfall、Agile(Scrum&amp;XP)，染指C#、ASP.NET、MVC、EF、NHibernate、SQL Server、Oracle、JavaScript、HTML5、CSS3、JQuery、Knockout、Silverlight、WPF、WCF、ADFS等技术<br>
+<br>
+<span style="color: red;">注：</span>本人翻译的技术文章皆不是逐句翻译，而是按照自己的理解翻译的（当然也去除了一些不影响理解但本人实在不知道如何组织的句子）。<br>
+<br>
+<p style="clear:both"></p>
+<fieldset> <legend>作品上市</legend>
+<p><img style="float:left;margin-right:10px" src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/shupi.jpg" alt="" width="150">
+[1] <a href="http://product.china-pub.com/3769483" target="_blank">China-Pub</a>
+<br>
+<br>
+</p>
+<p style="clear:both"></p><br>
+<p><img style="float:left;margin-right:10px" src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/o_jsdp.jpg" alt="" width="150">
+[1] <a href="http://book.jd.com/11253887.html" target="_blank">京东商城</a>
+<br>
+[2] <a href="http://www.amazon.cn/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BE%8E-Addy-Osmani/dp/B00D6MT3LG/" target="_blank">卓越亚马逊</a>
+<br>
+[3] <a href="http://product.dangdang.com/product.aspx?product_id=23266635" target="_blank">当当网</a>
+<br>
+[4] <a href="http://product.china-pub.com/3768064" target="_blank">China-Pub</a>
+<br>
+[5] <a href="http://book.douban.com/subject/24744217/" target="_blank">豆瓣网</a>
+<br>
+[6] <a href="http://s.taobao.com/search?q=JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20Addy%20Osmani" target="_blank">淘宝网</a>
+<br>
+<br>
+</p>
+<div style="clear:both"></div>
+<p><img style="float:left;margin-right:10px" src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/o_EloquentJavaScript.jpg" alt="" width="150">
+[1] <a href="http://book.360buy.com/11091494.html" target="_blank">京东商城</a>
+<br>
+[2] <a href="http://www.amazon.cn/JavaScript%E7%BC%96%E7%A8%8B%E7%B2%BE%E8%A7%A3-%E5%93%88%E5%BC%97%E8%B4%9D%E5%85%8B/dp/B009A7D25E/ref=sr_1_11" target="_blank">卓越亚马逊</a>
+<br>
+[3] <a href="http://union.dangdang.com/transfer/transfer.aspx?from=P-263982&backurl=http://product.dangdang.com/product.aspx?product_id=22873894" target="_blank">当当网</a>
+<br>
+[4] <a href="http://product.china-pub.com/3684096" target="_blank">China-Pub</a>
+<br>
+[5] <a href="http://book.douban.com/subject/19933548/" target="_blank">豆瓣网</a>
+<br>
+[6] <a href="http://s.taobao.com/search?q=JavaScript%E7%BC%96%E7%A8%8B%E7%B2%BE%E8%A7%A3" target="_blank">淘宝网</a>
+<br>
+<br>
+<a href="http://www.cnblogs.com/TomXu/archive/2012/10/21/JSError.html" target="_blank">本书勘误</a>
+</p>
+
+</fieldset><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/TomXu/">汤姆大叔</a><br>园龄：<a href="http://home.cnblogs.com/u/TomXu/" title="入园时间：2011-11-10">2年3个月</a><br>荣誉：<a href="http://www.cnblogs.com/expert/">推荐博客</a><br>粉丝：<a href="http://home.cnblogs.com/u/TomXu/followers/">4759</a><br>关注：<a href="http://home.cnblogs.com/u/TomXu/followees/">19</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="cnblogs.UserManager.FollowBlogger(&#39;65b02d3c-5b0b-e111-b7b9-842b2b196315&#39;)">+加关注</a></div></div></div>
+<script type="text/javascript">loadBlogNews();</script>
+</div>
+</div>
+</div>
+
+			    <script language="javascript" type="text/javascript">
+                        var m = window.__blog.aboutRendered;
+                        if (m) { m(__$("about")); }
+                </script>
+                
+<script type="text/javascript">
+function zzk_go()
+{
+	var blogapp = 'TomXu';
+	var keystr = encodeURIComponent("blog:"+blogapp+" "+document.getElementById('q').value);
+    window.location = "http://zzk.cnblogs.com/s?w="+keystr;
+}
+function zzk_go_enter(event)
+{
+	if(event.keyCode == 13)
+	{
+	    zzk_go();
+	    return false;
+	}
+}
+</script>
+
+<div id="mySearchWrapper">
+    <div id="mySearch">
+        <input type="image" src="./Knockout应用开发指南 第三章：绑定语法（3） - 汤姆大叔 - 博客园_files/btnsearch.gif" id="btnZzk" class="submit" onclick="zzk_go();return false;">
+        <label class="lb_search"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="keyword"></label>
+    </div>
+</div>
+
+                <script language="javascript" type="text/javascript">
+                                var m = window.__blog.searchFormRendered;
+                                if (m) { m(__$("searchform")); }
+                </script>
+                <div id="sideMain">
+                <div id="side-recent-posts">
+<h2>最新随笔</h2>
+ <ul class="bullet">
+
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2013/06/14/3135050.html">新书《JavaScript设计模式 》出版，感谢支持</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/10/22/2733027.html">《JavaScript编程精解》回馈网友，汤姆大叔送书30本</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/10/21/JSError.html">《JavaScript编程精解》勘误</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/07/26/2581268.html">深入理解JavaScript系列（结局篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/07/24/2581239.html">深入理解JavaScript系列（50）：Function模式（下篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/07/23/2580701.html">深入理解JavaScript系列（49）：Function模式（上篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/26/2443010.html">深入理解JavaScript系列（48）：对象创建模式（下篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/25/2439527.html">深入理解JavaScript系列（47）：对象创建模式（上篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/24/2438050.html">深入理解JavaScript系列（46）：代码复用模式（推荐篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/23/2438005.html">深入理解JavaScript系列（45）：代码复用模式（避免篇）</a></li>
+	
+</ul>
+</div><div id="side-recent-comments">
+    <h2>最新评论</h2>
+    <ul class="voice">
+    
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/09/2306329.html#2887741">Re:深入理解JavaScript系列（7）：S.O.L.I.D五大原则之开闭原则OCP</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/09/2306329.html#2887741">
+                @蓝丶 sky引用@chasefornone如果先设置my的renderInput，基类中的renderInput就会覆盖你重写的那个函数，这样就没用了。而写在后面可以覆盖基类中的renderInpu...
+                 -- LoveJenny
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html#2887325">Re:深入理解JavaScript系列</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html#2887325">
+                @linjisong<br>麻烦发给我一份，这是我的邮箱: wyf061@126.com<br>谢谢。
+                 -- Vincent Wu
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/06/2305513.html#2887245">Re:深入理解JavaScript系列（6）：S.O.L.I.D五大原则之单一职责SRP</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/06/2305513.html#2887245">
+                @汤姆大叔引用引用引用600120：感觉大叔学习精力充沛哦，问个个人问题，大叔有孩子了没？有了，儿子，所以不担心身体了，也敢喝可乐了，嘿嘿有了儿子，就更要担心身体了，只是不用担心自己不孕不育了，呵呵。
+                 -- LoveJenny
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html#2887188">Re:深入理解JavaScript系列（4）：立即调用的函数表达式</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html#2887188">
+                @unbreakable引用@shinebob(function(){})()还记的我们var a=function(){},用a()来调用这个方法吧！此处a看做一个函数对象引用,那我们可以看做(fu...
+                 -- LoveJenny
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/04/11/2435452.html#2883158">Re:深入理解JavaScript系列（39）：设计模式之适配器模式</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/04/11/2435452.html#2883158">
+                @troy huang我觉得是没有必要执行这个操作，TurkeyAdapter包装类传过去的对象参数只要是WildTurkey类的子对象就可以了吧，...
+                 -- js蜗牛
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882937">Re:大叔手记（9）：小心使用IHttpHandler下的IsReusable属性</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882937">
+                本意应该是：IHttpHandler的实现类，要注意多线程问题，<br>而不是ProcessRequest (HttpContext context)中的context 有问题
+                 -- 个人知识管理
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882908">Re:大叔手记（9）：小心使用IHttpHandler下的IsReusable属性</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882908">
+                有误！<br>应是不能使用 HttpContext.Current来获取Request等
+                 -- 个人知识管理
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html#2881687">Re:深入理解JavaScript系列（14）：作用域链(Scope Chain)</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html#2881687">
+                @eeeeeeebar函数的执行上下文：barExecution Context={ 变量对象: barAO, this:foo, Scope Chain:[barAO,globalVO]}barAO...
+                 -- mciiv
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html#2881218">Re:深入理解JavaScript系列（2）：揭秘命名函数表达式</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html#2881218">
+                测试了一下，IE9以下的浏览器除了回忽略if语句，也会忽略return语句，直接解析命名表达式：	var f = (function() { if (false) { return function ...
+                 -- islerning
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/16/2309728.html#2880668">Re:深入理解JavaScript系列（12）：变量对象（Variable Object）</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/16/2309728.html#2880668">
+                引用变量对象(缩写为VO)是一个与执行上下文相关的特殊对象，它存储着在上下文中声明的以下内容： 变量 (var, 变量声明); 函数声明 (FunctionDeclaration, 缩写为FD); 函...
+                 -- mciiv
+            </a>
+            </li>
+        
+    </ul>
+</div></div>
+                <div id="sideRight">
+                <div id="side-archives">
+<h2>随笔档案</h2>
+<ul class="date">
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2013/06.html">2013年6月(1)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/10.html">2012年10月(2)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/07.html">2012年7月(3)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/04.html">2012年4月(12)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/03.html">2012年3月(5)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/02.html">2012年2月(18)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/01.html">2012年1月(14)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12.html">2011年12月(45)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2011/11.html">2011年11月(28)</a></li>
+ 
+
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="日历">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2014/02/01&#39;);return false;">&lt;</a></td><td align="center">2014年3月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2014/04/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">23</td><td class="CalOtherMonthDay" align="center">24</td><td class="CalOtherMonthDay" align="center">25</td><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalWeekendDay" align="center">1</td></tr><tr><td class="CalWeekendDay" align="center">2</td><td align="center">3</td><td class="CalTodayDay" align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td class="CalWeekendDay" align="center">8</td></tr><tr><td class="CalWeekendDay" align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalWeekendDay" align="center">15</td></tr><tr><td class="CalWeekendDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td class="CalWeekendDay" align="center">22</td></tr><tr><td class="CalWeekendDay" align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalWeekendDay" align="center">29</td></tr><tr><td class="CalWeekendDay" align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td></tr>
+</tbody></table></div><div id="side-link-341714">
+    <h2>[01]汤姆大叔系列博文</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/10/2283385.html" target="_blank">[01]大叔手记全集</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/11/21/2257154.html" target="_blank">[02]Knockout应用开发指南</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/11/25/2263050.html" target="_blank">[03]微软ASP.NET站点部署指南</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/06/2277499.html" target="_blank">[04]HTML5学习笔记简明版</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2284773.html" target="_blank">[05]大叔翻译博文索引</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" target="_blank">[06]深入理解JavaScript系列</a></li>
+    
+    </ul>
+</div><div id="side-link-345292">
+    <h2>[03]推荐博友算法相关</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/huangxincheng/category/340146.html" target="_blank">[01]算法系列15天速成</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/jinzhao/archive/2011/11/30/2268569.html" target="_blank">[02]算法实现大全</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/tuyile006/category/95974.html" target="_blank">[03]常用算法</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/Jax/category/57279.html" target="_blank">[04]算法大全</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/weidagang2046/archive/2009/07/31/1535902.html" target="_blank">[05]博客积分算法探讨</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/chehaoj/archive/2010/11/23/1885497.html" target="_blank">[06]常见算法推演</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/wangfupeng1988/archive/2011/12/26/2302216.html" target="_blank">[07]眼睛直观感受几种常用排序算法</a></li>
+    
+    </ul>
+</div></div>
+                <div id="sideLeft">            
+                <div id="side-categories">
+<h2>随笔分类</h2>
+<ul class="folder">
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/335665.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/335665.html">[01].Net Framework(4)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338101.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338101.html">[02]C#(3)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338102.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338102.html">[03]ASP.NET(5)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/335666.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/335666.html">[04]ASP.NET MVC(8)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/336175.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/336175.html">[05]HTML5/CSS3(16)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338104.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338104.html">[06]JS/jQuery(62)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/337109.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/337109.html">[07]Web开发(57)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/336771.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/336771.html">[08]Knockout(15)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338040.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338040.html">[09]配置管理(13)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/337899.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/337899.html">[10]项目管理(3)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/340064.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/340064.html">[11]大叔手记(22)</a> </li>
+
+</ul>
+</div><div id="side-top-posts-custom">
+<h2>推荐排行榜</h2>
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html">1. 深入理解JavaScript系列(260)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/28/2286877.html">2. 深入理解JavaScript系列（1）：编写高质量JavaScript代码的基本要点(249)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/21/2292722.html">3. 大叔手记（12）：我的一次面试经历（谈大叔如何应对面试官）(225)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/02/23/2364425.html">4. 大叔手记（21）：汤姆大叔博客园开博100天总结(197)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html">5. 深入理解JavaScript系列（2）：揭秘命名函数表达式(124)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/30/2288372.html">6. 深入理解JavaScript系列（3）：全面解析Module模式(104)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/12/2308594.html">7. 深入理解JavaScript系列（10）：JavaScript核心（晋级高手必读篇）(98)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html">8. 深入理解JavaScript系列（5）：强大的原型和原型链(93)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/19/2291448.html">9. 大叔手记（10）：别再让面试官问你单例（暨6种实现方式让你堵住面试官的嘴）(85)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2258849.html">10. 最锋利的Visual Studio Web开发工具扩展：Web Essentials详解(72)</a></li></ul></div>
+</div><div id="side-top-posts">
+<h2>阅读排行榜</h2>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html">1. 深入理解JavaScript系列(141708)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/28/2286877.html">2. 深入理解JavaScript系列（1）：编写高质量JavaScript代码的基本要点(60458)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/11/21/2257154.html">3. Knockout应用开发指南（完整版） 目录索引(34682)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html">4. 深入理解JavaScript系列（2）：揭秘命名函数表达式(32605)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/10/22/2733027.html">5. 《JavaScript编程精解》回馈网友，汤姆大叔送书30本(29832)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/21/2292722.html">6. 大叔手记（12）：我的一次面试经历（谈大叔如何应对面试官）(25719)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/30/2288372.html">7. 深入理解JavaScript系列（3）：全面解析Module模式(24692)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/12/2308594.html">8. 深入理解JavaScript系列（10）：JavaScript核心（晋级高手必读篇）(23956)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/06/2277510.html">9. 汤姆大叔博客索引(22745)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html">10. 深入理解JavaScript系列（5）：强大的原型和原型链(20925)</a></li></ul></div>
+</div><div id="side-link-342866">
+    <h2>[02]汤姆大叔推荐单篇</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/14/2286225.html" target="_blank">[01]大型JavaScript应用架构模式</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/19/2291448.html" target="_blank">[02]别再让面试官问你单例</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/21/2292722.html" target="_blank">[03]大叔的一次面试经历</a></li>
+    
+    </ul>
+</div><div id="side-link-345293">
+    <h2>[04]推荐博友精选好文</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/peterzb/archive/2009/06/14/1502918.html" target="_blank">[01]C# WinForm开发系列</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/lifepoem/archive/2011/12/16/2288017.html" target="_blank">[02]LINQ之路</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/xiao-f/archive/2011/12/19/lang.html" target="_blank">[03]Javascript面向对象扩展库</a></li>
+    
+    </ul>
+</div><div id="side-link-348581">
+    <h2>[05]推荐外部精选好文</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://kangax.github.com/es5-compat-table/" target="_blank">[01]ECMAScript 5浏览器兼容表</a></li>
+    
+        <li>
+        <a href="http://kb.cnblogs.com/page/127995/" target="_blank">[02]Javascript 面向对象编程</a></li>
+    
+    </ul>
+</div></div>
+			    
+			    <div id="sideContainer"></div>
+                <script language="javascript" type="text/javascript">
+                    $.ajax({
+                        url: '/' + currentBlogApp + '/mvc/blog/Minyx2_Lite_SideColumn.aspx',
+                        data: '{}',
+                        type: 'post',
+                        dataType: 'text',
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (data) {
+                            if (data) {
+                                $("#sideContainer").html(data);
+                                if ($("#blog-calendar").length) {
+                                    loadBlogCalendar();
+                                }
+                                loadBlogSideBlocks();
+                                var m = window.__blog.sideContainerRendered;
+                                if (m) { m(__$("sideContainer")); }
+                                window.__blog.sidebar.__layout();
+                            }
+                        }
+                    });
+                    
+                 </script>       	
+			                      
+ 		    </div>
+     		
+	        <script language="javascript" type="text/javascript">
+	        var m = window.__blog.sidebarRendered;
+	        if (m) { m(__$("sidebar")); }
+                </script>        
+     </div>
+     
+        <script language="javascript" type="text/javascript">
+            var m = window.__blog.wrapperRendered;
+            if (m) { m(__$("wrapper")); }
+        </script>
+
+</div>
+<!-- end of container -->
+    
+<script language="javascript" type="text/javascript">
+    var m = window.__blog.containerRendered;
+    if (m) { m(__$("container")); }
+</script>
+
+<div id="footer">
+        
+<p id="logoFoot">
+    <a href="http://www.spiga.com.mx/" title="Agencia Interactiva Spiga">www.spiga.com.mx</a>
+</p>
+<div class="footText">
+<p>
+Copyright ©2014 汤姆大叔
+</p>
+<p>
+<a href="http://www.cnblogs.com/">博客园</a>
+</p>
+</div>
+</div><!--end: footer -->
+
+<!--PageEndHtml Block Begin-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("body").prepend($("#div_digg").css({
+            "position": "fixed", "right": "0px", "bottom": "0px", "z-index": "10", "background-color": "white", "margin": "10px", "padding": "10px", "border": "1px solid #cccccc"
+        }));
+      $(".cnblogs_code_toolbar").hide();
+    });
+</script>
+<!--PageEndHtml Block End-->
+
+
+<iframe id="google_osd_static_frame_9075127120595" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px; "></iframe></body></html>

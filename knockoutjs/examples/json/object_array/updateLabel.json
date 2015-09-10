@@ -1,0 +1,41 @@
+{
+  "success":true,
+  "data": {
+    "customLableId": "234",
+    "customLabelName": "营业属性",
+    "labelProList" : [
+      {
+        "customLabelProId": 1,
+        "customLableProValue": "品牌品类专卖店"
+      },
+      {
+        "customLabelProId": 2,
+        "customLableProValue": "理货商"
+      },
+      {
+        "customLabelProId": 3,
+        "customLableProValue": "IT经销商"
+      },
+      {
+        "customLabelProId": 4,
+        "customLableProValue": "综合卖场"
+      },
+      {
+        "customLabelProId": 5,
+        "customLableProValue": "品牌品类专卖店"
+      },
+      {
+        "customLabelProId": 6,
+        "customLableProValue": "理货商"
+      },
+      {
+        "customLabelProId": 7,
+        "customLableProValue": "IT经销商"
+      },
+      {
+        "customLabelProId": 8,
+        "customLableProValue": "综合卖场"
+      }
+    ]
+  }
+}

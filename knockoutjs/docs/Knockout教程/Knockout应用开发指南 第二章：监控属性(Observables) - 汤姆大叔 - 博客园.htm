@@ -1,0 +1,1061 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" type="text/javascript" src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/gpt.js"></script><script type="text/javascript" src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/encoder.js"></script>
+
+<title>Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/style.css">
+<link type="text/css" rel="stylesheet" href="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/101461.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/TomXu/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/TomXu/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/TomXu/wlwmanifest.xml">
+<script src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'TomXu', cb_enable_mathjax=false;</script>
+<script src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/blog-common.js" type="text/javascript"></script>
+<script src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/skin.js" language="javascript" type="text/javascript"></script>
+<script async="" type="text/javascript" src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/pubads_impl_32.js"></script><script type="text/javascript" src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/osd.js"></script></head>
+<body>
+<a name="top"></a>
+
+
+<div id="container">
+    <a class="minyx" href="http://www.spiga.com.mx/">Spiga</a>
+    <ul id="topMnu">
+        <!-- 统计数据 -->
+        <li>
+        
+            
+Posts - 128, 
+Articles - 1, 
+Comments - 15150
+<!---->            
+        
+        </li>
+        <!-- 这边可以增加一些链接 -->
+        <!-- 博客园 -->
+        <li><a href="http://www.cnblogs.com/">Cnblogs</a></li>
+        <!-- 管理 -->
+        <li id="topMnu-dashboard"><a id="lnkDashboard" href="http://www.cnblogs.com/TomXu/admin/EditPosts.aspx">Dashboard</a></li>
+        <li><a id="lnkLogin" href="http://passport.cnblogs.com/login.aspx?ReturnUrl=http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html">Login</a></li>
+    </ul>
+    
+    <script language="javascript" type="text/javascript">
+        var m = window.__blog.topMenuRendered;
+        if (m) { m(__$("topMnu")); }
+    </script>
+
+    <div id="header">
+        <ul id="menu">
+                <!-- 首页，当前section加上current类 -->
+                <li id="menu-home" class="current"><a id="lnkHome" href="http://www.cnblogs.com/TomXu/">Home</a></li>
+                <!-- 联系 -->
+                <li id="menu-contact"><a id="lnkContact" href="http://space.cnblogs.com/msg/send/%e6%b1%a4%e5%a7%86%e5%a4%a7%e5%8f%94">Contact</a></li>
+                <!-- 相册 -->
+                <li id="menu-gallary"><a id="lnkGallery" href="http://www.cnblogs.com/TomXu/gallery.html">Gallery</a></li>
+                <!-- Rss订阅 -->
+                <li id="rss"><a id="lnkRss" href="http://www.cnblogs.com/TomXu/rss">RSS</a></li>
+        </ul>
+	<div id="newmsg"></div>
+        <h1>
+            <!-- 主标题 -->
+            <a id="lnkBlogTitle" href="http://www.cnblogs.com/TomXu/">汤姆大叔的博客</a>
+            <!-- 子标题 -->
+            <small></small>
+        </h1>
+    </div>
+    
+    <script language="javascript" type="text/javascript">
+        var m = window.__blog.headerRendered;
+        if (m) { m(__$("header")); }
+    </script>
+        
+    <div id="wrapper"> 
+        <div id="content">
+             <script language="javascript" type="text/javascript">
+                        var m = window.__blog.preRenderPosts;
+                        if (m) { m(); } 
+            </script>
+            
+
+<div class="post" id="post"><a name="top"></a>
+    <h2>
+        <a id="ctl01_lnkTitle" href="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园.htm">Knockout应用开发指南 第二章：监控属性(Observables)</a></h2>
+    <small>
+        2011-11-22 08:30
+        by
+        汤姆大叔,
+        <span id="post_view_count">12736</span>
+        阅读,
+        <span id="post-comment-count"><span id="post_comment_count">16</span></span>
+        评论,
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#" onclick="PutInWz();return false;">收藏</a>,
+        <a id="ctl01_lnkEdit" href="http://i.cnblogs.com/EditPosts.aspx?postid=2256820">编辑</a></small>
+    <div class="entry">
+        <div id="cnblogs_post_body"><p><span style="color: #ff9900;">关于Knockout的3个重要概念（Observables,DependentObservables,ObservableArray），本人无法准确表达它的准确含义，所以暂定翻译为（监控属性、依赖监控属性和监控数组），如果有好的建议请指正，多谢。</span></p>
+<h3>1&nbsp;&nbsp;&nbsp;&nbsp; 创建带有监控属性的view model</h3>
+<p><strong>Observables</strong></p>
+<p>Knockout是在下面三个核心功能是建立起来的：</p>
+<ol>
+<li>监控属性（Observables）和依赖跟踪（Dependency tracking）</li>
+<li>声明式绑定（Declarative bindings）</li>
+<li>模板（Templating）</li>
+</ol>
+<p>&nbsp;这一节，你讲学到3个功能中的第一个。 在这之前， 我们来解释一下MVVM模式和view model的概念。</p>
+<p>&nbsp;<strong>MVVM and View Models</strong></p>
+<p>Model-View-View Model (MVVM) 是一种创建用户界面的设计模式。 描述的是如何将复杂的UI用户界面分成3个部分：</p>
+<ul>
+<li>&nbsp;<strong>model</strong>: 你程序里存储的数据。这个数据包括对象和业务操作（例如：银子账户可以完成转账功能）， 并且独立于任何UI。使用KO的时候，通常说是向服务器调用Ajax读写这个存储的模型数据。</li>
+<li>&nbsp;<strong>view model</strong>: 在UI上，纯code描述的数据以及操作。例如，如果你实现列表编辑，你的view model应该是一个包含列表项items的对象和暴露的add/remove列表项（item）的操作方法。</li>
+</ul>
+<p>　　　　注意这不是UI本身：它不包含任何按钮的概念或者显示风格。它也不是持续数据模型 – 包含用户正在使用的未保存数据。使用KO的时候，你的view models是不包含任何HTML知识的纯JavaScript 对象。保持view model抽象可以保持简单，以便你能管理更复杂的行为。</p>
+<ul>
+<li>&nbsp;<strong>view</strong>: 一个可见的，交互式的，表示view model状态的UI。 从view model显示数据，发送命令到view model（例如：当用户click按钮的时候） ，任何view model状态改变的时候更新。</li>
+</ul>
+<p>使用KO的时候，你的view就是你带有绑定信息的HTML文档，这些声明式的绑定管理到你的view model上。或者你可以使用模板从你的view model获取数据生成HTML。</p>
+<p>创建一个view model，只需要声明任意的JavaScript object。例如：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> myViewModel = {<br>    personName: 'Bob',<br>    personAge: 123<br>};</pre>
+</div>
+<p>你可以为view model创建一个声明式绑定的简单view。例如：下面的代码显示personName 值：</p>
+<div class="cnblogs_code">
+<pre>The name is <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="text: personName"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>&nbsp;</p>
+<p><strong>Activating Knockout</strong></p>
+<p>data-bind属性尽快好用但它不是HTML的原生属性（它严格遵从HTML5语法， 虽然HTML4验证器提示有不可识别的属性但依然可用）。由于浏览器不识别它是什么意思，所以你需要激活Knockout 来让他起作用。</p>
+<p>激活Knockout，需要添加如下的 &lt;script&gt; 代码块：</p>
+<div class="cnblogs_code">
+<pre>ko.applyBindings(myViewModel);</pre>
+</div>
+<p>你可以将这个代码块放在HTML底部，或者放在jQuery的$函数或者ready 函数里，然后放在页面上面, 最终生成结果就是如下的HTML代码：</p>
+<div class="cnblogs_code">
+<pre>The name is <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>Bob<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>你可能奇怪ko.applyBindings使用的是什么样的参数,</p>
+<ul>
+<li>&nbsp;第一个参数是你想用于声明式绑定</li>
+<li>第二个参数（可选），可以声明成使用data-bind的HTML元素或者容器。例如， <span style="color: #ff6600;">ko.applyBindings(myViewModel, document.getElementById('someElementId'))</span>。它的现在是只有作为someElementId 的元素和子元素才能激活KO功能。 好处是你可以在同一个页面声明多个view model，用来区分区域。</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Observables</strong></p>
+<p>现在已经知道如何创建一个简单的view model并且通过binding显示它的属性了。但是KO一个重要的功能是当你的view model改变的时候能自动更新你的界面。当你的view model部分改变的时候KO是如何知道的呢？答案是：你需要将你的model属性声明成observable的, 因为它是非常特殊的JavaScript objects，能够通知订阅者它的改变以及自动探测到相关的依赖。</p>
+<p>&nbsp;</p>
+<p>例如：将上述例子的view model改成如下代码：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> myViewModel = {<br>    personName: ko.observable('Bob'),<br>    personAge: ko.observable(123)<br>};</pre>
+</div>
+<p>你根本不需要修改view – 所有的data-bind语法依然工作，不同的是他能监控到变化，当值改变时，view会自动更新。</p>
+<p>&nbsp;</p>
+<p><strong>监控属性（observables）的读和写</strong></p>
+<p>不是所有的浏览器都支持JavaScript的 getters and setters (比如IE),，所以为了兼容性，使用ko.observable监控的对象都是真实的function函数。</p>
+<ul>
+<li>&nbsp;读取监控属性（observable）的值，只需要直接调用监控属性（observable）（不需要参数），例如myViewModel.personName() 将返回'Bob', <span style="color: #ff6600;">myViewModel.personAge()</span> 将返回 123。</li>
+<li>写一个新值到监控属性（observable）上，调用这个observable属性并当新值作为参数。例如：调用 <span style="color: #ff6600;">myViewModel.personName('Mary')</span> 将更新name值为'Mary'。</li>
+<li>给一个model对象的多个属性写入新值，你可以使用链式语法。例如：<span style="color: #ff6600;"> myViewModel.personName('Mary').personAge(50)</span> 将会将name更新为 'Mary' 并且 将age更新为 50.</li>
+</ul>
+<p>监控属性（observables）的特征就是监控（observed），例如其它代码可以说我需要得到对象变化的通知，所以KO内部有很多内置的绑定语法。所以如果你的代码写成<span style="color: #ff6600;">data-bind="text: personName"</span>， text绑定注册到自身，一旦personName的值改变，它就能得到通知。</p>
+<p>当然调用<span style="color: #ff6600;">myViewModel.personName('Mary')</span>改变name的值，text绑定将自动更新这个新值到相应的DOM元素上。这就是如何将view model的改变传播到view上的。</p>
+<p>&nbsp;</p>
+<p><strong>监控属性（Observables）的显式订阅</strong></p>
+<p>通常情况下，你不用手工订阅，所以新手可以忽略此小节。高级用户，如果你要注册自己的订阅到监控属性（observables），你可以调用它的subscribe 函数。例如：</p>
+<div class="cnblogs_code">
+<pre>myViewModel.personName.subscribe(<span style="color: #0000ff;">function</span> (newValue) {<br>    alert("The person's new name is " + newValue);<br>});</pre>
+</div>
+<p>这个subscribe 函数在内部很多地方都用到的。你也可以终止自己的订阅：首先得到你的订阅，然后调用这个对象的dispose函数，例如：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> subscription = myViewModel.personName.subscribe(<span style="color: #0000ff;">function</span> (newValue) { <span style="color: #008000;">/*</span><span style="color: #008000;"> do stuff </span><span style="color: #008000;">*/</span> });<br><span style="color: #008000;">//</span><span style="color: #008000;"> ...then later...</span><span style="color: #008000;"><br></span>subscription.dispose(); <span style="color: #008000;">//</span><span style="color: #008000;"> I no longer want notifications</span></pre>
+</div>
+<p>大多数情况下，你不需要做这些，因为内置的绑定和模板系统已经帮你做好很多事情了，可以直接使用它们。</p>
+<p>&nbsp;</p>
+<h3>2&nbsp;&nbsp;&nbsp;&nbsp; 使用依赖监控属性(Dependent Observables)</h3>
+<p>如果你已经有了监控属性firstName和lastName，你想显示全称怎么办？ 这就需要用到依赖监控属性了 – 这些函数是一个或多个监控属性， 如果他们的依赖对象改变，他们会自动跟着改变。</p>
+<p>例如，下面的view model,</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> viewModel = {<br>    firstName: ko.observable('Bob'),<br>    lastName: ko.observable('Smith')<br>};</pre>
+</div>
+<p>… 你可以添加一个依赖监控属性来返回姓名全称：</p>
+<div class="cnblogs_code">
+<pre>viewModel.fullName = ko.dependentObservable(<span style="color: #0000ff;">function</span> () {<br>    <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">this</span>.firstName() + " " + <span style="color: #0000ff;">this</span>.lastName();<br>}, viewModel);</pre>
+</div>
+<p>并且绑定到UI的元素上，例如：</p>
+<div class="cnblogs_code">
+<pre>The name is <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="text: fullName"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>… 不管firstName还是lastName改变，全称fullName都会自动更新（不管谁改变，执行函数都会调用一次，不管改变成什么，他的值都会更新到UI或者其他依赖监控属性上）。</p>
+<p>&nbsp;</p>
+<p><strong>管理‘this’</strong></p>
+<p>新手可忽略此小节，你只需要安装上面例子中的代码模式写就行了，无需知道/关注这个this。</p>
+<p>你可能疑惑ko.dependentObservable的第二个参数是做什么用的（上面的例子中我传的是viewModel）, 它是声明执行依赖监控属性的this用的。 没有它，你不能引用到this.firstName() 和this.lastName()。 老练的JavaScript 开发人员不觉得this怎么样，但是如果你不熟悉JavaScript，那就对它就会很陌生。(C#和Java需要不需要为set一个值为设置this，但是JavaScript 需要，因为默认情况下他们的函数自身不是任何对象的一部分)。</p>
+<p>&nbsp;</p>
+<p>不幸的是， JavaScript 对象没有任何办法能引用他们自身，所以你需要通过myViewModelObject.myDependentObservable = ... 的形式添加依赖监控属性到view model对象上。 你不能直接在view model里声明他们，换句话说，你不能写成下面这样：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> viewModel = {<br>    myDependentObservable: ko.dependentObservable(<span style="color: #0000ff;">function</span>() {<br>        ...<br>    }, <span style="color: #008000;">/*</span><span style="color: #008000;"> can't refer to viewModel from here, so this doesn't work </span><span style="color: #008000;">*/</span>)<br>}</pre>
+</div>
+<p>… 相反你必须写成如下这样：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">var</span> viewModel = {<br>    <span style="color: #008000;">//</span><span style="color: #008000;"> Add other properties here as you wish</span><span style="color: #008000;"><br></span>};<br><br>viewModel.myDependentObservable = ko.dependentObservable(<span style="color: #0000ff;">function</span>() {<br>    ...<br>}, viewModel); <span style="color: #008000;">//</span><span style="color: #008000;"> This is OK</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>只要你知道期望什么，它确实不是个问题。J</p>
+<p>&nbsp;</p>
+<p><strong>依赖链</strong></p>
+<p>理所当然，如果你想你可以创建一个依赖监控属性的链。例如：</p>
+<ul>
+<li>监控属性items表述一组列表项</li>
+<li>监控属性selectedIndexes保存着被用户选上的列表项的索引</li>
+<li>依赖监控属性selectedItems 返回的是selectedIndexes 对应的列表项数组</li>
+<li>另一个依赖监控属性返回的true或false依赖于 selectedItems 的各个列表项是否包含一些属性（例如，是否新的或者还未保存的）。一些UI element（像按钮的启用/禁用）的状态取决于这个值）。</li>
+</ul>
+<p>&nbsp;然后，items或者selectedIndexes 的改变将会影响到所有依赖监控属性的链，所有绑定这些属性的UI元素都会自动更新。多么整齐与优雅！</p>
+<p>&nbsp;</p>
+<p><strong>可写的依赖监控属性</strong></p>
+<p>新手可忽略此小节，可写依赖监控属性真的是太advanced了，而且大部分情况下都用不到。</p>
+<p>正如所学到的，依赖监控属性是通过计算其它的监控属性而得到的。感觉是依赖监控属性正常情况下应该是只读的。那么，有可能让依赖监控属性支持可写么？你只需要声明自己的callback函数然后利用写入的值再处理一下相应的逻辑即可。</p>
+<p>你可以像使用普通的监控属性一样使用依赖监控属性 – 数据双向绑定到DOM元素上，并且通过自定义的逻辑拦截所有的读和写操作。这是非常牛逼的特性并且可以在大范围内使用。</p>
+<p>&nbsp;</p>
+<p><strong>例1：分解用户的输入</strong></p>
+<p>返回到经典的“first name + last name = full name” 例子上，你可以让事情调回来看: 让依赖监控属性fullName可写，让用户直接输入姓名全称，然后输入的值将被解析并映射写入到基本的监控属性firstName和lastName上：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">var</span> viewModel = {<br>    firstName: ko.observable("Planet"),<br>    lastName: ko.observable("Earth")<br>};<br><br>viewModel.fullName = ko.dependentObservable({<br><br>    read: <span style="color: #0000ff;">function</span> () {<br>        <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">this</span>.firstName() + " " + <span style="color: #0000ff;">this</span>.lastName();<br>    },<br><br>    write: <span style="color: #0000ff;">function</span> (value) {<br>        <span style="color: #0000ff;">var</span> lastSpacePos = value.lastIndexOf(" ");<br>        <span style="color: #0000ff;">if</span> (lastSpacePos &gt; 0) { <span style="color: #008000;">//</span><span style="color: #008000;"> Ignore values with no space character</span><span style="color: #008000;"><br></span>            <span style="color: #0000ff;">this</span>.firstName(value.substring(0, lastSpacePos)); <span style="color: #008000;">//</span><span style="color: #008000;"> Update "firstName"</span><span style="color: #008000;"><br></span>            <span style="color: #0000ff;">this</span>.lastName(value.substring(lastSpacePos + 1)); <span style="color: #008000;">//</span><span style="color: #008000;"> Update "lastName"</span><span style="color: #008000;"><br></span>        }<br>    },<br>    owner: viewModel<br>});</pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>这个例子里，写操作的callback接受写入的值，把值分离出来，分别写入到“firstName”和“lastName”上。 你可以像普通情况一样将这个view model绑定到DOM元素上，如下：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>First name: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="text: firstName"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Last name: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="text: lastName"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">h2</span><span style="color: #0000ff;">&gt;</span>Hello, <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="value: fullName"</span><span style="color: #0000ff;">/&gt;</span>!<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">h2</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>这是一个Hello World 例子的反例子，姓和名都不可编辑，相反姓和名组成的姓名全称却是可编辑的。</p>
+<p>上面的view model演示的是通过一个简单的参数来初始化依赖监控属性。你可以给下面的属性传入任何JavaScript对象：</p>
+<ul>
+<li>&nbsp;&nbsp; read — 必选，一个用来执行取得依赖监控属性当前值的函数。</li>
+<li>&nbsp;&nbsp; write — 可选，如果声明将使你的依赖监控属性可写，别的代码如果这个可写功能写入新值，通过自定义逻辑将值再写入各个基础的监控属性上。</li>
+<li>&nbsp;&nbsp; owner — 可选，如果声明，它就是KO调用read或write的callback时用到的this。查看“管理this”获取更新信息。</li>
+</ul>
+<p>&nbsp;<strong>例2：Value转换器</strong></p>
+<p>&nbsp;有时候你可能需要显示一些不同格式的数据，从基础的数据转化成显示格式。比如，你存储价格为float类型，但是允许用户编辑的字段需要支持货币单位和小数点。你可以用可写的依赖监控属性来实现，然后解析传入的数据到基本 float类型里：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>viewModel.formattedPrice = ko.dependentObservable({<br><br>    read: <span style="color: #0000ff;">function</span> () {<br>        <span style="color: #0000ff;">return</span> "$" + <span style="color: #0000ff;">this</span>.price().toFixed(2);<br>    },<br><br>    write: <span style="color: #0000ff;">function</span> (value) {<br>        <span style="color: #008000;">//</span><span style="color: #008000;"> Strip out unwanted characters, parse as float, then write the raw data back to the underlying "price" observable</span><span style="color: #008000;"><br></span>        value = parseFloat(value.replace(/[^\.\d]/g, ""));<br>        <span style="color: #0000ff;">this</span>.price(isNaN(value) ? 0 : value); <span style="color: #008000;">//</span><span style="color: #008000;"> Write to underlying storage</span><span style="color: #008000;"><br></span>    },<br>    owner: viewModel<br>});</pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>然后我们绑定formattedPrice到text box上:</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Enter bid price: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="value: formattedPrice"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>所以，不管用户什么时候输入新价格，输入什么格式，text box里会自动更新为带有2位小数点和货币符号的数值。这样用户可以看到你的程序有多聪明，来告诉用户只能输入2位小数，否则的话自动删除多余的位数，当然也不能输入负数，因为write的callback函数会自动删除负号。</p>
+<p>&nbsp;</p>
+<p><strong>例3：过滤并验证用户输入</strong></p>
+<p>例1展示的是写操作过滤的功能，如果你写的值不符合条件的话将不会被写入，忽略所有不包括空格的值。</p>
+<p>再多走一步，你可以声明一个监控属性isValid 来表示最后一次写入是否合法，然后根据真假值显示相应的提示信息。稍后仔细介绍，先参考如下代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">var</span> viewModel = {<br>    acceptedNumericValue: ko.observable(123),<br>    lastInputWasValid: ko.observable(<span style="color: #0000ff;">true</span>)<br>};<br><br>viewModel.attemptedValue = ko.dependentObservable({<br>    read: viewModel.acceptedNumericValue,<br>    write: <span style="color: #0000ff;">function</span> (value) {<br>        <span style="color: #0000ff;">if</span> (isNaN(value))<br>            <span style="color: #0000ff;">this</span>.lastInputWasValid(<span style="color: #0000ff;">false</span>);<br>        <span style="color: #0000ff;">else</span> {<br>            <span style="color: #0000ff;">this</span>.lastInputWasValid(<span style="color: #0000ff;">true</span>);<br>            <span style="color: #0000ff;">this</span>.acceptedNumericValue(value); <span style="color: #008000;">//</span><span style="color: #008000;"> Write to underlying storage</span><span style="color: #008000;"><br></span>        }<br>    },<br>    owner: viewModel<br>});</pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>… 按照如下格式声明绑定元素：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Enter a numeric value: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="value: attemptedValue"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="visible: !lastInputWasValid()"</span><span style="color: #0000ff;">&gt;</span>That's not a number!<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>现在，acceptedNumericValue 将只接受数字，其它任何输入的值都会触发显示验证信息，而会更新acceptedNumericValue。</p>
+<p>备注：上面的例子显得杀伤力太强了，更简单的方式是在&lt;input&gt;上使用jQuery Validation和number class。Knockout可以和jQuery Validation一起很好的使用，参考例子：<a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#_Editable_grid">grid editor</a> 。当然，上面的例子依然展示了一个如何使用自定义逻辑进行过滤和验证数据，如果验证很复杂而jQuery Validation很难使用的话，你就可以用它。</p>
+<p>&nbsp;</p>
+<p><strong>依赖跟踪如何工作的</strong></p>
+<p>新手没必要知道太清楚，但是高级开发人员可以需要知道为什么依赖监控属性能够自动跟踪并且自动更新UI…</p>
+<p>事实上，非常简单，甚至说可爱。跟踪的逻辑是这样的：</p>
+<ol>
+<li>当你声明一个依赖监控属性的时候，KO会立即调用执行函数并且获取初始化值。</li>
+<li>当你的执行函数运行的时候，KO会把所有需要依赖的依赖属性（或者监控依赖属性）都记录到一个Log列表里。</li>
+<li>执行函数结束以后，KO会向所有Log里需要依赖到的对象进行订阅。订阅的callback函数是重新运行你的执行函数。然后回头重新执行上面的第一步操作（并且注销不再使用的订阅）。</li>
+<li>最后KO会通知上游所有订阅它的订阅者，告诉它们我已经设置了新值。</li>
+</ol>
+<p>所有说，KO不仅仅是在第一次执行函数执行时候探测你的依赖项，每次它都会探测。举例来说，你的依赖属性可以是动态的：依赖属性A代表你是否依赖于依赖属性B或者C，这时候只有当A或者你当前的选择B或者C改变的时候执行函数才重新执行。你不需要再声明其它的依赖：运行时会自动探测到的。</p>
+<p>另外一个技巧是：一个模板输出的绑定是依赖监控属性的简单实现，如果模板读取一个监控属性的值，那模板绑定就会自动变成依赖监控属性依赖于那个监控属性，监控属性一旦改变，模板绑定的依赖监控属性就会自动执行。嵌套的模板也是自动的：如果模板X render模板 Y，并且Y需要显示监控属性Z的值，当Z改变的时候，由于只有Y依赖它，所以只有Y这部分进行了重新绘制（render）。</p>
+<h3>3&nbsp;&nbsp;&nbsp;&nbsp; 使用observable数组</h3>
+<p>如果你要探测和响应一个对象的变化，你应该用observables。如果你需要探测和响应一个集合对象的变化，你应该用observableArray 。在很多场景下，它都非常有用，比如你要在UI上需要显示/编辑的一个列表数据集合，然后对集合进行添加和删除。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> myObservableArray = ko.observableArray();    <span style="color: #008000;">//</span><span style="color: #008000;"> Initially an empty array</span><span style="color: #008000;"><br></span>myObservableArray.push('Some value');            <span style="color: #008000;">//</span><span style="color: #008000;"> Adds the value and notifies observers</span></pre>
+</div>
+<p>&nbsp;</p>
+<p><strong>关键点：监控数组跟踪的是数组里的对象，而不是这些对象自身的状态。</strong></p>
+<p>简单说，将一对象放在observableArray 里不会使这个对象本身的属性变化可监控的。当然你自己也可以声明这个对象的属性为observable的，但它就成了一个依赖监控对象了。一个observableArray 仅仅监控他拥有的对象，并在这些对象添加或者删除的时候发出通知。</p>
+<p>&nbsp;</p>
+<p><strong>预加载一个监控数组observableArray</strong></p>
+<p>如果你想让你的监控数组在开始的时候就有一些初始值，那么在声明的时候，你可以在构造器里加入这些初始对象。例如：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008000;">//</span><span style="color: #008000;"> This observable array initially contains three objects</span><span style="color: #008000;"><br></span><span style="color: #0000ff;">var</span> anotherObservableArray = ko.observableArray([<br>    { name: "Bungle", type: "Bear" },<br>    { name: "George", type: "Hippo" },<br>    { name: "Zippy", type: "Unknown" }<br>]);</pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p><strong>从observableArray里读取信息</strong></p>
+<p>一个observableArray其实就是一个observable的监控对象，只不过他的值是一个数组（observableArray还加了很多其他特性，稍后介绍）。所以你可以像获取普通的observable的值一样，只需要调用无参函数就可以获取自身的值了。 例如，你可以像下面这样获取它的值：</p>
+<div class="cnblogs_code">
+<pre>alert('The length of the array is ' + myObservableArray().length);<br>alert('The first element is ' + myObservableArray()[0]);</pre>
+</div>
+<p>理论上你可以使用任何原生的JavaScript数组函数来操作这些数组，但是KO提供了更好的功能等价函数，他们非常有用是因为：</p>
+<ol>
+<li>兼容所有浏览器。（例如indexOf不能在IE8和早期版本上使用，但KO自己的indexOf 可以在所有浏览器上使用）</li>
+<li>在数组操作函数方面（例如push和splice），KO自己的方式可以自动触发依赖跟踪，并且通知所有的订阅者它的变化，然后让UI界面也相应的自动更新。</li>
+<li>语法更方便，调用KO的push方法，只需要这样写：myObservableArray.push(...)。 比如原生数组的myObservableArray().push(...)好用多了。</li>
+</ol>
+<p>&nbsp;</p>
+<p>下面讲解的均是observableArray的读取和写入的相关函数。</p>
+<p><strong>indexOf</strong></p>
+<p>indexOf 函数返回的是第一个等于你参数数组项的索引。例如：myObservableArray.indexOf('Blah')将返回以0为第一个索引的第一个等于Blah的数组项的索引。如果没有找到相等的，将返回-1。</p>
+<p><strong>slice</strong></p>
+<p>slice函数是observableArray相对于JavaScript 原生函数slice的等价函数（返回给定的从开始索引到结束索引之间所有的对象集合）。 调用myObservableArray.slice(...)等价于调用JavaScript原生函数（例如：myObservableArray().slice(...)）。</p>
+<p>&nbsp;</p>
+<p><strong>操作observableArray</strong></p>
+<p>observableArray 展现的是数组对象相似的函数并通知订阅者的功能。</p>
+<p><strong>pop, push, shift, unshift, reverse, sort, splice</strong></p>
+<p>所有这些函数都是和JavaScript数组原生函数等价的，唯一不同的数组改变可以通知订阅者：</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.push('Some new value')</span> 在数组末尾添加一个新项</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.pop()</span> 删除数组最后一个项并返回该项</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.unshift('Some new value')</span> 在数组头部添加一个项</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.shift()</span> 删除数组头部第一项并返回该项</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.reverse()</span> 翻转整个数组的顺序</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.sort()</span> 给数组排序</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 默认情况下，是按照字符排序（如果是字符）或者数字排序（如果是数字）。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 你可以排序传入一个排序函数进行排序，该排序函数需要接受2个参数（代表该数组里需要比较的项），如果第一个项小于第二个项，返回-1，大于则返回1，等于返回0。例如：用lastname给person排序，你可以这样写：<span style="color: #ff6600;">myObservableArray.sort (function (left, right) {return left.lastName == right.lastName? 0: (left.lastName &lt; right.lastName? -1: 1) })</span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.splice()</span> 删除指定开始索引和指定数目的数组对象元素。例如<span style="color: #ff6600;">myObservableArray.splice(1, 3)</span> 从索引1开始删除3个元素（第2,3,4个元素）然后将这些元素作为一个数组对象返回。</p>
+<p>更多observableArray 函数的信息，请参考等价的<a href="http://www.w3schools.com/jsref/jsref_obj_array.asp">JavaScript数组标准函数</a>。</p>
+<p>&nbsp;</p>
+<p><strong>remove</strong><strong>和removeAll</strong></p>
+<p>observableArray 添加了一些JavaScript数组默认没有但非常有用的函数：</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.remove(someItem)</span> 删除所有等于someItem的元素并将被删除元素作为一个数组返回</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.remove(function(item) { return item.age &lt; 18 })</span> 删除所有age属性小于18的元素并将被删除元素作为一个数组返回</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.removeAll(['Chad', 132, undefined])</span> 删除所有等于'Chad', 123, or undefined的元素并将被删除元素作为一个数组返回</p>
+<p>&nbsp;</p>
+<p><strong>destroy</strong><strong>和destroyAll（注：通常只和和Ruby on Rails开发者有关)</strong></p>
+<p>destroy和destroyAll函数是为Ruby on Rails开发者方便使用为开发的：</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.destroy(someItem)</span> 找出所有等于someItem的元素并给他们添加一个属性_destroy，并赋值为true</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.destroy(function(someItem) { return someItem.age &lt; 18 })</span> 找出所有age属性小于18的元素并给他们添加一个属性_destroy，并赋值为true</p>
+<p>&nbsp;&nbsp;&nbsp; <span style="color: #ff6600;">myObservableArray.destroyAll(['Chad', 132, undefined])</span> 找出所有等于'Chad', 123, 或undefined 的元素并给他们添加一个属性_destroy，并赋值为true</p>
+<p>&nbsp;</p>
+<p>那么，<span style="color: #ff6600;">_destroy</span>是做什么用的？正如我提到的，这只是为Rails 开发者准备的。在Rails 开发过程中，如果你传入一个JSON对象，Rails 框架会自动转换成ActiveRecord对象并且保存到数据库。Rails 框架知道哪些对象以及在数据库中存在，哪些需要添加或更新， 标记<span style="color: #ff6600;">_destroy</span>为true就是告诉框架删除这条记录。</p>
+<p>&nbsp;</p>
+<p>注意的是：在KO render一个foreach模板的时候，会自动隐藏带有_destroy属性并且值为true的元素。所以如果你的“delete”按钮调用<span style="color: #ff6600;">destroy(someItem)</span> 方法的话，UI界面上的相对应的元素将自动隐藏，然后等你提交这个JSON对象到Rails上的时候，这个元素项将从数据库删除（同时其它的元素项将正常的插入或者更新）。</p></div><div id="MySignature"></div>
+        
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="blog_post_info"><div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/TomXu/category/336771.html">[08]Knockout</a></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/TomXu/tag/Knockout/">Knockout</a>, <a href="http://www.cnblogs.com/TomXu/tag/asp.net%20MVC/">asp.net MVC</a>, <a href="http://www.cnblogs.com/TomXu/tag/JavaScript/">JavaScript</a>, <a href="http://www.cnblogs.com/TomXu/tag/MVVM/">MVVM</a>, <a href="http://www.cnblogs.com/TomXu/tag/ViewModel/">ViewModel</a></div>
+<div id="green_channel">
+绿色通道：
+<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(cb_entryId,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+<a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a>
+<a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://space.cnblogs.com/msg/send/%e6%b1%a4%e5%a7%86%e5%a4%a7%e5%8f%94" target="_blank">与我联系</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/icon_weibo_24.png" alt=""></a>
+</div>
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/TomXu/" target="_blank"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/u349491.jpg" class="author_avatar" alt=""></a>
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/TomXu/">汤姆大叔</a><br>
+<a href="http://home.cnblogs.com/u/TomXu/followees">关注 - 19</a><br>
+<a href="http://home.cnblogs.com/u/TomXu/followers">粉丝 - 4759</a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor">荣誉：<a href="http://www.cnblogs.com/expert/" target="_blank">推荐博客</a></div>
+<div id="author_profile_follow">
+    <a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a>
+</div>
+</div>
+<div id="div_digg">										
+	<div class="diggit" onclick="votePost(cb_entryId,&#39;Digg&#39;)"> 
+		<span class="diggnum" id="digg_count">14</span>
+	</div>
+	<div class="buryit" onclick="votePost(cb_entryId,&#39;Bury&#39;)"> 
+		<span class="burynum" id="bury_count">0</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">
+    (请您对文章做出评价)
+    </div>	
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/TomXu/archive/2011/11/21/2257154.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/TomXu/archive/2011/11/21/2257154.html" title="发布于2011-11-21 14:24">Knockout应用开发指南（完整版） 目录索引</a><br><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2258670.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2258670.html" title="发布于2011-11-22 13:19">【翻译】我钟爱的Visual Studio前端开发工具/扩展</a><br></div>
+</div>
+
+
+    </div>    
+    <ul class="postmetadata">
+        <li id="ctl01_liCate" class="icon_cat"><strong>Categories: </strong>
+            <a href="http://www.cnblogs.com/TomXu/category/336771.html">[08]Knockout</a>            
+        </li>
+        <li id="ctl01_liTag" class="icon_bullet"><strong>Tags: </strong>
+            <a href="http://www.cnblogs.com/TomXu/tag/Knockout/">Knockout</a>, <a href="http://www.cnblogs.com/TomXu/tag/asp.net+MVC/">asp.net MVC</a>, <a href="http://www.cnblogs.com/TomXu/tag/JavaScript/">JavaScript</a>, <a href="http://www.cnblogs.com/TomXu/tag/MVVM/">MVVM</a>, <a href="http://www.cnblogs.com/TomXu/tag/ViewModel/">ViewModel</a>
+        </li>        
+    </ul>
+</div>
+<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=101461,cb_entryId=2256820,cb_blogApp=currentBlogApp,cb_blogUserGuid='65b02d3c-5b0b-e111-b7b9-842b2b196315',cb_entryCreatedDate='2011/11/22 8:30:00';loadViewCount(cb_entryId);</script>
+<script type="text/javascript">
+    var m = window.__blog.postRendered;
+    if (m) { m(__$("post")); }
+</script>
+
+<script type="text/javascript">
+    var m = window.__blog.postRenderPosts;
+    if (m) { m(); }
+</script><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<a class="addcomment" href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#comment_tip">Add your comment</a>
+<h3 id="comments"></h3>
+<div class="feedbackNoItems"></div>
+
+
+<ol class="commentlist" id="commentList">	
+
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2250262" class="layer">#1楼</a><a name="2250262" id="comment_anchor_2250262"></a></cite> <a id="a_comment_author_2250262" href="http://www.cnblogs.com/deafcat/" target="_blank">_龙猫</a> <a href="http://space.cnblogs.com/msg/send/_%e9%be%99%e7%8c%ab" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2011-11-22 08:58</span></small>
+			</h5>
+			<div id="comment_body_2250262" class="blog_comment_body">使用场景比较有限啊，不过倒是很方便。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2250262,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2250262,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2250382" class="layer">#2楼</a><a name="2250382" id="comment_anchor_2250382"></a></cite> <a id="a_comment_author_2250382" href="http://www.cnblogs.com/neoayi/" target="_blank">黄明</a> <a href="http://space.cnblogs.com/msg/send/%e9%bb%84%e6%98%8e" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2011-11-22 10:24</span></small>
+			</h5>
+			<div id="comment_body_2250382" class="blog_comment_body">看的很爽 支持 但是在现有的环境中 使用的人应该不是特别多吧。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2250382,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2250382,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2250382_avatar" style="display:none;">http://pic.cnitblog.com/face/u23358.jpg</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2251061" class="layer">#3楼</a><a name="2251061" id="comment_anchor_2251061"></a></cite> <a id="a_comment_author_2251061" href="http://www.cnblogs.com/gaotang/" target="_blank">高堂</a> <a href="http://space.cnblogs.com/msg/send/%e9%ab%98%e5%a0%82" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2011-11-22 22:04</span></small>
+			</h5>
+			<div id="comment_body_2251061" class="blog_comment_body">支持中。。。。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2251061,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2251061,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2251061_avatar" style="display:none;">http://pic.cnitblog.com/face/u37156.jpg</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2348111" class="layer">#4楼</a><a name="2348111" id="comment_anchor_2348111"></a></cite> <a id="a_comment_author_2348111" href="http://www.cnblogs.com/encore620/" target="_blank">天蓝若空</a> <a href="http://space.cnblogs.com/msg/send/%e5%a4%a9%e8%93%9d%e8%8b%a5%e7%a9%ba" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-04-05 18:25</span></small>
+			</h5>
+			<div id="comment_body_2348111" class="blog_comment_body">The name is &lt;span&gt;Bob&lt;/span&gt; 这个地方 我按照大叔的代码写出来的应该是不带span标签的。 大叔的knockout系列让一个小菜鸟再一次感受到javascript的强大</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2348111,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2348111,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2348111_avatar" style="display:none;">http://pic.cnitblog.com/face/u229400.jpg?id=20161847</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2353956" class="layer">#5楼</a><a name="2353956" id="comment_anchor_2353956"></a></cite> <a id="a_comment_author_2353956" href="http://www.cnblogs.com/wbpmrck/" target="_blank">刺客之家</a> <a href="http://space.cnblogs.com/msg/send/%e5%88%ba%e5%ae%a2%e4%b9%8b%e5%ae%b6" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-04-13 08:43</span></small>
+			</h5>
+			<div id="comment_body_2353956" class="blog_comment_body">大叔，想问一下，2.0中的compute是不是就等价于这里的dependentObservable？</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2353956,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2353956,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2353956_avatar" style="display:none;">http://pic.cnitblog.com/face/u136049.gif?id=12163526</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2353994" class="layer">#6楼</a><a name="2353994" id="comment_anchor_2353994"></a>[<span class="louzhu">楼主</span>]</cite> <a id="a_comment_author_2353994" href="http://www.cnblogs.com/TomXu/" target="_blank">汤姆大叔</a> <a href="http://space.cnblogs.com/msg/send/%e6%b1%a4%e5%a7%86%e5%a4%a7%e5%8f%94" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-04-13 09:05</span></small>
+			</h5>
+			<div id="comment_body_2353994" class="blog_comment_body"><fieldset class="comment_quote"><legend><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2353956" title="查看引用原文">引用</a></legend>刺客之家：大叔，想问一下，2.0中的compute是不是就等价于这里的dependentObservable？</fieldset><br>是的</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2353994,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2353994,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2353994_avatar" style="display:none;">http://pic.cnitblog.com/face/u349491.jpg?id=02230504</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2447694" class="layer">#7楼</a><a name="2447694" id="comment_anchor_2447694"></a></cite> <a id="a_comment_author_2447694" href="http://www.cnblogs.com/guangpeng/" target="_blank">断肠人在天涯</a> <a href="http://space.cnblogs.com/msg/send/%e6%96%ad%e8%82%a0%e4%ba%ba%e5%9c%a8%e5%a4%a9%e6%b6%af" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-08-13 17:19</span></small>
+			</h5>
+			<div id="comment_body_2447694" class="blog_comment_body">很实用 讲的也很系统 不错</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2447694,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2447694,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2453027" class="layer">#8楼</a><a name="2453027" id="comment_anchor_2453027"></a></cite> <a id="a_comment_author_2453027" href="http://www.cnblogs.com/guaicaiboshi/" target="_blank">怪才博士</a> <a href="http://space.cnblogs.com/msg/send/%e6%80%aa%e6%89%8d%e5%8d%9a%e5%a3%ab" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-08-21 16:35</span></small>
+			</h5>
+			<div id="comment_body_2453027" class="blog_comment_body">楼主，在执行 var viewModel = {    firstName: ko.observable('Bob'),    lastName: ko.observable('Smith')}; <br>… 你可以添加一个依赖监控属性来返回姓名全称：<br> <br>viewModel.fullName = ko.dependentObservable(function () {    return this.firstName() + " " + this.lastName();}, viewModel); <br>并且绑定到UI的元素上，例如：<br> <br>The name is &lt;span data-bind="text: fullName"&gt;&lt;/span&gt;  这个的时候，没有反应俺的。求解。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2453027,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2453027,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2529902" class="layer">#9楼</a><a name="2529902" id="comment_anchor_2529902"></a></cite> <a id="a_comment_author_2529902" href="http://www.cnblogs.com/codeinspiremyselft/" target="_blank">xuelei</a> <a href="http://space.cnblogs.com/msg/send/xuelei" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-11-12 13:53</span></small>
+			</h5>
+			<div id="comment_body_2529902" class="blog_comment_body"><a href="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/2012111213511559.jpg" target="_blank"><img src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/2012111213511559.jpg" alt="" border="0" onload="javascript:if(this.width&gt;500) this.width=500;" width="500"></a><br>大叔,貌似您这里有个错误</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2529902,&#39;Digg&#39;,this)">支持(1)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2529902,&#39;Bury&#39;,this)">反对(1)</a></div><span id="comment_2529902_avatar" style="display:none;">http://pic.cnitblog.com/face/u400056.jpg?id=20030804</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2530822" class="layer">#10楼</a><a name="2530822" id="comment_anchor_2530822"></a></cite> <a id="a_comment_author_2530822" href="http://home.cnblogs.com/u/327770/" target="_blank">殷文旭</a> <a href="http://space.cnblogs.com/msg/send/%e6%ae%b7%e6%96%87%e6%97%ad" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-11-13 11:12</span></small>
+			</h5>
+			<div id="comment_body_2530822" class="blog_comment_body">大叔你好，能否为后面的绑定数组的情况写一个完整的简单例子。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2530822,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2530822,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2601496" class="layer">#11楼</a><a name="2601496" id="comment_anchor_2601496"></a></cite> <a id="a_comment_author_2601496" href="http://www.cnblogs.com/boulder/" target="_blank">bluskyer</a> <a href="http://space.cnblogs.com/msg/send/bluskyer" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2013-01-16 15:29</span></small>
+			</h5>
+			<div id="comment_body_2601496" class="blog_comment_body"><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2529902" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,2529902);">@</a>xuelei<br>这个地方我试了一下好像必须有Owner不然会报错</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2601496,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2601496,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2749135" class="layer">#12楼</a><a name="2749135" id="comment_anchor_2749135"></a></cite> <a id="a_comment_author_2749135" href="http://www.cnblogs.com/gesenkof99/" target="_blank">葛森</a> <a href="http://space.cnblogs.com/msg/send/%e8%91%9b%e6%a3%ae" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2013-08-12 15:59</span></small>
+			</h5>
+			<div id="comment_body_2749135" class="blog_comment_body">翻译的非常不错，谢谢</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2749135,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2749135,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2770763" class="layer">#13楼</a><a name="2770763" id="comment_anchor_2770763"></a></cite> <a id="a_comment_author_2770763" href="http://www.cnblogs.com/jsonliu/" target="_blank">jsonliu</a> <a href="http://space.cnblogs.com/msg/send/jsonliu" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2013-09-08 10:03</span></small>
+			</h5>
+			<div id="comment_body_2770763" class="blog_comment_body">大叔 那个输入数字然后转化成$x.00的那个例子 如果连续两次输入的数字一样只有第一个会转化成$x.00，第二个不变怎么回事哦。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2770763,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2770763,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2772483" class="layer">#14楼</a><a name="2772483" id="comment_anchor_2772483"></a></cite> <a id="a_comment_author_2772483" href="http://www.cnblogs.com/lovemory/" target="_blank">墨尔</a> <a href="http://space.cnblogs.com/msg/send/%e5%a2%a8%e5%b0%94" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2013-09-10 15:02</span></small>
+			</h5>
+			<div id="comment_body_2772483" class="blog_comment_body">有没有演示工程呀？</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2772483,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2772483,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2807055" class="layer">#15楼</a><a name="2807055" id="comment_anchor_2807055"></a></cite> <a id="a_comment_author_2807055" href="http://www.cnblogs.com/wumadi/" target="_blank">无码帝</a> <a href="http://space.cnblogs.com/msg/send/%e6%97%a0%e7%a0%81%e5%b8%9d" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2013-11-01 09:59</span></small>
+			</h5>
+			<div id="comment_body_2807055" class="blog_comment_body">value转换器这里，如果第一次输入aaaa的话，通过监控，将值变为$0，如果我们将$0删除，再换成aaaa的话，控件将不会再将aaaa转成$0,因为在this.price(value)，两次的value都是0，所以监控认定为不变化。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2807055,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2807055,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2807055_avatar" style="display:none;">http://pic.cnitblog.com/face/497929/20130421185755.png</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#2829338" class="layer">#16楼</a><a name="2829338" id="comment_anchor_2829338"></a><span id="comment-maxId" style="display:none;">2829338</span><span id="comment-maxDate" style="display:none;">2013/12/3 14:40:44</span></cite> <a id="a_comment_author_2829338" href="http://www.cnblogs.com/yidiandian/" target="_blank">代码一点点</a> <a href="http://space.cnblogs.com/msg/send/%e4%bb%a3%e7%a0%81%e4%b8%80%e7%82%b9%e7%82%b9" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2013-12-03 14:40</span></small>
+			</h5>
+			<div id="comment_body_2829338" class="blog_comment_body">大叔牛逼 11年的时候就玩这个了~ 我现在才发现~~</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2829338,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2829338,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+</ol>
+
+<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2256820.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"><a href="http://www.cnblogs.com/cmt/p/3577868.html" target="_blank">游戏开发者报名得阿里云代金券，更有千元大奖等你拿</a></div>
+<div id="site_nav_under"><a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">博客园首页</a><a href="http://q.cnblogs.com/" target="_blank" title="程序员问答社区">博问</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://job.cnblogs.com/" target="_blank">程序员招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a></div>
+<div id="ad_under_post_holder">
+
+<div id="google_ad_c1" class="c_ad_block">
+    <!-- cnblogs_blogpost_C1_sitehome -->
+    <div id="div-gpt-ad-1346480159711-0" style="width: 300px; height: 250px; ">
+    
+    <div id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__container__" style="border: 0pt none; "><iframe id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom; " src="javascript:"<html><body style='background:transparent'></body></html>""></iframe></div><iframe id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none; " src="javascript:"<html><body style='background:transparent'></body></html>""></iframe></div>
+</div>
+<div id="blog_news_kb"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/201932/" target="_blank">腾讯手游想疯狂变现 却遭遇360狙击</a><br> ·  <a href="http://news.cnblogs.com/n/201931/" target="_blank">迅雷推“红雷盒子”机顶盒：3月28日发售 售399元</a><br> ·  <a href="http://news.cnblogs.com/n/201930/" target="_blank">全球最大飞行器竟是美军间谍工具</a><br> ·  <a href="http://news.cnblogs.com/n/201929/" target="_blank">中国人民银行行长周小川：绝不取缔余额宝</a><br> ·  <a href="http://news.cnblogs.com/n/201928/" target="_blank">神PS！奥斯卡影星与年轻时自己的合影</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/191521/" target="_blank">指尖上的浏览：如何理解用户的眼？</a><br> ·  <a href="http://kb.cnblogs.com/page/200929/" target="_blank">Node.js 究竟是什么？</a><br> ·  <a href="http://kb.cnblogs.com/page/194376/" target="_blank">Habya'a（临时拼凑的组件）与技术债务</a><br> ·  <a href="http://kb.cnblogs.com/page/200528/" target="_blank">关于在线教育和线下教育的六个问题</a><br> ·  <a href="http://kb.cnblogs.com/page/199787/" target="_blank">别错把需求当市场</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div></div>
+<script type="text/javascript">
+var enableGoogleAd = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+fixPostBodyFormat();
+loadAdUnderPost();
+</script>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+loadBlogSignature();
+LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+</script>
+<script type="text/javascript">
+    $.ajax({ url: 'http://counter.cnblogs.com/blog/post/' + cb_entryId, type: 'get', dataType: 'script', cache: true });
+</script>
+</div>
+
+        </div>
+        
+	    <script language="javascript" type="text/javascript">
+	               var m = window.__blog.contentRendered;
+	               if (m) { m(__$("content")); }
+        </script>
+
+	    <div id="sidebar">
+			    
+<div id="about">
+<div>
+<h2 id="about_title">About</h2>
+<div id="about_body">
+<div id="blog-news" style=""><p><img style="float:left;margin-right:10px" alt="" src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/tom.jpg" height="150" width="150"><strong>目前工作</strong>：项目管理（PMP）<br>
+<strong>曾获认证</strong>：MCP、MCSE、MCDBA、MCTS、MCITP、MCPD、PMP、MVP<br>
+<strong>略有小成</strong>：软件架构、设计模式、OOD、OOP、DI、IOC、AOP、SOA<br>
+<strong>兴趣爱好</strong>：技术、管理、英文、吃喝玩乐乱侃空
+</p>
+<p style="clear:both"></p>
+<br>
+熟悉Waterfall、Agile(Scrum&amp;XP)，染指C#、ASP.NET、MVC、EF、NHibernate、SQL Server、Oracle、JavaScript、HTML5、CSS3、JQuery、Knockout、Silverlight、WPF、WCF、ADFS等技术<br>
+<br>
+<span style="color: red;">注：</span>本人翻译的技术文章皆不是逐句翻译，而是按照自己的理解翻译的（当然也去除了一些不影响理解但本人实在不知道如何组织的句子）。<br>
+<br>
+<p style="clear:both"></p>
+<fieldset> <legend>作品上市</legend>
+<p><img style="float:left;margin-right:10px" src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/shupi.jpg" alt="" width="150">
+[1] <a href="http://product.china-pub.com/3769483" target="_blank">China-Pub</a>
+<br>
+<br>
+</p>
+<p style="clear:both"></p><br>
+<p><img style="float:left;margin-right:10px" src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/o_jsdp.jpg" alt="" width="150">
+[1] <a href="http://book.jd.com/11253887.html" target="_blank">京东商城</a>
+<br>
+[2] <a href="http://www.amazon.cn/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BE%8E-Addy-Osmani/dp/B00D6MT3LG/" target="_blank">卓越亚马逊</a>
+<br>
+[3] <a href="http://product.dangdang.com/product.aspx?product_id=23266635" target="_blank">当当网</a>
+<br>
+[4] <a href="http://product.china-pub.com/3768064" target="_blank">China-Pub</a>
+<br>
+[5] <a href="http://book.douban.com/subject/24744217/" target="_blank">豆瓣网</a>
+<br>
+[6] <a href="http://s.taobao.com/search?q=JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20Addy%20Osmani" target="_blank">淘宝网</a>
+<br>
+<br>
+</p>
+<div style="clear:both"></div>
+<p><img style="float:left;margin-right:10px" src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/o_EloquentJavaScript.jpg" alt="" width="150">
+[1] <a href="http://book.360buy.com/11091494.html" target="_blank">京东商城</a>
+<br>
+[2] <a href="http://www.amazon.cn/JavaScript%E7%BC%96%E7%A8%8B%E7%B2%BE%E8%A7%A3-%E5%93%88%E5%BC%97%E8%B4%9D%E5%85%8B/dp/B009A7D25E/ref=sr_1_11" target="_blank">卓越亚马逊</a>
+<br>
+[3] <a href="http://union.dangdang.com/transfer/transfer.aspx?from=P-263982&backurl=http://product.dangdang.com/product.aspx?product_id=22873894" target="_blank">当当网</a>
+<br>
+[4] <a href="http://product.china-pub.com/3684096" target="_blank">China-Pub</a>
+<br>
+[5] <a href="http://book.douban.com/subject/19933548/" target="_blank">豆瓣网</a>
+<br>
+[6] <a href="http://s.taobao.com/search?q=JavaScript%E7%BC%96%E7%A8%8B%E7%B2%BE%E8%A7%A3" target="_blank">淘宝网</a>
+<br>
+<br>
+<a href="http://www.cnblogs.com/TomXu/archive/2012/10/21/JSError.html" target="_blank">本书勘误</a>
+</p>
+
+</fieldset><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/TomXu/">汤姆大叔</a><br>园龄：<a href="http://home.cnblogs.com/u/TomXu/" title="入园时间：2011-11-10">2年3个月</a><br>荣誉：<a href="http://www.cnblogs.com/expert/">推荐博客</a><br>粉丝：<a href="http://home.cnblogs.com/u/TomXu/followers/">4759</a><br>关注：<a href="http://home.cnblogs.com/u/TomXu/followees/">19</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="cnblogs.UserManager.FollowBlogger(&#39;65b02d3c-5b0b-e111-b7b9-842b2b196315&#39;)">+加关注</a></div></div></div>
+<script type="text/javascript">loadBlogNews();</script>
+</div>
+</div>
+</div>
+
+			    <script language="javascript" type="text/javascript">
+                        var m = window.__blog.aboutRendered;
+                        if (m) { m(__$("about")); }
+                </script>
+                
+<script type="text/javascript">
+function zzk_go()
+{
+	var blogapp = 'TomXu';
+	var keystr = encodeURIComponent("blog:"+blogapp+" "+document.getElementById('q').value);
+    window.location = "http://zzk.cnblogs.com/s?w="+keystr;
+}
+function zzk_go_enter(event)
+{
+	if(event.keyCode == 13)
+	{
+	    zzk_go();
+	    return false;
+	}
+}
+</script>
+
+<div id="mySearchWrapper">
+    <div id="mySearch">
+        <input type="image" src="./Knockout应用开发指南 第二章：监控属性(Observables) - 汤姆大叔 - 博客园_files/btnsearch.gif" id="btnZzk" class="submit" onclick="zzk_go();return false;">
+        <label class="lb_search"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="keyword"></label>
+    </div>
+</div>
+
+                <script language="javascript" type="text/javascript">
+                                var m = window.__blog.searchFormRendered;
+                                if (m) { m(__$("searchform")); }
+                </script>
+                <div id="sideMain">
+                <div id="side-recent-posts">
+<h2>最新随笔</h2>
+ <ul class="bullet">
+
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2013/06/14/3135050.html">新书《JavaScript设计模式 》出版，感谢支持</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/10/22/2733027.html">《JavaScript编程精解》回馈网友，汤姆大叔送书30本</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/10/21/JSError.html">《JavaScript编程精解》勘误</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/07/26/2581268.html">深入理解JavaScript系列（结局篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/07/24/2581239.html">深入理解JavaScript系列（50）：Function模式（下篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/07/23/2580701.html">深入理解JavaScript系列（49）：Function模式（上篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/26/2443010.html">深入理解JavaScript系列（48）：对象创建模式（下篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/25/2439527.html">深入理解JavaScript系列（47）：对象创建模式（上篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/24/2438050.html">深入理解JavaScript系列（46）：代码复用模式（推荐篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/23/2438005.html">深入理解JavaScript系列（45）：代码复用模式（避免篇）</a></li>
+	
+</ul>
+</div><div id="side-recent-comments">
+    <h2>最新评论</h2>
+    <ul class="voice">
+    
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/09/2306329.html#2887741">Re:深入理解JavaScript系列（7）：S.O.L.I.D五大原则之开闭原则OCP</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/09/2306329.html#2887741">
+                @蓝丶 sky引用@chasefornone如果先设置my的renderInput，基类中的renderInput就会覆盖你重写的那个函数，这样就没用了。而写在后面可以覆盖基类中的renderInpu...
+                 -- LoveJenny
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html#2887325">Re:深入理解JavaScript系列</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html#2887325">
+                @linjisong<br>麻烦发给我一份，这是我的邮箱: wyf061@126.com<br>谢谢。
+                 -- Vincent Wu
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/06/2305513.html#2887245">Re:深入理解JavaScript系列（6）：S.O.L.I.D五大原则之单一职责SRP</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/06/2305513.html#2887245">
+                @汤姆大叔引用引用引用600120：感觉大叔学习精力充沛哦，问个个人问题，大叔有孩子了没？有了，儿子，所以不担心身体了，也敢喝可乐了，嘿嘿有了儿子，就更要担心身体了，只是不用担心自己不孕不育了，呵呵。
+                 -- LoveJenny
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html#2887188">Re:深入理解JavaScript系列（4）：立即调用的函数表达式</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html#2887188">
+                @unbreakable引用@shinebob(function(){})()还记的我们var a=function(){},用a()来调用这个方法吧！此处a看做一个函数对象引用,那我们可以看做(fu...
+                 -- LoveJenny
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/04/11/2435452.html#2883158">Re:深入理解JavaScript系列（39）：设计模式之适配器模式</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/04/11/2435452.html#2883158">
+                @troy huang我觉得是没有必要执行这个操作，TurkeyAdapter包装类传过去的对象参数只要是WildTurkey类的子对象就可以了吧，...
+                 -- js蜗牛
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882937">Re:大叔手记（9）：小心使用IHttpHandler下的IsReusable属性</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882937">
+                本意应该是：IHttpHandler的实现类，要注意多线程问题，<br>而不是ProcessRequest (HttpContext context)中的context 有问题
+                 -- 个人知识管理
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882908">Re:大叔手记（9）：小心使用IHttpHandler下的IsReusable属性</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882908">
+                有误！<br>应是不能使用 HttpContext.Current来获取Request等
+                 -- 个人知识管理
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html#2881687">Re:深入理解JavaScript系列（14）：作用域链(Scope Chain)</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html#2881687">
+                @eeeeeeebar函数的执行上下文：barExecution Context={ 变量对象: barAO, this:foo, Scope Chain:[barAO,globalVO]}barAO...
+                 -- mciiv
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html#2881218">Re:深入理解JavaScript系列（2）：揭秘命名函数表达式</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html#2881218">
+                测试了一下，IE9以下的浏览器除了回忽略if语句，也会忽略return语句，直接解析命名表达式：	var f = (function() { if (false) { return function ...
+                 -- islerning
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/16/2309728.html#2880668">Re:深入理解JavaScript系列（12）：变量对象（Variable Object）</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/16/2309728.html#2880668">
+                引用变量对象(缩写为VO)是一个与执行上下文相关的特殊对象，它存储着在上下文中声明的以下内容： 变量 (var, 变量声明); 函数声明 (FunctionDeclaration, 缩写为FD); 函...
+                 -- mciiv
+            </a>
+            </li>
+        
+    </ul>
+</div></div>
+                <div id="sideRight">
+                <div id="side-archives">
+<h2>随笔档案</h2>
+<ul class="date">
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2013/06.html">2013年6月(1)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/10.html">2012年10月(2)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/07.html">2012年7月(3)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/04.html">2012年4月(12)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/03.html">2012年3月(5)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/02.html">2012年2月(18)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/01.html">2012年1月(14)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12.html">2011年12月(45)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2011/11.html">2011年11月(28)</a></li>
+ 
+
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="日历">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2014/02/01&#39;);return false;">&lt;</a></td><td align="center">2014年3月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2014/04/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">23</td><td class="CalOtherMonthDay" align="center">24</td><td class="CalOtherMonthDay" align="center">25</td><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalWeekendDay" align="center">1</td></tr><tr><td class="CalWeekendDay" align="center">2</td><td align="center">3</td><td class="CalTodayDay" align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td class="CalWeekendDay" align="center">8</td></tr><tr><td class="CalWeekendDay" align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalWeekendDay" align="center">15</td></tr><tr><td class="CalWeekendDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td class="CalWeekendDay" align="center">22</td></tr><tr><td class="CalWeekendDay" align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalWeekendDay" align="center">29</td></tr><tr><td class="CalWeekendDay" align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td></tr>
+</tbody></table></div><div id="side-link-341714">
+    <h2>[01]汤姆大叔系列博文</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/10/2283385.html" target="_blank">[01]大叔手记全集</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/11/21/2257154.html" target="_blank">[02]Knockout应用开发指南</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/11/25/2263050.html" target="_blank">[03]微软ASP.NET站点部署指南</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/06/2277499.html" target="_blank">[04]HTML5学习笔记简明版</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2284773.html" target="_blank">[05]大叔翻译博文索引</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" target="_blank">[06]深入理解JavaScript系列</a></li>
+    
+    </ul>
+</div><div id="side-link-345292">
+    <h2>[03]推荐博友算法相关</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/huangxincheng/category/340146.html" target="_blank">[01]算法系列15天速成</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/jinzhao/archive/2011/11/30/2268569.html" target="_blank">[02]算法实现大全</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/tuyile006/category/95974.html" target="_blank">[03]常用算法</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/Jax/category/57279.html" target="_blank">[04]算法大全</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/weidagang2046/archive/2009/07/31/1535902.html" target="_blank">[05]博客积分算法探讨</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/chehaoj/archive/2010/11/23/1885497.html" target="_blank">[06]常见算法推演</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/wangfupeng1988/archive/2011/12/26/2302216.html" target="_blank">[07]眼睛直观感受几种常用排序算法</a></li>
+    
+    </ul>
+</div></div>
+                <div id="sideLeft">            
+                <div id="side-categories">
+<h2>随笔分类</h2>
+<ul class="folder">
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/335665.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/335665.html">[01].Net Framework(4)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338101.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338101.html">[02]C#(3)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338102.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338102.html">[03]ASP.NET(5)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/335666.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/335666.html">[04]ASP.NET MVC(8)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/336175.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/336175.html">[05]HTML5/CSS3(16)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338104.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338104.html">[06]JS/jQuery(62)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/337109.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/337109.html">[07]Web开发(57)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/336771.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/336771.html">[08]Knockout(15)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338040.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338040.html">[09]配置管理(13)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/337899.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/337899.html">[10]项目管理(3)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/340064.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/340064.html">[11]大叔手记(22)</a> </li>
+
+</ul>
+</div><div id="side-top-posts-custom">
+<h2>推荐排行榜</h2>
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html">1. 深入理解JavaScript系列(260)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/28/2286877.html">2. 深入理解JavaScript系列（1）：编写高质量JavaScript代码的基本要点(249)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/21/2292722.html">3. 大叔手记（12）：我的一次面试经历（谈大叔如何应对面试官）(225)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/02/23/2364425.html">4. 大叔手记（21）：汤姆大叔博客园开博100天总结(197)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html">5. 深入理解JavaScript系列（2）：揭秘命名函数表达式(124)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/30/2288372.html">6. 深入理解JavaScript系列（3）：全面解析Module模式(104)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/12/2308594.html">7. 深入理解JavaScript系列（10）：JavaScript核心（晋级高手必读篇）(98)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html">8. 深入理解JavaScript系列（5）：强大的原型和原型链(93)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/19/2291448.html">9. 大叔手记（10）：别再让面试官问你单例（暨6种实现方式让你堵住面试官的嘴）(85)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2258849.html">10. 最锋利的Visual Studio Web开发工具扩展：Web Essentials详解(72)</a></li></ul></div>
+</div><div id="side-top-posts">
+<h2>阅读排行榜</h2>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html">1. 深入理解JavaScript系列(141708)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/28/2286877.html">2. 深入理解JavaScript系列（1）：编写高质量JavaScript代码的基本要点(60458)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/11/21/2257154.html">3. Knockout应用开发指南（完整版） 目录索引(34682)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html">4. 深入理解JavaScript系列（2）：揭秘命名函数表达式(32605)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/10/22/2733027.html">5. 《JavaScript编程精解》回馈网友，汤姆大叔送书30本(29832)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/21/2292722.html">6. 大叔手记（12）：我的一次面试经历（谈大叔如何应对面试官）(25719)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/30/2288372.html">7. 深入理解JavaScript系列（3）：全面解析Module模式(24692)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/12/2308594.html">8. 深入理解JavaScript系列（10）：JavaScript核心（晋级高手必读篇）(23956)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/06/2277510.html">9. 汤姆大叔博客索引(22745)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html">10. 深入理解JavaScript系列（5）：强大的原型和原型链(20925)</a></li></ul></div>
+</div><div id="side-link-342866">
+    <h2>[02]汤姆大叔推荐单篇</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/14/2286225.html" target="_blank">[01]大型JavaScript应用架构模式</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/19/2291448.html" target="_blank">[02]别再让面试官问你单例</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/21/2292722.html" target="_blank">[03]大叔的一次面试经历</a></li>
+    
+    </ul>
+</div><div id="side-link-345293">
+    <h2>[04]推荐博友精选好文</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/peterzb/archive/2009/06/14/1502918.html" target="_blank">[01]C# WinForm开发系列</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/lifepoem/archive/2011/12/16/2288017.html" target="_blank">[02]LINQ之路</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/xiao-f/archive/2011/12/19/lang.html" target="_blank">[03]Javascript面向对象扩展库</a></li>
+    
+    </ul>
+</div><div id="side-link-348581">
+    <h2>[05]推荐外部精选好文</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://kangax.github.com/es5-compat-table/" target="_blank">[01]ECMAScript 5浏览器兼容表</a></li>
+    
+        <li>
+        <a href="http://kb.cnblogs.com/page/127995/" target="_blank">[02]Javascript 面向对象编程</a></li>
+    
+    </ul>
+</div></div>
+			    
+			    <div id="sideContainer"></div>
+                <script language="javascript" type="text/javascript">
+                    $.ajax({
+                        url: '/' + currentBlogApp + '/mvc/blog/Minyx2_Lite_SideColumn.aspx',
+                        data: '{}',
+                        type: 'post',
+                        dataType: 'text',
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (data) {
+                            if (data) {
+                                $("#sideContainer").html(data);
+                                if ($("#blog-calendar").length) {
+                                    loadBlogCalendar();
+                                }
+                                loadBlogSideBlocks();
+                                var m = window.__blog.sideContainerRendered;
+                                if (m) { m(__$("sideContainer")); }
+                                window.__blog.sidebar.__layout();
+                            }
+                        }
+                    });
+                    
+                 </script>       	
+			                      
+ 		    </div>
+     		
+	        <script language="javascript" type="text/javascript">
+	        var m = window.__blog.sidebarRendered;
+	        if (m) { m(__$("sidebar")); }
+                </script>        
+     </div>
+     
+        <script language="javascript" type="text/javascript">
+            var m = window.__blog.wrapperRendered;
+            if (m) { m(__$("wrapper")); }
+        </script>
+
+</div>
+<!-- end of container -->
+    
+<script language="javascript" type="text/javascript">
+    var m = window.__blog.containerRendered;
+    if (m) { m(__$("container")); }
+</script>
+
+<div id="footer">
+        
+<p id="logoFoot">
+    <a href="http://www.spiga.com.mx/" title="Agencia Interactiva Spiga">www.spiga.com.mx</a>
+</p>
+<div class="footText">
+<p>
+Copyright ©2014 汤姆大叔
+</p>
+<p>
+<a href="http://www.cnblogs.com/">博客园</a>
+</p>
+</div>
+</div><!--end: footer -->
+
+<!--PageEndHtml Block Begin-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("body").prepend($("#div_digg").css({
+            "position": "fixed", "right": "0px", "bottom": "0px", "z-index": "10", "background-color": "white", "margin": "10px", "padding": "10px", "border": "1px solid #cccccc"
+        }));
+      $(".cnblogs_code_toolbar").hide();
+    });
+</script>
+<!--PageEndHtml Block End-->
+
+
+<iframe id="google_osd_static_frame_482946813572" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px; "></iframe></body></html>

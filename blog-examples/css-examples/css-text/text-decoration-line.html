@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>text-decoration-line text-decoration-color 和 text-decoration-style 的用法</title>
+    <style>
+        .demo li {
+            margin-top: 10px;
+        }
+        .demo li:nth-child(1) {
+            -moz-text-decoration-style: solid;
+            -moz-text-decoration-color: #008ab8;
+            -moz-text-decoration-line: underline;
+        }
+        .demo li:nth-child(2) {
+            -moz-text-decoration-style: double;
+            -moz-text-decoration-color: #ff0000;
+            -moz-text-decoration-line: underline;
+        }
+        .demo li:nth-child(3) {
+            -moz-text-decoration-style: dashed;
+            -moz-text-decoration-color: #006080;
+            -moz-text-decoration-line: underline;
+        }
+        .demo li:nth-child(4) {
+            -moz-text-decoration-style: dotted;
+            -moz-text-decoration-color: #333;
+            -moz-text-decoration-line: overline;
+        }
+        .demo li:nth-child(5) {
+            -moz-text-decoration-style: wavy;
+            -moz-text-decoration-color: #f00;
+            -moz-text-decoration-line: line-through;
+        }
+    </style>
+</head>
+<body>
+<ul class="demo">
+    <li>简单的下划线文字</li>
+    <li>红色下划双线文字</li>
+    <li>下划虚线文字</li>
+    <li>上划点线文字</li>
+    <li>贯穿线（波浪线）文字</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../bower_components/jquery-ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link href="../styles/examples.css" rel="stylesheet">
+
+    <title>Computed Observables用法</title>
+</head>
+<body>
+
+<p>
+    <button id="openDialog">打开对话框</button>
+</p>
+<div id="dialog" title="knockout与jQuery UI结合dialog" style="display: none;">
+    <p>以下是knockoutjs代码</p>
+    <ul data-bind="foreach: { data: categories, as: 'category' }">
+        <li>
+            <ul data-bind="foreach: { data: items, as: 'item' }">
+                <li>
+                    <span data-bind="text: category.name"></span>:
+                    <input type="text" data-bind="value: item"/>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="../../bower_components/knockout/dist/knockout.debug.js"></script>
+
+<script>
+    $(function () {
+        var initKo = function () {
+            var viewModel1 = {
+                categories: ko.observableArray([
+                    {name: 'Fruit', items: ['Apple', 'Orange', 'Banana']},
+                    {name: 'Vegetables', items: ['Celery', 'Corn', 'Spinach']}
+                ]),
+                submitData: function () {
+                    console.info(viewModel1.categories()[0].items[0]);
+                }.bind(this)
+            };
+            ko.applyBindings(viewModel1, $('#dialog')[0]);
+        };
+        var dialog = $('#dialog').dialog({
+            autoOpen: false,
+            width: 350,
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    dialog.dialog('close');
+                },
+                Cancel: function () {
+                    dialog.dialog('close');
+                }
+            },
+            create: function () {
+                initKo();
+            },
+            close: function () {
+
+            }
+        });
+
+        $('#openDialog').click(function () {
+            $('#dialog').dialog('open');
+        });
+
+    });
+</script>
+</body>
+</html>

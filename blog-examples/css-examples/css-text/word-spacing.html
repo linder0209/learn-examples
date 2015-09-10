@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>word-spacing用法</title>
+  <style>
+    ol {
+      width: 300px;
+    }
+    p {
+      border: 1px solid #008ab8;
+    }
+    .normal p {
+      word-spacing: normal;
+    }
+    .length p {
+      word-spacing: 10px;
+    }
+    .negative p {
+      word-spacing: -0.5em;
+    }
+  </style>
+</head>
+<body>
+<ol>
+  <li class="normal">
+    <strong>默认间隔</strong>
+    <p>how are you!</p>
+  </li>
+  <li class="length">
+    <strong>自定义的间隔大小，注意最后一个单词的间距不是10px</strong>
+    <p>how are you! how are you! how are you!</p>
+  </li>
+  <li class="negative">
+    <strong>设置负值</strong>
+    <p>how are you!</p>
+  </li>
+</ol>
+</body>
+</html>

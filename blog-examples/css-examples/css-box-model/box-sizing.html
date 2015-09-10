@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>box-sizing 用法</title>
+    <style>
+        ol > li {
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            border: 15px solid #999;
+            background-color: #fefcc9;
+            margin-bottom: 20px;
+        }
+        .content-box {
+            box-sizing: content-box;
+        }
+        .border-box {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li class="content-box">
+        设置为width: 400px; height: 200px; padding:10px; border-width: 15px; box-sizing: content-box;的效果，Element width = width + border + padding
+    </li>
+    <li class="border-box">设置为width: 400px; height: 200px; padding:10px; border-width: 15px; box-sizing: border-box;的效果， Element width = width </li>
+</ol>
+</body>
+</html>

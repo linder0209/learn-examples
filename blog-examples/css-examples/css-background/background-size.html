@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>background-size 用法</title>
+  <style>
+    p {
+      border: 20px dashed #ccc;
+      width: 350px;
+      height: 300px;
+      padding: 20px;
+      background: url("http://linder0209.github.io/resources/images/flower.jpg") no-repeat #008ab8;
+    }
+    .cover p {
+      background-size: cover;
+    }
+    .contain p {
+      background-size: contain;
+    }
+    .length p {
+      background-size: 100px 140px;
+    }
+    .percentage p {
+      background-size: 150%;
+    }
+  </style>
+</head>
+<body>
+<h1>background-size 用法</h1>
+<ol>
+  <li>
+    <h2>auto</h2>
+    <p>默认值为auto，即保持背景图原来大小。</p>
+  </li>
+  <li class="cover">
+    <h2>cover</h2>
+    <p>将背景图像等比缩放到完全覆盖容器，背景图像有可能超出容器。</p>
+  </li>
+  <li class="contain">
+    <h2>contain</h2>
+
+    <p>将背景图像等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内。</p>
+  </li>
+  <li class="length">
+    <h2>length</h2>
+    <p>自定义背景图像大小</p>
+  </li>
+  <li class="percentage">
+    <h2>percentage</h2>
+    <p>百分比自定义背景图像大小</p>
+  </li>
+</ol>
+</body>
+</html>
+			

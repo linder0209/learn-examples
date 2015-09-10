@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>text-align 用法</title>
+  <style>
+    ol {
+      width: 300px;
+    }
+    p {
+      border: 1px solid #008ab8;
+    }
+    .left p {
+      text-align: left;
+    }
+    .center p {
+      text-align: center;
+    }
+    .right p {
+      text-align: right;
+    }
+    .justify p {
+      text-align: justify;
+    }
+    .start p {
+      text-align: start;
+    }
+    .end p {
+      text-align: end;
+    }
+    .break p{
+      text-align: justify;
+    }
+    .break p.break-all{
+      word-break: break-all;
+    }
+    .br p{
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+<ol>
+  <li class="left">
+    <strong>left</strong>
+    <p>左对齐 左对齐 左对齐 左对齐 左对齐左对齐左对齐</p>
+  </li>
+  <li class="center">
+    <strong>center</strong>
+    <p>居中对齐居中对齐居中对齐居中对齐居中对齐居中对齐</p>
+  </li>
+  <li class="right">
+    <strong>right</strong>
+    <p>右对齐右对齐右对齐右对齐右对齐右对齐右对齐右对齐</p>
+  </li>
+  <li class="justify">
+    <strong>justify</strong>
+    <p>我 是一段可以两端对齐的文字， 你 仔细看看， 我 的对齐方式都贴着 容器左右的边缘。</p>
+  </li>
+  <li class="justify">
+    <strong>只有一行文字，justify不起作用</strong>
+    <p>只有一行文字</p>
+  </li>
+  <li class="break">
+    <strong>对于 justify 设置 word-break: break-all; 和不设置的比较</strong>
+    <h4>设置 word-break: break-all; </h4>
+    <p class="break-all">我是一段可以两端对齐的文字， 你仔细看看， 我的对齐方式都贴着容器左右的边缘。</p>
+    <h4>不设置 word-break: break-all; </h4>
+    <p>我是一段可以两端对齐的文字， 你仔细看看， 我的对齐方式都贴着容器左右的边缘。</p>
+  </li>
+  <li class="br">
+    <strong>对于 justify 强制换行和不强制换行的比较</strong>
+    <h4>强制换行</h4>
+    <p>我是第一行，后面紧 接着强制 换行<br/>一些随 意的 文字内容 一些随 意的 文字内容</p>
+    <h4>不强制换行</h4>
+    <p>我是第一行，后面没有紧接着强制 换行一些随 意的 文字内容 一些随 意的 文字内容</p>
+  </li>
+  <li class="start">
+    <strong>start</strong>
+    <p>start效果start效果start效果start效果start效果start效果start效果start效果</p>
+  </li>
+  <li class="end">
+    <strong>end</strong>
+    <p>end效果end效果end效果end效果end效果end效果end效果end效果end效果end效果end效果</p>
+  </li>
+</ol>
+</body>
+</html>

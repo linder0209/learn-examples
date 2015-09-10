@@ -1,0 +1,123 @@
+.example {
+  margin-top: 20px;
+}
+.example {
+  counter-reset: outline1;
+}
+.example > h1 {
+  counter-reset: outline2;
+}
+.example > h1:before {
+  content: counter(outline1, decimal) ". ";
+  counter-increment: outline1;
+  font-weight: bold;
+}
+.example > h1 ~ h2 {
+  counter-reset: outline3;
+}
+.example > h1 ~ h2:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) ". ";
+  counter-increment: outline2;
+  font-weight: bold;
+}
+.example > h1 ~ h2 ~ h3 {
+  counter-reset: outline4;
+}
+.example > h1 ~ h2 ~ h3:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) "." counter(outline3, decimal) ". ";
+  counter-increment: outline3;
+  font-weight: bold;
+}
+.example > h1 ~ h2 ~ h3 ~ h4 {
+  counter-reset: outline5;
+}
+.example > h1 ~ h2 ~ h3 ~ h4:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) "." counter(outline3, decimal) "." counter(outline4, decimal) ". ";
+  counter-increment: outline4;
+  font-weight: bold;
+}
+.example > h1 ~ h2 ~ h3 ~ h4 ~ h5 {
+  counter-reset: outline6;
+}
+.example > h1 ~ h2 ~ h3 ~ h4 ~ h5:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) "." counter(outline3, decimal) "." counter(outline4, decimal) "." counter(outline5, decimal) ". ";
+  counter-increment: outline5;
+  font-weight: bold;
+}
+.example > h1 ~ h2 ~ h3 ~ h4 ~ h5 ~ h6:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) "." counter(outline3, decimal) "." counter(outline4, decimal) "." counter(outline5, decimal) "." counter(outline6, decimal) ". ";
+  counter-increment: outline6;
+  font-weight: bold;
+}
+.example > h2 {
+  counter-reset: outline2;
+}
+.example > h2:before {
+  content: counter(outline1, decimal) ". ";
+  counter-increment: outline1;
+  font-weight: bold;
+}
+.example > h2 ~ h3 {
+  counter-reset: outline3;
+}
+.example > h2 ~ h3:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) ". ";
+  counter-increment: outline2;
+  font-weight: bold;
+}
+.example > h2 ~ h3 ~ h4 {
+  counter-reset: outline4;
+}
+.example > h2 ~ h3 ~ h4:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) "." counter(outline3, decimal) ". ";
+  counter-increment: outline3;
+  font-weight: bold;
+}
+.example > h2 ~ h3 ~ h4 ~ h5 {
+  counter-reset: outline5;
+}
+.example > h2 ~ h3 ~ h4 ~ h5:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) "." counter(outline3, decimal) "." counter(outline4, decimal) ". ";
+  counter-increment: outline4;
+  font-weight: bold;
+}
+.example > h2 ~ h3 ~ h4 ~ h5 ~ h6:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) "." counter(outline3, decimal) "." counter(outline4, decimal) "." counter(outline5, decimal) ". ";
+  counter-increment: outline5;
+  font-weight: bold;
+}
+.example > h3 {
+  counter-reset: outline2;
+}
+.example > h3:before {
+  content: counter(outline1, decimal) ". ";
+  counter-increment: outline1;
+  font-weight: bold;
+}
+.example > h3 ~ h4 {
+  counter-reset: outline3;
+}
+.example > h3 ~ h4:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) ". ";
+  counter-increment: outline2;
+  font-weight: bold;
+}
+.example > h3 ~ h4 ~ h5 {
+  counter-reset: outline4;
+}
+.example > h3 ~ h4 ~ h5:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) "." counter(outline3, decimal) ". ";
+  counter-increment: outline3;
+  font-weight: bold;
+}
+.example > h3 ~ h4 ~ h5 ~ h6:before {
+  content: counter(outline1, decimal) "." counter(outline2, decimal) "." counter(outline3, decimal) "." counter(outline4, decimal) ". ";
+  counter-increment: outline4;
+  font-weight: bold;
+}
+.example-exhibition {
+  padding: 1em;
+  background-color: #F7F7F9;
+  border: 1px solid #E1E1E8;
+  max-width: 655px;
+}

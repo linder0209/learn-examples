@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="overflow: auto;border:1px solid #3A9EA7;width:100px;height:100px;">
+    <div style="position:relative;">
+        在IE6，IE7下，子元素使用position:relative，父元素使用overflow:auto后，我们预期的是滚动条滚动时，子元素也随着滚动，实际情况是内容不滚动，而且内容会溢出父元素。
+        解决的办法是在父元素上添加position:relative（这样会产生副作用）。
+    </div>
+</div>
+</body>
+</html>

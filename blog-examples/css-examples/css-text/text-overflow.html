@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>text-overflow 用法</title>
+    <style>
+        li {
+            margin-top: 10px;
+        }
+
+        .clip p,
+        .ellipsis p,
+        .ellipsis span {
+            overflow: hidden;
+            width: 200px;
+            white-space: nowrap;
+            border: 1px solid #008ab8;
+        }
+
+        .clip p {
+            text-overflow: clip;
+        }
+
+        .ellipsis p,
+        .ellipsis span {
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li class="clip">
+        <strong>clip: 溢出的文字将被截取</strong>
+
+        <p>测试用文字测试用文字测试用文字测试用文字测试用文字测试用文字</p>
+
+        <p>This is test for english.This is test for english.</p>
+    </li>
+    <li class="ellipsis">
+        <strong>ellipsis: 将溢出的文字显示省略标记（...）</strong>
+
+        <p>测试用文字测试用文字测试用文字测试用文字测试用文字测试用文字</p>
+
+        <p>This is test for english.This is test for english.</p>
+        <span> 行内框不起作用：span 元素  span 元素  span 元素  span 元素  span 元素</span>
+    </li>
+</ol>
+<script>
+    $(function () {
+        var size = $("#addressSection .address").size();
+        if (size <= 3) {
+            $('#lesshide').hide();
+            $('#morehide').hide();
+        } else {
+            $('#addressSection .address:gt(2)').hide();
+            $('#lesshide').hide();
+            $('#more').click(function (e) {
+                e.preventDefault();
+                $('#addressSection .address:gt(2)').show();
+                $('#lesshide').show();
+                $('#morehide').hide();
+            });
+        }
+        $('#addressSection .address:gt(2)').show();
+        $('#less').click(function (e) {
+            e.preventDefault();
+            $('#addressSection .address:gt(2)').hide();
+            $('#morehide').show();
+            $('#lesshide').hide();
+        });
+    });
+
+</script>
+</body>
+</html>

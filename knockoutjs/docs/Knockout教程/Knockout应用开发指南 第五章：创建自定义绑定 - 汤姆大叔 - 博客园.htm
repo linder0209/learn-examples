@@ -1,0 +1,774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)http://www.cnblogs.com/TomXu/archive/2011/11/26/2256949.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" type="text/javascript" src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/gpt.js"></script><script type="text/javascript" src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/encoder.js"></script>
+
+<title>Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/style.css">
+<link type="text/css" rel="stylesheet" href="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/101461.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/TomXu/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/TomXu/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/TomXu/wlwmanifest.xml">
+<script src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'TomXu', cb_enable_mathjax=false;</script>
+<script src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/blog-common.js" type="text/javascript"></script>
+<script src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/skin.js" language="javascript" type="text/javascript"></script>
+<script async="" type="text/javascript" src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/pubads_impl_32.js"></script><script type="text/javascript" src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/osd.js"></script></head>
+<body>
+<a name="top"></a>
+
+
+<div id="container">
+    <a class="minyx" href="http://www.spiga.com.mx/">Spiga</a>
+    <ul id="topMnu">
+        <!-- 统计数据 -->
+        <li>
+        
+            
+Posts - 128, 
+Articles - 1, 
+Comments - 15150
+<!---->            
+        
+        </li>
+        <!-- 这边可以增加一些链接 -->
+        <!-- 博客园 -->
+        <li><a href="http://www.cnblogs.com/">Cnblogs</a></li>
+        <!-- 管理 -->
+        <li id="topMnu-dashboard"><a id="lnkDashboard" href="http://www.cnblogs.com/TomXu/admin/EditPosts.aspx">Dashboard</a></li>
+        <li><a id="lnkLogin" href="http://passport.cnblogs.com/login.aspx?ReturnUrl=http://www.cnblogs.com/TomXu/archive/2011/11/26/2256949.html">Login</a></li>
+    </ul>
+    
+    <script language="javascript" type="text/javascript">
+        var m = window.__blog.topMenuRendered;
+        if (m) { m(__$("topMnu")); }
+    </script>
+
+    <div id="header">
+        <ul id="menu">
+                <!-- 首页，当前section加上current类 -->
+                <li id="menu-home" class="current"><a id="lnkHome" href="http://www.cnblogs.com/TomXu/">Home</a></li>
+                <!-- 联系 -->
+                <li id="menu-contact"><a id="lnkContact" href="http://space.cnblogs.com/msg/send/%e6%b1%a4%e5%a7%86%e5%a4%a7%e5%8f%94">Contact</a></li>
+                <!-- 相册 -->
+                <li id="menu-gallary"><a id="lnkGallery" href="http://www.cnblogs.com/TomXu/gallery.html">Gallery</a></li>
+                <!-- Rss订阅 -->
+                <li id="rss"><a id="lnkRss" href="http://www.cnblogs.com/TomXu/rss">RSS</a></li>
+        </ul>
+	<div id="newmsg"></div>
+        <h1>
+            <!-- 主标题 -->
+            <a id="lnkBlogTitle" href="http://www.cnblogs.com/TomXu/">汤姆大叔的博客</a>
+            <!-- 子标题 -->
+            <small></small>
+        </h1>
+    </div>
+    
+    <script language="javascript" type="text/javascript">
+        var m = window.__blog.headerRendered;
+        if (m) { m(__$("header")); }
+    </script>
+        
+    <div id="wrapper"> 
+        <div id="content">
+             <script language="javascript" type="text/javascript">
+                        var m = window.__blog.preRenderPosts;
+                        if (m) { m(); } 
+            </script>
+            
+
+<div class="post" id="post"><a name="top"></a>
+    <h2>
+        <a id="ctl01_lnkTitle" href="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园.htm">Knockout应用开发指南 第五章：创建自定义绑定</a></h2>
+    <small>
+        2011-11-26 19:20
+        by
+        汤姆大叔,
+        <span id="post_view_count">4828</span>
+        阅读,
+        <span id="post-comment-count"><span id="post_comment_count">2</span></span>
+        评论,
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/11/26/2256949.html#" onclick="PutInWz();return false;">收藏</a>,
+        <a id="ctl01_lnkEdit" href="http://i.cnblogs.com/EditPosts.aspx?postid=2256949">编辑</a></small>
+    <div class="entry">
+        <div id="cnblogs_post_body"><h3>创建自定义绑定</h3>
+<p>你可以创建自己的自定义绑定 – 没有必要非要使用内嵌的绑定（像click，value等）。你可以你封装复杂的逻辑或行为，自定义很容易使用和重用的绑定。例如，你可以在form表单里自定义像grid，tabset等这样的绑定。</p>
+<p><strong>重要：以下文档只应用在Knockout 1.1.1和更高版本，Knockout 1.1.0和以前的版本在注册API上是不同的。</strong></p>
+<p>&nbsp;</p>
+<p><strong>注册你的绑定</strong></p>
+<p>添加子属性到ko.bindingHandlers来注册你的绑定：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>ko.bindingHandlers.yourBindingName = {<br>    init: <span style="color: #0000ff;">function</span>(element, valueAccessor, allBindingsAccessor, viewModel) {<br>        <span style="color: #008000;">//</span><span style="color: #008000;"> This will be called when the binding is first applied to an element</span><span style="color: #008000;"><br></span>        <span style="color: #008000;">//</span><span style="color: #008000;"> Set up any initial state, event handlers, etc. here</span><span style="color: #008000;"><br></span>    },<br><br>    update: <span style="color: #0000ff;">function</span>(element, valueAccessor, allBindingsAccessor, viewModel) {<br>        <span style="color: #008000;">//</span><span style="color: #008000;"> This will be called once when the binding is first applied to an element,</span><span style="color: #008000;"><br></span>        <span style="color: #008000;">//</span><span style="color: #008000;"> and again whenever the associated observable changes value.</span><span style="color: #008000;"><br></span>        <span style="color: #008000;">//</span><span style="color: #008000;"> Update the DOM element based on the supplied values here.</span><span style="color: #008000;"><br></span>    }<br>};</pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>… 然后就可以在任何DOM元素上使用了：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="yourBindingName: someValue"</span><span style="color: #0000ff;">&gt;</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>注：你实际上没必要把init和update这两个callbacks都定义，你可以只定义其中的任意一个。</p>
+<p>&nbsp;</p>
+<p><strong>update 回调</strong><strong></strong></p>
+<p>当管理的observable改变的时候，KO会调用你的update callback函数，然后传递以下参数：</p>
+<ul>
+<li><span style="color: #ff6600;">element</span> — 使用这个绑定的DOM元素</li>
+<li><span style="color: #ff6600;">valueAccessor</span> —JavaScript函数，通过valueAccessor()可以得到应用到这个绑定的model上的当前属性值。</li>
+<li><span style="color: #ff6600;">allBindingsAccessor</span> —JavaScript函数，通过allBindingsAccessor ()得到这个元素上所有model的属性值。</li>
+<li><span style="color: #ff6600;">viewModel</span> — 传递给ko.applyBindings使用的 view model参数，如果是模板内部的话，那这个参数就是传递给该模板的数据。</li>
+</ul>
+<p>&nbsp;</p>
+<p>例如，你可能想通过 visible绑定来控制一个元素的可见性，但是你想让该元素在隐藏或者显示的时候加入动画效果。那你可以自定义自己的绑定来调用jQuery的slideUp/slideDown 函数：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>ko.bindingHandlers.slideVisible = {<br>    update: <span style="color: #0000ff;">function</span>(element, valueAccessor, allBindingsAccessor) {<br>        <span style="color: #008000;">//</span><span style="color: #008000;"> First get the latest data that we're bound to</span><span style="color: #008000;"><br></span>        <span style="color: #0000ff;">var</span> value = valueAccessor(), allBindings = allBindingsAccessor();        <br><br>        <span style="color: #008000;">//</span><span style="color: #008000;"> Next, whether or not the supplied model property is observable, get its current value</span><span style="color: #008000;"><br></span>        <span style="color: #0000ff;">var</span> valueUnwrapped = ko.utils.unwrapObservable(value);<br><br>        <span style="color: #008000;">//</span><span style="color: #008000;"> Grab some more data from another binding property</span><span style="color: #008000;"><br></span>        <span style="color: #0000ff;">var</span> duration = allBindings.slideDuration || 400;<br><br><span style="color: #008000;">        //</span><span style="color: #008000;"> 400ms is default duration unless otherwise specified</span><span style="color: #008000;"><br></span>     <br>        <span style="color: #008000;">//</span><span style="color: #008000;"> Now manipulate the DOM element</span><span style="color: #008000;"><br></span><br>        <span style="color: #0000ff;">if</span> (valueUnwrapped == <span style="color: #0000ff;">true</span>)<br>            $(element).slideDown(duration); <span style="color: #008000;">//</span><span style="color: #008000;"> Make the element visible</span><span style="color: #008000;"><br></span>        <span style="color: #0000ff;">else</span><br>            $(element).slideUp(duration);   <span style="color: #008000;">//</span><span style="color: #008000;"> Make the element invisible</span><span style="color: #008000;"><br></span>    }<br>};</pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><br><br></p>
+<p>然后你可以像这样使用你的绑定：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="slideVisible: giftWrap, slideDuration:600"</span><span style="color: #0000ff;">&gt;</span>You have selected the option<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">label</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="checkbox"</span><span style="color: #ff0000;"> data-bind</span><span style="color: #0000ff;">="checked: giftWrap"</span><span style="color: #0000ff;">/&gt;</span> Gift wrap<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">label</span><span style="color: #0000ff;">&gt;</span> <br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        giftWrap: ko.observable(</span><span style="background-color: #f5f5f5; color: #0000ff;">true</span><span style="background-color: #f5f5f5; color: #000000;">)<br>    };<br>    ko.applyBindings(viewModel);<br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>当然，看来可能代码很多，但是一旦你创建了自定义绑定，你就可以在很多地方重用它。</p>
+<p>&nbsp;</p>
+<p><strong>init 回调</strong><strong></strong></p>
+<p>Knockout在DOM元素使用自定义绑定的时候会调用你的init函数。init有两个重要的用途：</p>
+<ul>
+<li>为DOM元素设置初始值</li>
+<li>注册事件句柄，例如当用户点击或者编辑DOM元素的时候，你可以改变相关的observable值的状态。</li>
+</ul>
+<p>&nbsp;KO会传递和update回调函数一样的参数。</p>
+<p>继续上面的例子，你可以像让slideVisible在页面第一次显示的时候设置该元素的状态（但是不使用任何动画效果），而只是让动画在以后改变的时候再执行。你可以这样来做：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>ko.bindingHandlers.slideVisible = {<br>    init: <span style="color: #0000ff;">function</span>(element, valueAccessor) {<br>        <span style="color: #0000ff;">var</span> value = ko.utils.unwrapObservable(valueAccessor());<br>        <span style="color: #008000;">//</span><span style="color: #008000;"> Get the current value of the current property we're bound to</span><span style="color: #008000;"><br></span>        $(element).toggle(value);<br>        <span style="color: #008000;">//</span><span style="color: #008000;"> jQuery will hide/show the element depending on whether "value" or true or false</span><span style="color: #008000;"><br></span>    },<br><br>    update: <span style="color: #0000ff;">function</span>(element, valueAccessor, allBindingsAccessor) {<br>        <span style="color: #008000;">//</span><span style="color: #008000;"> Leave as before</span><span style="color: #008000;"><br></span>    }<br>};</pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>这就是说giftWrap的初始值声明的是false（例如giftWrap: ko.observable(false)），然后让初始值会让关联的DIV隐藏，之后用户点击checkbox的时候会让元素显示出来。</p>
+<p>&nbsp;</p>
+<p><strong>DOM</strong><strong>事件之后更新observable值</strong></p>
+<p>你已经值得了如何使用update回调，当observable值改变的时候，你可以更新相关的DOM元素。但是其它形式的事件怎么做呢？比如当用户对某个DOM元素有某些action操作的时候，你想更新相关的observable值。</p>
+<p>你可以使用init回调来注册一个事件句柄，这样可以改变相关的observable值，例如，</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>ko.bindingHandlers.hasFocus = {<br><br>    init: <span style="color: #0000ff;">function</span> (element, valueAccessor) {<br>        $(element).focus(<span style="color: #0000ff;">function</span> () {<br>            <span style="color: #0000ff;">var</span> value = valueAccessor();<br>            value(<span style="color: #0000ff;">true</span>);<br>        });<br><br>        $(element).blur(<span style="color: #0000ff;">function</span> () {<br>            <span style="color: #0000ff;">var</span> value = valueAccessor();<br>            value(<span style="color: #0000ff;">false</span>);<br>        });<br>    },<br><br>    update: <span style="color: #0000ff;">function</span> (element, valueAccessor) {<br>        <span style="color: #0000ff;">var</span> value = valueAccessor();<br>        <span style="color: #0000ff;">if</span> (ko.utils.unwrapObservable(value))<br>            element.focus();<br>        <span style="color: #0000ff;">else</span><br>            element.blur();<br>    }<br>};</pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>现在你可以通过hasFocus绑定来读取或者写入这个observable值了：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>Name: <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="hasFocus: editingName"</span><span style="color: #0000ff;">/&gt;&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> Showing that we can both read and write the focus state </span><span style="color: #008000;">--&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="visible: editingName"</span><span style="color: #0000ff;">&gt;</span>You're editing the name<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">button </span><span style="color: #ff0000;">data-bind</span><span style="color: #0000ff;">="enable: !editingName(), click:function() { editingName(true) }"</span><span style="color: #0000ff;">&gt;</span>Edit name<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">button</span><span style="color: #0000ff;">&gt;</span><br><br><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #000000;"><br>    </span><span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> viewModel </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> {<br>        editingName: ko.observable()<br>    };<br>    ko.applyBindings(viewModel);<br></span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="display: none; "><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><br><br>&nbsp;</p></div><div id="MySignature"></div>
+        
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="blog_post_info"><div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/TomXu/category/336771.html">[08]Knockout</a></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/TomXu/tag/Knockout/">Knockout</a>, <a href="http://www.cnblogs.com/TomXu/tag/asp.net%20MVC/">asp.net MVC</a>, <a href="http://www.cnblogs.com/TomXu/tag/JavaScript/">JavaScript</a>, <a href="http://www.cnblogs.com/TomXu/tag/MVVM/">MVVM</a>, <a href="http://www.cnblogs.com/TomXu/tag/ViewModel/">ViewModel</a>, <a href="http://www.cnblogs.com/TomXu/tag/jQuery/">jQuery</a></div>
+<div id="green_channel">
+绿色通道：
+<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(cb_entryId,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+<a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a>
+<a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://space.cnblogs.com/msg/send/%e6%b1%a4%e5%a7%86%e5%a4%a7%e5%8f%94" target="_blank">与我联系</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/icon_weibo_24.png" alt=""></a>
+</div>
+<div id="digg_block">
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/TomXu/" target="_blank"><img src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/u349491.jpg" class="author_avatar" alt=""></a>
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/TomXu/">汤姆大叔</a><br>
+<a href="http://home.cnblogs.com/u/TomXu/followees">关注 - 19</a><br>
+<a href="http://home.cnblogs.com/u/TomXu/followers">粉丝 - 4759</a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor">荣誉：<a href="http://www.cnblogs.com/expert/" target="_blank">推荐博客</a></div>
+<div id="author_profile_follow">
+<a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a>
+</div>
+</div>
+<div id="div_digg">										
+	<div class="diggit" onclick="votePost(cb_entryId,&#39;Digg&#39;)"> 
+		<span class="diggnum" id="digg_count">6</span>
+	</div>
+	<div class="buryit" onclick="votePost(cb_entryId,&#39;Bury&#39;)"> 
+		<span class="burynum" id="bury_count">0</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">
+    (请您对文章做出评价)
+    </div>	
+</div>
+</div></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/TomXu/archive/2011/11/26/2263104.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/TomXu/archive/2011/11/26/2263104.html" title="发布于2011-11-26 08:54">微软ASP.NET站点部署指南（5）：部署到IIS上作为测试环境</a><br><a href="http://www.cnblogs.com/TomXu/archive/2011/11/27/2264876.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/TomXu/archive/2011/11/27/2264876.html" title="发布于2011-11-27 10:40">用Javascript评估用户输入密码的强度（Knockout版）</a><br></div>
+</div>
+
+
+    </div>    
+    <ul class="postmetadata">
+        <li id="ctl01_liCate" class="icon_cat"><strong>Categories: </strong>
+            <a href="http://www.cnblogs.com/TomXu/category/336771.html">[08]Knockout</a>            
+        </li>
+        <li id="ctl01_liTag" class="icon_bullet"><strong>Tags: </strong>
+            <a href="http://www.cnblogs.com/TomXu/tag/Knockout/">Knockout</a>, <a href="http://www.cnblogs.com/TomXu/tag/asp.net+MVC/">asp.net MVC</a>, <a href="http://www.cnblogs.com/TomXu/tag/JavaScript/">JavaScript</a>, <a href="http://www.cnblogs.com/TomXu/tag/MVVM/">MVVM</a>, <a href="http://www.cnblogs.com/TomXu/tag/ViewModel/">ViewModel</a>, <a href="http://www.cnblogs.com/TomXu/tag/jQuery/">jQuery</a>
+        </li>        
+    </ul>
+</div>
+<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=101461,cb_entryId=2256949,cb_blogApp=currentBlogApp,cb_blogUserGuid='65b02d3c-5b0b-e111-b7b9-842b2b196315',cb_entryCreatedDate='2011/11/26 19:20:00';loadViewCount(cb_entryId);</script>
+<script type="text/javascript">
+    var m = window.__blog.postRendered;
+    if (m) { m(__$("post")); }
+</script>
+
+<script type="text/javascript">
+    var m = window.__blog.postRenderPosts;
+    if (m) { m(); }
+</script><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<a class="addcomment" href="http://www.cnblogs.com/TomXu/archive/2011/11/26/2256949.html#comment_tip">Add your comment</a>
+<h3 id="comments"></h3>
+<div class="feedbackNoItems"></div>
+
+
+<ol class="commentlist" id="commentList">	
+
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/26/2256949.html#2454635" class="layer">#1楼</a><a name="2454635" id="comment_anchor_2454635"></a></cite> <a id="a_comment_author_2454635" href="http://www.cnblogs.com/rxnh8255/" target="_blank">血血</a> <a href="http://space.cnblogs.com/msg/send/%e8%a1%80%e8%a1%80" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2012-08-23 10:51</span></small>
+			</h5>
+			<div id="comment_body_2454635" class="blog_comment_body">传递进去的值为什么都不对啊....<br>全是这种值:<br><br><br>function b(){if(0&lt;arguments.length){if(!b.equalityComparer||!b.equalityComparer(d,arguments[0]))b.H(),d=arguments[0],b.G();return this}r.T.Ha(b);return d}</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2454635,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2454635,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2454635_avatar" style="display:none;">http://pic.cnitblog.com/face/u43082.jpg</span>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+		<li class="alt">
+			<h5>
+				<cite><a href="http://www.cnblogs.com/TomXu/archive/2011/11/26/2256949.html#2631674" class="layer">#2楼</a><a name="2631674" id="comment_anchor_2631674"></a><span id="comment-maxId" style="display:none;">2631674</span><span id="comment-maxDate" style="display:none;">2013/3/10 15:42:54</span></cite> <a id="a_comment_author_2631674" href="http://home.cnblogs.com/u/277344/" target="_blank">安静生活</a> <a href="http://space.cnblogs.com/msg/send/%e5%ae%89%e9%9d%99%e7%94%9f%e6%b4%bb" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><small> <span class="comment_date">2013-03-10 15:42</span></small>
+			</h5>
+			<div id="comment_body_2631674" class="blog_comment_body">var value = valueAccessor()<br><br>var valueUnwrapped = ko.utils.unwrapObservable(value);<br><br>根据上面的注释，我感觉这两行代码，所起的作用是一样的，就是得到当前元素的值<br><br>这两行代码，有什么区别呢？谢谢</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2631674,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2631674,&#39;Bury&#39;,this)">反对(0)</a></div>
+			<div class="opt_comment"><span class="comment_actions"></span></div>
+		</li>
+	
+</ol>
+
+<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="http://www.cnblogs.com/TomXu/archive/2011/11/26/2256949.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/TomXu/archive/2011/11/26/2256949.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"><a href="http://www.cnblogs.com/cmt/p/3577868.html" target="_blank">游戏开发者报名得阿里云代金券，更有千元大奖等你拿</a></div>
+<div id="site_nav_under"><a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">博客园首页</a><a href="http://q.cnblogs.com/" target="_blank" title="程序员问答社区">博问</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://job.cnblogs.com/" target="_blank">程序员招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a></div>
+<div id="ad_under_post_holder">
+
+<div id="google_ad_c1" class="c_ad_block">
+    <!-- cnblogs_blogpost_C1_sitehome -->
+    <div id="div-gpt-ad-1346480159711-0" style="width: 300px; height: 250px; ">
+    
+    <div id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__container__" style="border: 0pt none; "><iframe id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom; " src="javascript:"<html><body style='background:transparent'></body></html>""></iframe></div><iframe id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none; " src="javascript:"<html><body style='background:transparent'></body></html>""></iframe></div>
+</div>
+<div id="blog_news_kb"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/201932/" target="_blank">腾讯手游想疯狂变现 却遭遇360狙击</a><br> ·  <a href="http://news.cnblogs.com/n/201931/" target="_blank">迅雷推“红雷盒子”机顶盒：3月28日发售 售399元</a><br> ·  <a href="http://news.cnblogs.com/n/201930/" target="_blank">全球最大飞行器竟是美军间谍工具</a><br> ·  <a href="http://news.cnblogs.com/n/201929/" target="_blank">中国人民银行行长周小川：绝不取缔余额宝</a><br> ·  <a href="http://news.cnblogs.com/n/201928/" target="_blank">神PS！奥斯卡影星与年轻时自己的合影</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/191521/" target="_blank">指尖上的浏览：如何理解用户的眼？</a><br> ·  <a href="http://kb.cnblogs.com/page/200929/" target="_blank">Node.js 究竟是什么？</a><br> ·  <a href="http://kb.cnblogs.com/page/194376/" target="_blank">Habya'a（临时拼凑的组件）与技术债务</a><br> ·  <a href="http://kb.cnblogs.com/page/200528/" target="_blank">关于在线教育和线下教育的六个问题</a><br> ·  <a href="http://kb.cnblogs.com/page/199787/" target="_blank">别错把需求当市场</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div></div>
+<script type="text/javascript">
+var enableGoogleAd = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+fixPostBodyFormat();
+loadAdUnderPost();
+</script>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+loadBlogSignature();
+LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+</script>
+<script type="text/javascript">
+    $.ajax({ url: 'http://counter.cnblogs.com/blog/post/' + cb_entryId, type: 'get', dataType: 'script', cache: true });
+</script>
+</div>
+
+        </div>
+        
+	    <script language="javascript" type="text/javascript">
+	               var m = window.__blog.contentRendered;
+	               if (m) { m(__$("content")); }
+        </script>
+
+	    <div id="sidebar">
+			    
+<div id="about">
+<div>
+<h2 id="about_title">About</h2>
+<div id="about_body">
+<div id="blog-news" style=""><p><img style="float:left;margin-right:10px" alt="" src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/tom.jpg" height="150" width="150"><strong>目前工作</strong>：项目管理（PMP）<br>
+<strong>曾获认证</strong>：MCP、MCSE、MCDBA、MCTS、MCITP、MCPD、PMP、MVP<br>
+<strong>略有小成</strong>：软件架构、设计模式、OOD、OOP、DI、IOC、AOP、SOA<br>
+<strong>兴趣爱好</strong>：技术、管理、英文、吃喝玩乐乱侃空
+</p>
+<p style="clear:both"></p>
+<br>
+熟悉Waterfall、Agile(Scrum&amp;XP)，染指C#、ASP.NET、MVC、EF、NHibernate、SQL Server、Oracle、JavaScript、HTML5、CSS3、JQuery、Knockout、Silverlight、WPF、WCF、ADFS等技术<br>
+<br>
+<span style="color: red;">注：</span>本人翻译的技术文章皆不是逐句翻译，而是按照自己的理解翻译的（当然也去除了一些不影响理解但本人实在不知道如何组织的句子）。<br>
+<br>
+<p style="clear:both"></p>
+<fieldset> <legend>作品上市</legend>
+<p><img style="float:left;margin-right:10px" src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/shupi.jpg" alt="" width="150">
+[1] <a href="http://product.china-pub.com/3769483" target="_blank">China-Pub</a>
+<br>
+<br>
+</p>
+<p style="clear:both"></p><br>
+<p><img style="float:left;margin-right:10px" src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/o_jsdp.jpg" alt="" width="150">
+[1] <a href="http://book.jd.com/11253887.html" target="_blank">京东商城</a>
+<br>
+[2] <a href="http://www.amazon.cn/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BE%8E-Addy-Osmani/dp/B00D6MT3LG/" target="_blank">卓越亚马逊</a>
+<br>
+[3] <a href="http://product.dangdang.com/product.aspx?product_id=23266635" target="_blank">当当网</a>
+<br>
+[4] <a href="http://product.china-pub.com/3768064" target="_blank">China-Pub</a>
+<br>
+[5] <a href="http://book.douban.com/subject/24744217/" target="_blank">豆瓣网</a>
+<br>
+[6] <a href="http://s.taobao.com/search?q=JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20Addy%20Osmani" target="_blank">淘宝网</a>
+<br>
+<br>
+</p>
+<div style="clear:both"></div>
+<p><img style="float:left;margin-right:10px" src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/o_EloquentJavaScript.jpg" alt="" width="150">
+[1] <a href="http://book.360buy.com/11091494.html" target="_blank">京东商城</a>
+<br>
+[2] <a href="http://www.amazon.cn/JavaScript%E7%BC%96%E7%A8%8B%E7%B2%BE%E8%A7%A3-%E5%93%88%E5%BC%97%E8%B4%9D%E5%85%8B/dp/B009A7D25E/ref=sr_1_11" target="_blank">卓越亚马逊</a>
+<br>
+[3] <a href="http://union.dangdang.com/transfer/transfer.aspx?from=P-263982&backurl=http://product.dangdang.com/product.aspx?product_id=22873894" target="_blank">当当网</a>
+<br>
+[4] <a href="http://product.china-pub.com/3684096" target="_blank">China-Pub</a>
+<br>
+[5] <a href="http://book.douban.com/subject/19933548/" target="_blank">豆瓣网</a>
+<br>
+[6] <a href="http://s.taobao.com/search?q=JavaScript%E7%BC%96%E7%A8%8B%E7%B2%BE%E8%A7%A3" target="_blank">淘宝网</a>
+<br>
+<br>
+<a href="http://www.cnblogs.com/TomXu/archive/2012/10/21/JSError.html" target="_blank">本书勘误</a>
+</p>
+
+</fieldset><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/TomXu/">汤姆大叔</a><br>园龄：<a href="http://home.cnblogs.com/u/TomXu/" title="入园时间：2011-11-10">2年3个月</a><br>荣誉：<a href="http://www.cnblogs.com/expert/">推荐博客</a><br>粉丝：<a href="http://home.cnblogs.com/u/TomXu/followers/">4759</a><br>关注：<a href="http://home.cnblogs.com/u/TomXu/followees/">19</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="cnblogs.UserManager.FollowBlogger(&#39;65b02d3c-5b0b-e111-b7b9-842b2b196315&#39;)">+加关注</a></div></div></div>
+<script type="text/javascript">loadBlogNews();</script>
+</div>
+</div>
+</div>
+
+			    <script language="javascript" type="text/javascript">
+                        var m = window.__blog.aboutRendered;
+                        if (m) { m(__$("about")); }
+                </script>
+                
+<script type="text/javascript">
+function zzk_go()
+{
+	var blogapp = 'TomXu';
+	var keystr = encodeURIComponent("blog:"+blogapp+" "+document.getElementById('q').value);
+    window.location = "http://zzk.cnblogs.com/s?w="+keystr;
+}
+function zzk_go_enter(event)
+{
+	if(event.keyCode == 13)
+	{
+	    zzk_go();
+	    return false;
+	}
+}
+</script>
+
+<div id="mySearchWrapper">
+    <div id="mySearch">
+        <input type="image" src="./Knockout应用开发指南 第五章：创建自定义绑定 - 汤姆大叔 - 博客园_files/btnsearch.gif" id="btnZzk" class="submit" onclick="zzk_go();return false;">
+        <label class="lb_search"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="keyword"></label>
+    </div>
+</div>
+
+                <script language="javascript" type="text/javascript">
+                                var m = window.__blog.searchFormRendered;
+                                if (m) { m(__$("searchform")); }
+                </script>
+                <div id="sideMain">
+                <div id="side-recent-posts">
+<h2>最新随笔</h2>
+ <ul class="bullet">
+
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2013/06/14/3135050.html">新书《JavaScript设计模式 》出版，感谢支持</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/10/22/2733027.html">《JavaScript编程精解》回馈网友，汤姆大叔送书30本</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/10/21/JSError.html">《JavaScript编程精解》勘误</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/07/26/2581268.html">深入理解JavaScript系列（结局篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/07/24/2581239.html">深入理解JavaScript系列（50）：Function模式（下篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/07/23/2580701.html">深入理解JavaScript系列（49）：Function模式（上篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/26/2443010.html">深入理解JavaScript系列（48）：对象创建模式（下篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/25/2439527.html">深入理解JavaScript系列（47）：对象创建模式（上篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/24/2438050.html">深入理解JavaScript系列（46）：代码复用模式（推荐篇）</a></li>
+	
+		<li><a href="http://www.cnblogs.com/TomXu/archive/2012/04/23/2438005.html">深入理解JavaScript系列（45）：代码复用模式（避免篇）</a></li>
+	
+</ul>
+</div><div id="side-recent-comments">
+    <h2>最新评论</h2>
+    <ul class="voice">
+    
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/09/2306329.html#2887741">Re:深入理解JavaScript系列（7）：S.O.L.I.D五大原则之开闭原则OCP</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/09/2306329.html#2887741">
+                @蓝丶 sky引用@chasefornone如果先设置my的renderInput，基类中的renderInput就会覆盖你重写的那个函数，这样就没用了。而写在后面可以覆盖基类中的renderInpu...
+                 -- LoveJenny
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html#2887325">Re:深入理解JavaScript系列</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html#2887325">
+                @linjisong<br>麻烦发给我一份，这是我的邮箱: wyf061@126.com<br>谢谢。
+                 -- Vincent Wu
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/06/2305513.html#2887245">Re:深入理解JavaScript系列（6）：S.O.L.I.D五大原则之单一职责SRP</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/06/2305513.html#2887245">
+                @汤姆大叔引用引用引用600120：感觉大叔学习精力充沛哦，问个个人问题，大叔有孩子了没？有了，儿子，所以不担心身体了，也敢喝可乐了，嘿嘿有了儿子，就更要担心身体了，只是不用担心自己不孕不育了，呵呵。
+                 -- LoveJenny
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html#2887188">Re:深入理解JavaScript系列（4）：立即调用的函数表达式</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html#2887188">
+                @unbreakable引用@shinebob(function(){})()还记的我们var a=function(){},用a()来调用这个方法吧！此处a看做一个函数对象引用,那我们可以看做(fu...
+                 -- LoveJenny
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/04/11/2435452.html#2883158">Re:深入理解JavaScript系列（39）：设计模式之适配器模式</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/04/11/2435452.html#2883158">
+                @troy huang我觉得是没有必要执行这个操作，TurkeyAdapter包装类传过去的对象参数只要是WildTurkey类的子对象就可以了吧，...
+                 -- js蜗牛
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882937">Re:大叔手记（9）：小心使用IHttpHandler下的IsReusable属性</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882937">
+                本意应该是：IHttpHandler的实现类，要注意多线程问题，<br>而不是ProcessRequest (HttpContext context)中的context 有问题
+                 -- 个人知识管理
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882908">Re:大叔手记（9）：小心使用IHttpHandler下的IsReusable属性</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/17/2288579.html#2882908">
+                有误！<br>应是不能使用 HttpContext.Current来获取Request等
+                 -- 个人知识管理
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html#2881687">Re:深入理解JavaScript系列（14）：作用域链(Scope Chain)</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html#2881687">
+                @eeeeeeebar函数的执行上下文：barExecution Context={ 变量对象: barAO, this:foo, Scope Chain:[barAO,globalVO]}barAO...
+                 -- mciiv
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html#2881218">Re:深入理解JavaScript系列（2）：揭秘命名函数表达式</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html#2881218">
+                测试了一下，IE9以下的浏览器除了回忽略if语句，也会忽略return语句，直接解析命名表达式：	var f = (function() { if (false) { return function ...
+                 -- islerning
+            </a>
+            </li>
+        
+            <li>
+                <a href="http://www.cnblogs.com/TomXu/archive/2012/01/16/2309728.html#2880668">Re:深入理解JavaScript系列（12）：变量对象（Variable Object）</a>
+            <br>
+            <a class="child" href="http://www.cnblogs.com/TomXu/archive/2012/01/16/2309728.html#2880668">
+                引用变量对象(缩写为VO)是一个与执行上下文相关的特殊对象，它存储着在上下文中声明的以下内容： 变量 (var, 变量声明); 函数声明 (FunctionDeclaration, 缩写为FD); 函...
+                 -- mciiv
+            </a>
+            </li>
+        
+    </ul>
+</div></div>
+                <div id="sideRight">
+                <div id="side-archives">
+<h2>随笔档案</h2>
+<ul class="date">
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2013/06.html">2013年6月(1)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/10.html">2012年10月(2)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/07.html">2012年7月(3)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/04.html">2012年4月(12)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/03.html">2012年3月(5)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/02.html">2012年2月(18)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2012/01.html">2012年1月(14)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12.html">2011年12月(45)</a></li>
+ 
+
+ <li><a href="http://www.cnblogs.com/TomXu/archive/2011/11.html">2011年11月(28)</a></li>
+ 
+
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="日历">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2014/02/01&#39;);return false;">&lt;</a></td><td align="center">2014年3月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2014/04/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">23</td><td class="CalOtherMonthDay" align="center">24</td><td class="CalOtherMonthDay" align="center">25</td><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalWeekendDay" align="center">1</td></tr><tr><td class="CalWeekendDay" align="center">2</td><td align="center">3</td><td class="CalTodayDay" align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td class="CalWeekendDay" align="center">8</td></tr><tr><td class="CalWeekendDay" align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalWeekendDay" align="center">15</td></tr><tr><td class="CalWeekendDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td class="CalWeekendDay" align="center">22</td></tr><tr><td class="CalWeekendDay" align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalWeekendDay" align="center">29</td></tr><tr><td class="CalWeekendDay" align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td></tr>
+</tbody></table></div><div id="side-link-341714">
+    <h2>[01]汤姆大叔系列博文</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/10/2283385.html" target="_blank">[01]大叔手记全集</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/11/21/2257154.html" target="_blank">[02]Knockout应用开发指南</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/11/25/2263050.html" target="_blank">[03]微软ASP.NET站点部署指南</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/06/2277499.html" target="_blank">[04]HTML5学习笔记简明版</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2284773.html" target="_blank">[05]大叔翻译博文索引</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" target="_blank">[06]深入理解JavaScript系列</a></li>
+    
+    </ul>
+</div><div id="side-link-345292">
+    <h2>[03]推荐博友算法相关</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/huangxincheng/category/340146.html" target="_blank">[01]算法系列15天速成</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/jinzhao/archive/2011/11/30/2268569.html" target="_blank">[02]算法实现大全</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/tuyile006/category/95974.html" target="_blank">[03]常用算法</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/Jax/category/57279.html" target="_blank">[04]算法大全</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/weidagang2046/archive/2009/07/31/1535902.html" target="_blank">[05]博客积分算法探讨</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/chehaoj/archive/2010/11/23/1885497.html" target="_blank">[06]常见算法推演</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/wangfupeng1988/archive/2011/12/26/2302216.html" target="_blank">[07]眼睛直观感受几种常用排序算法</a></li>
+    
+    </ul>
+</div></div>
+                <div id="sideLeft">            
+                <div id="side-categories">
+<h2>随笔分类</h2>
+<ul class="folder">
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/335665.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/335665.html">[01].Net Framework(4)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338101.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338101.html">[02]C#(3)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338102.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338102.html">[03]ASP.NET(5)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/335666.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/335666.html">[04]ASP.NET MVC(8)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/336175.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/336175.html">[05]HTML5/CSS3(16)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338104.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338104.html">[06]JS/jQuery(62)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/337109.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/337109.html">[07]Web开发(57)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/336771.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/336771.html">[08]Knockout(15)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/338040.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/338040.html">[09]配置管理(13)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/337899.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/337899.html">[10]项目管理(3)</a> </li>
+
+ <li><a class="mini_rss" href="http://www.cnblogs.com/TomXu/category/340064.html/rss">Rss</a>
+ <a href="http://www.cnblogs.com/TomXu/category/340064.html">[11]大叔手记(22)</a> </li>
+
+</ul>
+</div><div id="side-top-posts-custom">
+<h2>推荐排行榜</h2>
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html">1. 深入理解JavaScript系列(260)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/28/2286877.html">2. 深入理解JavaScript系列（1）：编写高质量JavaScript代码的基本要点(249)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/21/2292722.html">3. 大叔手记（12）：我的一次面试经历（谈大叔如何应对面试官）(225)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/02/23/2364425.html">4. 大叔手记（21）：汤姆大叔博客园开博100天总结(197)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html">5. 深入理解JavaScript系列（2）：揭秘命名函数表达式(124)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/30/2288372.html">6. 深入理解JavaScript系列（3）：全面解析Module模式(104)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/12/2308594.html">7. 深入理解JavaScript系列（10）：JavaScript核心（晋级高手必读篇）(98)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html">8. 深入理解JavaScript系列（5）：强大的原型和原型链(93)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/19/2291448.html">9. 大叔手记（10）：别再让面试官问你单例（暨6种实现方式让你堵住面试官的嘴）(85)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/11/22/2258849.html">10. 最锋利的Visual Studio Web开发工具扩展：Web Essentials详解(72)</a></li></ul></div>
+</div><div id="side-top-posts">
+<h2>阅读排行榜</h2>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html">1. 深入理解JavaScript系列(141708)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/28/2286877.html">2. 深入理解JavaScript系列（1）：编写高质量JavaScript代码的基本要点(60458)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/11/21/2257154.html">3. Knockout应用开发指南（完整版） 目录索引(34682)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/29/2290308.html">4. 深入理解JavaScript系列（2）：揭秘命名函数表达式(32605)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/10/22/2733027.html">5. 《JavaScript编程精解》回馈网友，汤姆大叔送书30本(29832)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/21/2292722.html">6. 大叔手记（12）：我的一次面试经历（谈大叔如何应对面试官）(25719)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/30/2288372.html">7. 深入理解JavaScript系列（3）：全面解析Module模式(24692)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/12/2308594.html">8. 深入理解JavaScript系列（10）：JavaScript核心（晋级高手必读篇）(23956)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/06/2277510.html">9. 汤姆大叔博客索引(22745)</a></li><li><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html">10. 深入理解JavaScript系列（5）：强大的原型和原型链(20925)</a></li></ul></div>
+</div><div id="side-link-342866">
+    <h2>[02]汤姆大叔推荐单篇</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/14/2286225.html" target="_blank">[01]大型JavaScript应用架构模式</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/19/2291448.html" target="_blank">[02]别再让面试官问你单例</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/21/2292722.html" target="_blank">[03]大叔的一次面试经历</a></li>
+    
+    </ul>
+</div><div id="side-link-345293">
+    <h2>[04]推荐博友精选好文</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://www.cnblogs.com/peterzb/archive/2009/06/14/1502918.html" target="_blank">[01]C# WinForm开发系列</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/lifepoem/archive/2011/12/16/2288017.html" target="_blank">[02]LINQ之路</a></li>
+    
+        <li>
+        <a href="http://www.cnblogs.com/xiao-f/archive/2011/12/19/lang.html" target="_blank">[03]Javascript面向对象扩展库</a></li>
+    
+    </ul>
+</div><div id="side-link-348581">
+    <h2>[05]推荐外部精选好文</h2>
+    <ul class="chain">
+    
+        <li>
+        <a href="http://kangax.github.com/es5-compat-table/" target="_blank">[01]ECMAScript 5浏览器兼容表</a></li>
+    
+        <li>
+        <a href="http://kb.cnblogs.com/page/127995/" target="_blank">[02]Javascript 面向对象编程</a></li>
+    
+    </ul>
+</div></div>
+			    
+			    <div id="sideContainer"></div>
+                <script language="javascript" type="text/javascript">
+                    $.ajax({
+                        url: '/' + currentBlogApp + '/mvc/blog/Minyx2_Lite_SideColumn.aspx',
+                        data: '{}',
+                        type: 'post',
+                        dataType: 'text',
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (data) {
+                            if (data) {
+                                $("#sideContainer").html(data);
+                                if ($("#blog-calendar").length) {
+                                    loadBlogCalendar();
+                                }
+                                loadBlogSideBlocks();
+                                var m = window.__blog.sideContainerRendered;
+                                if (m) { m(__$("sideContainer")); }
+                                window.__blog.sidebar.__layout();
+                            }
+                        }
+                    });
+                    
+                 </script>       	
+			                      
+ 		    </div>
+     		
+	        <script language="javascript" type="text/javascript">
+	        var m = window.__blog.sidebarRendered;
+	        if (m) { m(__$("sidebar")); }
+                </script>        
+     </div>
+     
+        <script language="javascript" type="text/javascript">
+            var m = window.__blog.wrapperRendered;
+            if (m) { m(__$("wrapper")); }
+        </script>
+
+</div>
+<!-- end of container -->
+    
+<script language="javascript" type="text/javascript">
+    var m = window.__blog.containerRendered;
+    if (m) { m(__$("container")); }
+</script>
+
+<div id="footer">
+        
+<p id="logoFoot">
+    <a href="http://www.spiga.com.mx/" title="Agencia Interactiva Spiga">www.spiga.com.mx</a>
+</p>
+<div class="footText">
+<p>
+Copyright ©2014 汤姆大叔
+</p>
+<p>
+<a href="http://www.cnblogs.com/">博客园</a>
+</p>
+</div>
+</div><!--end: footer -->
+
+<!--PageEndHtml Block Begin-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("body").prepend($("#div_digg").css({
+            "position": "fixed", "right": "0px", "bottom": "0px", "z-index": "10", "background-color": "white", "margin": "10px", "padding": "10px", "border": "1px solid #cccccc"
+        }));
+      $(".cnblogs_code_toolbar").hide();
+    });
+</script>
+<!--PageEndHtml Block End-->
+
+
+<iframe id="google_osd_static_frame_3886150172911" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px; "></iframe></body></html>

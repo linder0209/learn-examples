@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>box-shadow 例子</title>
+    <style>
+        ol {
+            width: 400px;
+        }
+        ol > li {
+            padding: 10px;
+            background-color: #eee;
+            margin-bottom: 50px;
+        }
+        .outset {
+            box-shadow: 5px 5px rgba(0, 0, 0, .6);
+        }
+        .outset-blur {
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+        }
+        .outset-extension {
+            box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, .6);
+        }
+        .inset {
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .6) inset;
+        }
+        .multiple-shadow {
+            box-shadow: 0 0 5px 3px rgba(255, 0, 0, .6), 0 0 5px 6px rgba(0, 182, 0, .6), 0 0 5px 10px rgba(255, 255, 0, .6);
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li class="outset">外阴影常规效果<br/>box-shadow:5px 5px rgba(0,0,0,.6);</li>
+    <li class="outset-blur">外阴影模糊效果<br/>box-shadow:5px 5px 5px rgba(0,0,0,.6);</li>
+    <li class="outset-extension">外阴影模糊外延效果<br/>box-shadow:5px 5px 5px 10px rgba(0,0,0,.6);</li>
+    <li class="inset">内阴影效果<br/>box-shadow:2px 2px 5px 1px rgba(0,0,0,.6) inset;</li>
+    <li class="multiple-shadow">外阴影模糊多组效果<br/>box-shadow: 0 0 5px 3px rgba(255, 0, 0, .6), 0 0 5px 6px rgba(0, 182, 0,
+        .6), 0 0 5px 10px rgba(255, 255, 0, .6);
+    </li>
+</ol>
+</body>
+</html>

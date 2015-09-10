@@ -1,0 +1,28 @@
+{
+  "name": "learn-examples",
+  "description": "学习过程参考实例",
+  "version": "0.0.1",
+  "homepage": "https://github.com/linder0209/learn-examples",
+  "authors": [
+    "linder0209 <linder0209@126.com>"
+  ],
+  "keywords": [
+    "learn-examples"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.2",
+    "jquery-ui": "~1.11.4",
+    "bootstrap": "~3.3.4",
+    "zeroclipboard": "^2.2.0",
+    "respond-minmax":"^1.4.2",
+    "html5shiv":"^3.7.2",
+    "es5-shim":"^4.1.0",
+    "json3": "^3.3.2",
+	"knockout": "~3.3.0"
+
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>word-break 用法</title>
+  <style>
+    p {
+      width: 100px;
+      border: 1px solid #008ab8;
+      color: #006080;
+    }
+    .normal p {
+      word-break: normal;
+    }
+    .break-all p {
+      word-break: break-all;
+    }
+    .keep-all p {
+      word-break: keep-all;
+    }
+  </style>
+</head>
+<body>
+<ol>
+  <li class="normal">
+    <strong>normal：</strong>
+    <p>aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn中文汉字</p>
+  </li>
+  <li class="break-all">
+    <strong>break-word：</strong>
+
+    <p>aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn中文汉字</p>
+  </li>
+  <li class="keep-all">
+    <strong>keep-all：</strong>
+    <p>aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn中文汉字</p>
+  </li>
+</ol>
+</body>
+</html>

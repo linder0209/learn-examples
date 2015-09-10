@@ -1,0 +1,22 @@
+{
+  "mocha": true,
+  "jasmine": true,
+  "trailing": true,
+  "strict": true,
+  "latedef": "nofunc",
+  "camelcase": true,
+  "node": true,
+  "noarg": true,
+  "unused": "vars",
+  "esnext": true,
+  "eqeqeq": true,
+  "indent": 2,
+  "quotmark": "single",
+  "jquery": true,
+  "browser": true,
+  "bitwise": true,
+  "curly": true,
+  "undef": true,
+  "nonew": true,
+  "forin": true
+}

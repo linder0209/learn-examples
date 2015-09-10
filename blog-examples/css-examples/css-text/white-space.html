@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>white-space 用法</title>
+  <style>
+    p {
+      width: 200px;
+      border: 1px solid #008ab8;
+      padding: 10px;
+    }
+    .normal p {
+      white-space: normal;
+    }
+    .pre p {
+      white-space: pre;
+    }
+    .pre-wrap p {
+      white-space: pre-wrap;
+    }
+    .pre-line p {
+      white-space: pre-line;
+    }
+    .nowrap p {
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+<ol>
+  <li class="normal">
+    <strong>normal：</strong>
+    <p>white-space 设为 normal 默认
+      显示 的效果 </p>
+  </li>
+  <li class="pre">
+    <strong>pre：</strong>
+    <p>不合并文字 间的空白符 （包括换行字符），
+      当文字超出边界时不换行， 与标签 pre 的行为是一样的</p>
+  </li>
+  <li class="nowrap">
+    <strong>nowrap：</strong>
+    <p>强制在 同一行内显示所有文本，
+      合并文本间的多余空白（包括换行字符）， 直到文本结束或者遇到 br <br/> 元素。</p>
+  </li>
+  <li class="pre-wrap">
+    <strong>pre-wrap：</strong>
+    <p>不合并文字间的 空白符
+      （包括换行字符），当文字超出边界时会自动换行。</p>
+  </li>
+  <li class="pre-line">
+    <strong>pre-line</strong>
+    <p>合并文字间的 空白符，
+      但会保留换行符，并且当文字超出边界时会自动换行。</p>
+  </li>
+</ol>
+</body>
+</html>

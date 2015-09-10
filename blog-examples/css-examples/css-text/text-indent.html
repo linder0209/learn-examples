@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>text-indent 用法</title>
+  <style>
+    ol {
+      width: 300px;
+    }
+    ol > li {
+      margin-bottom: 2px;
+    }
+    p {
+      border: 1px solid #008ab8;
+    }
+    .inline span {
+      text-indent: 30px;
+    }
+    .inline-block span {
+      display: inline-block;
+      text-indent: 30px;
+    }
+    .block span {
+      display: block;
+      text-indent: 30px;
+    }
+    .negative p {
+      text-indent: -5em;
+      margin-left: 5em;
+    }
+    .percentage p {
+      text-indent: 20%;
+    }
+    .inherit .inner {
+      text-indent: 10%;
+    }
+    .inherit .inner p {
+      border: 1px solid #006080;
+    }
+    .block-tag {
+      text-indent: 30px;
+    }
+    .block-tag custom {
+      display: inline-block;
+      background: #ccc;
+    }
+    .text-indent-image p {
+      text-indent: 5em;
+    }
+  </style>
+</head>
+<body>
+<ol>
+  <li class="inline">
+    <strong>内联元素span</strong>
+    <p><span>对于内联元素，text-indent不起作用　span{text-indent:30px;}</span></p>
+  </li>
+  <li class="inline-block">
+    <strong>把内联元素span设置为内联块级</strong>
+    <p><span>内联元素设置为内联块级，text-indent起作用　span{display:inline-block;text-indent:30px;}</span></p>
+  </li>
+  <li class="block">
+    <strong>把内联元素span设置为块级</strong>
+    <p><span>内联元素设置为块级，text-indent起作用　span{display:block;text-indent:30px;}</span></p>
+  </li>
+  <li class="negative">
+    <strong>设置为负值</strong>
+    <p>设置为负值，实现悬挂缩进的效果　.negative p {text-indent: -5em;margin-left: 5em;}</p>
+  </li>
+  <li class="percentage">
+    <strong>设置为百分值</strong>
+    <p>设置为百分值 .percentage p{text-indent: 20%;}</p>
+  </li>
+  <li class="inherit">
+    <strong>继承性</strong>
+    <div class="inner">
+      继承性例子
+      <p>p会继承inner设置的缩进 .inherit .inner {text-indent: 10%;}.inherit .inner p {border: 1px solid #006080;}</p>
+    </div>
+  </li>
+  <li class="block-tag">
+    <strong>块级元素和自定义内联块级元素</strong>
+    <p>块级元素</p>
+    <custom>我是一个自定义的内联块元素</custom>
+  </li>
+  <li class="text-indent-image">
+    <strong>首行中第一个元素是图像也会缩进</strong>
+    <p><img src="http://linder0209.github.io/resources/images/sprout.jpg" width="50px" height="50px"/>
+      设置缩进的段落首行中有一个图像
+    </p>
+  </li>
+</ol>
+</body>
+</html>
+			

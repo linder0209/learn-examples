@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>writing-mode 用法</title>
+    <style>
+        .demo {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid #aaa;
+        }
+        .lr-tb {
+            -webkit-writing-mode: horizontal-tb;
+            writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+        }
+        .tb-rl {
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+        }
+        .tb-lr {
+            -webkit-writing-mode: vertical-lr;
+            writing-mode: tb-rl;
+            writing-mode: vertical-lr;
+        }
+    </style>
+</head>
+<body>
+<div class="demo lr-tb">本段文字将按照水平从左到右的书写方向进行流动。</div>
+<div class="demo tb-rl">本段文字将按照垂直从右到左的书写方向进行流动。</div>
+<div class="demo tb-lr">本段文字将按照垂直从左到右的书写方向进行流动。</div>
+<ul class="tb-rl">
+    <li class="demo">本段文字将按照垂直从右到左的书写方向进行流动。</li>
+    <li class="demo">本段文字将按照垂直从右到左的书写方向进行流动。</li>
+</ul>
+<ul class="tb-lr">
+    <li class="demo">本段文字将按照垂直从左到右的书写方向进行流动。</li>
+    <li class="demo">本段文字将按照垂直从左到右的书写方向进行流动。</li>
+</ul>
+</body>
+</html>
