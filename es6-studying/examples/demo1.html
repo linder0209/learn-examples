@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="../node_modules/babel-core/browser.js"></script>
+<script type="text/babel">
+    class Test {
+        test() {
+            console.info('Test');
+            return "test";
+        }
+    }
+
+    var test = new Test;
+    test.test(); // "test"
+</script>
+</body>
+</html>
